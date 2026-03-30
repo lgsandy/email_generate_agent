@@ -1,0 +1,206 @@
+[
+  {
+    "moduleId": "e3700864-2eae-416f-9c61-8906c328aa59",
+    "moduleName": "TEST GEN AI ",
+    "moduleDamId": "V3Q000000007004",
+    "moduleDamName": "CM-001947",
+    "nextUniqueModuleCode": "BI_Module_013",
+    "source": "PromoMats",
+    "eDetailSourceDocNum": null,
+    "eDetailDocUrl": null,
+    "productName": "Biktarvy",
+    "productDamId": "00P000000000H01",
+    "countryName": "Spain",
+    "countryDamId": "spain",
+    "topicDamId": "V6G000000001002",
+    "topicName": "Efficacy",
+    "subtopicDamId": "V6F000000001027",
+    "subtopicName": "Sustained Viral Suppression",
+    "languageDamId": "V5B000000001026",
+    "languageName": "Spanish",
+    "therapeuticAreaDamId": "V1L000000001012",
+    "therapeuticAreaName": "Emerging Viruses",
+    "audienceDamId": "V3T000000001004",
+    "audienceName": "Internal",
+    "usageGuidelines": null,
+    "brandStyleGuidelines": "",
+    "communicationObjectives": "Educate healthcare professionals about the new indication and efficacy data for Biktarvy",
+    "creativeAgencyName": "21GRAMS",
+    "creativeAgencyDamId": "V3A000000001002",
+    "contentToneName": null,
+    "contentToneDamId": null,
+    "mlrStatus": "Available for Use",
+    "createdByName": "Kishan Kamal",
+    "moduleDamUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#object/content_module__v/V3Q000000007004",
+    "componentUrl": "https://d2ssk39mx0njby.cloudfront.net/components/e3700864-2eae-416f-9c61-8906c328aa59/9eb304b8-e5f5-4890-abd8-abc08a35b0a6/8741_1_0.png",
+    "componentThumbnailUrl": "https://d2ssk39mx0njby.cloudfront.net/components-thumbnails/e3700864-2eae-416f-9c61-8906c328aa59/9eb304b8-e5f5-4890-abd8-abc08a35b0a6/8741_1_0.png",
+    "approvedDateTime": "2026-01-17T11:52:39.000+0000",
+    "createdDateTime": "2026-01-17T11:49:37.000+0000",
+    "editedByName": "Kishan Kamal",
+    "editedDateTime": "2026-01-17T11:52:49.000+0000",
+    "strategicObjectives": [],
+    "segments": [
+      {
+        "segmentDamId": "esbvyexpertise_driven_agents_of_chang__c",
+        "segmentName": "ES-BVY-Expertise Driven: Agents of Change"
+      }
+    ],
+    "indications": [],
+    "claims": [
+      {
+        "claimName": "CL-005465",
+        "claimDamId": "V1X00000000B103",
+        "claimId": "48fc12b7-e505-40ef-bdb9-fb700664852e",
+        "matchText": "BIKTARVY® ha demostrado altas tasas de supresión virológica INDEPENDIENTEMENTE DE LA ADHERENCIA",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "subtopicName": "Sustained Viral Suppression",
+        "subtopicDamId": "V6F000000001027",
+        "mustUse": true,
+        "footnotes": "Todos los tratamientos deben tomarse conforme a las pautas posológicas establecidas en su ficha técnica.",
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "HIV Treatment",
+        "matchTextVariants": [],
+        "references": [
+          {
+            "id": "74f6af71-8c65-4a70-83f8-e2c6beafc43d",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/9032/1/0",
+            "documentName": "Roden L, et al. Antiretroviral (ART) Virologic Suppression (VS) and\nPatient Reported Outcomes (PROs) in the Clinical Opportunities and Management to Exploit Bictegravir/Emtricitabine/Tenofovir Alafenamide (B/F/TAF) as an Asynchronous\nConnection Key (COMEBACK) Study. Presented at IDWeek 2022, Poster 1466"
+          },
+          {
+            "id": "9b753a3f-c6eb-4a27-90d6-3af37f4618cb",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/9031/1/0",
+            "documentName": "Martorell C, et al. Efficacy and Safety of B/F/TAF in Hispanic/Latine Adults With HIV-1 Initiating First-Line Therapy: 5-Year Follow-Up From Two Phase 3 Studies. Poster\npresented at AIDS 2024, the 25th International AIDS Conference; July 22-26, 2024; Munich, Germany."
+          }
+        ],
+        "relatedClaims": [],
+        "font-size": "14px",
+        "line-height": "17px",
+        "font-weight": "700",
+        "align": "center",
+        "color": "#c00000",
+        "padding-bottom": "20px"
+      }
+    ],
+    "reusableTexts": [
+      {
+        "reusableTextId": "f4bf0f1b-2dae-4ede-a01a-e1d20396dcf8",
+        "reusableTextName": "RT-002174",
+        "reusableTextDamId": "V1X00000000C106",
+        "topicName": "Efficacy",
+        "topicDamId": "V6G000000001002",
+        "subtopicName": "Sustained Viral Suppression",
+        "subtopicDamId": "V6F000000001027",
+        "mustUse": true,
+        "matchText": "Timeline de participantes (ejemplo)",
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "HIV Treatment",
+        "matchTextVariants": []
+      }
+    ],
+    "components": [
+      {
+        "componentId": "9eb304b8-e5f5-4890-abd8-abc08a35b0a6",
+        "componentDocNumber": "COMP-0085",
+        "componentDamId": "8741_1_0",
+        "componentUrl": "https://d2ssk39mx0njby.cloudfront.net/components/e3700864-2eae-416f-9c61-8906c328aa59/9eb304b8-e5f5-4890-abd8-abc08a35b0a6/8741_1_0.png",
+        "subType": "Data Graphic",
+        "classification": "Data Chart",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "subtopicDamId": "V6F000000001027",
+        "subtopicName": "Sustained Viral Suppression",
+        "componentName": "Biktarvy_Data Graphic_Efficacy_MK Media",
+        "title": "DTG/3TC Adherencia",
+        "mustUse": false,
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "relatedClaims": [
+          {
+            "id": "d3075a82-f33b-42c4-87f4-ab099fe4fdb9",
+            "claimName": "CL-005489",
+            "claimDamId": "V1X00000000B115",
+            "mlrStatus": "Available for Use",
+            "matchText": "Porcentaje de participantes con ARN VIH-1 <200 c/mL de acuerdo a la adherencia individual calculado como medias de PDC:",
+            "abbreviation": "ARN: ácido ribonucleico,PDC: proporción de días cubiertos,VIH: virus de inmunodeficiencia humana",
+            "references": [
+              {
+                "id": "0e59d46b-63bb-455d-99db-cd53025abcc8",
+                "documentName": "Maggiolo F, et al. Real World Data on Forgiveness to Uncomplete Adherence to Bictegravir/ Emtricitabine/Tenofovir Alafenamide. J Int Assoc Provid AIDS Care. 2022 Jan-Dec;21:23259582221140208.\ndoi: 10.1177/23259582221140208",
+                "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/9000/1/0"
+              },
+              {
+                "id": "316cfe9b-8bce-4b7c-96b2-b71e73f2f4a8",
+                "documentName": "Maggiolo F, et al. Adherence to and Forgiveness of 3TC/DTG in a Real-World Cohort. J Int Assoc Provid AIDS Care. 2022 Jan-Dec;21:23259582221101815. doi: 10.1177/23259582221101815",
+                "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/9063/1/0"
+              }
+            ],
+            "matchTextVariants": []
+          }
+        ],
+        "relatedReusableTexts": []
+      },
+      {
+        "componentId": "4fc90774-0e21-4287-b787-49a43f162828",
+        "componentDocNumber": "COMP-0088",
+        "componentDamId": "8743_1_0",
+        "componentUrl": "https://d2ssk39mx0njby.cloudfront.net/components/fd6224c7-201f-4158-a2cf-4bcd2045c5bb/4fc90774-0e21-4287-b787-49a43f162828/8743_1_0.png",
+        "subType": "Data Graphic",
+        "classification": "Data Chart",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "subtopicDamId": "V6F000000001027",
+        "subtopicName": "Sustained Viral Suppression",
+        "componentName": "Biktarvy_Data Graphic_Efficacy_MK Media",
+        "title": "ARN del VIH-1 < 50 c/mL (ausente=excluido)",
+        "mustUse": false,
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "relatedClaims": [
+          {
+            "id": "ac2e4a0d-a100-424d-83be-7cc4243e32d1",
+            "claimName": "CL-005491",
+            "claimDamId": "V1X00000000B116",
+            "mlrStatus": "Available for Use",
+            "matchText": "ARN del VIH-1 < 50 c/mL (ausente=excluido)",
+            "abbreviation": "ARN: ácido ribonucleico,VIH: virus de inmunodeficiencia humana",
+            "references": [
+              {
+                "id": "9205321a-c4f2-46e9-8374-0fdfb762fd0b",
+                "documentName": "Martorell C, et al. Efficacy and Safety of B/F/TAF in Hispanic/Latine Adults With HIV-1 Initiating First-Line Therapy: 5-Year Follow-Up From Two Phase 3 Studies. Poster\npresented at AIDS 2024, the 25th International AIDS Conference; July 22-26, 2024; Munich, Germany.",
+                "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/9031/1/0"
+              }
+            ],
+            "matchTextVariants": []
+          }
+        ],
+        "relatedReusableTexts": []
+      }
+    ],
+    "businessRules": [],
+    "cmsdDocId": "9573",
+    "cmsdMajorV": null,
+    "cmsdMinorV": null,
+    "cmsdDocUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/9573",
+    "logos": [
+      "https://d2ssk39mx0njby.cloudfront.net/LOGO/modulePreviewArrow.svg",
+      "https://d2ssk39mx0njby.cloudfront.net/LOGO/mustUseGreenDot.svg",
+      "https://d2ssk39mx0njby.cloudfront.net/LOGO/mustUseRedDot.svg",
+      "https://d2ssk39mx0njby.cloudfront.net/LOGO/final-status.svg",
+      "https://d2ssk39mx0njby.cloudfront.net/LOGO/statusDraft.svg",
+      "https://d2ssk39mx0njby.cloudfront.net/LOGO/statusApproved.svg",
+      "https://d2ssk39mx0njby.cloudfront.net/LOGO/Intermediate.svg",
+      "https://d2ssk39mx0njby.cloudfront.net/LOGO/infoIcon.svg"
+    ],
+    "sourceModuleDamName": null,
+    "sourceModuleMlrStatus": null,
+    "sourceModuleDamUrl": null,
+    "sourceModuleId": null,
+    "moduleDraftElementIncluded": null,
+    "businessRulePublished": null,
+    "hasUnpublishedBusinessRules": false,
+    "buisnessRuleSaved": null
+  }
+]

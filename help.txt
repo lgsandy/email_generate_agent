@@ -1,0 +1,36 @@
+claude --resume "pharma-email-token-extractor"  
+
+
+● All done. Here's the project structure:
+
+  email_create/
+    index.js              — CLI entry: bun run index.js [email.html]
+    agent.js              — 2-pass extraction pipeline orchestrator
+    azure.js              — Azure OpenAI client (env vars)
+    schemas/
+      primitive-tokens.js — Colors, typography, spacing, borders
+      semantic-tokens.js  — Pharma-specific semantic mappings
+      component-tokens.js — CTA, claims, ISI, AE, footer, etc.
+      index.js            — Master DesignTokenOutput schema
+    extractors/
+      html-preprocessor.js — Strip MSO, chunk, build ground truth
+      style-extractor.js   — Pass 1: per-chunk LLM raw style extraction
+      semantic-classifier.js — Pass 2: semantic token classification
+      token-assembler.js   — Validation against ground truth
+    prompts/
+      system-prompt.js     — Pharma-domain system prompt
+      extraction-prompt.js — Per-chunk extraction instructions
+      classification-prompt.js — Semantic classification instructions
+    utils/
+      html-chunker.js      — Section splitting and grouping
+      style-parser.js      — Regex ground-truth style inventory
+      token-deduplicator.js — Merge and deduplicate
+    output/                — Generated JSON files
+
+  To run, set your env vars and execute:
+  export AZURE_RESOURCE_NAME=your-resource
+  export AZURE_API_KEY=your-key
+  export AZURE_DEPLOYMENT_NAME=gpt-4o  # optional
+  bun run index.js "./ModCon TRO Emailer.html"
+
+  It will output output/design-tokens.json (3-tier token hierarchy) and output/validation-report.json (ground-truth cross-validation).

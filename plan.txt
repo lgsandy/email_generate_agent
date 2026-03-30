@@ -1,0 +1,157 @@
+User approved Claude's plan
+  ⎿  Plan saved to: C:\Users\k_san\.claude\plans\frolicking-inventing-dusk.md · /plan to edit
+     Pharma Email Design Token Extraction System
+
+     Context
+
+     The goal is to build a system that accepts pharma marketing email HTML, sends it to an LLM (Azure OpenAI), and extracts precise design tokens — accurate   
+     enough to recreate emails with identical styles. The sample HTML is a TRODELVY/Gilead HCP email (~2855 lines, MJML-generated, table-based, inline styles,  
+     Outlook-compatible).
+
+     Architecture Overview
+
+     HTML Input → Preprocessor → LLM Extraction (2-pass) → Validation → JSON Output
+
+     Pass 1: Extract raw styles per HTML section (chunked)
+     Pass 2: Classify into pharma-semantic design tokens
+     Validation: Cross-check LLM output against regex-parsed ground truth
+
+     File Structure
+
+     email_create/
+       azure.ts              -- Azure OpenAI client (env vars)
+       index.ts              -- CLI entry: read HTML, run pipeline, write output
+       agent.ts              -- Orchestration: multi-pass extraction pipeline
+       schemas/
+         primitive-tokens.ts -- Colors, typography, spacing, borders
+         semantic-tokens.ts  -- Pharma-specific semantic mappings
+         component-tokens.ts -- CTA button, claim blocks, ISI, footer, etc.
+         index.ts            -- Master DesignTokenOutput schema
+       extractors/
+         html-preprocessor.ts -- Strip MSO comments, chunk by section
+         style-extractor.ts   -- Pass 1: per-chunk LLM style extraction
+         semantic-classifier.ts -- Pass 2: pharma-semantic classification
+         token-assembler.ts   -- Merge, deduplicate, validate
+       prompts/
+         system-prompt.ts     -- Pharma-domain system prompt
+         extraction-prompt.ts -- Per-chunk extraction instructions
+         classification-prompt.ts -- Semantic classification instructions
+       utils/
+         html-chunker.ts      -- Split HTML into section-based chunks
+         style-parser.ts      -- Regex extraction of all inline styles (ground truth)
+         token-deduplicator.ts -- Normalize and deduplicate tokens
+       output/                -- Generated JSON files
+
+     Key Design Decisions
+
+     1. Structured Output via Zod + generateObject
+
+     Use Vercel AI SDK's generateObject() with Zod schemas to guarantee well-typed JSON output from the LLM. Three-tier token hierarchy:
+
+     - Primitive tokens: Raw CSS values (colors like #003593, typography like Arial/13px/700, spacing like 20px)
+     - Semantic tokens: Pharma-meaningful names (brandPrimary, claimHighlight, isiText, adverseEventText)
+     - Component tokens: Full component definitions (CTA button, claim block, ISI block, adverse event box, footer, preheader)
+
+     2. Pharma-Specific Component Tokens
+
+     Based on the sample HTML, these components will be extracted:
+
+     ┌───────────────────┬───────────────────────────────────────────────────────────────────────────────────────┐
+     │     Component     │                                  Key Signals in HTML                                  │
+     ├───────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+     │ CTA Button        │ bgcolor="#003593", <a> with inline-block, padding 14px 23px, font-weight 700          │
+     ├───────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+     │ Claim Text        │ approved="true" attribute, bold text with specific colors (#003594, #01714f, #004092) │
+     ├───────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+     │ Scientific Claim  │ approved="true" + center-aligned + specific bg color (#dddced)                        │
+     ├───────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+     │ Body Text         │ Arial 13px/15px, color #000000, left-aligned                                          │
+     ├───────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+     │ Preheader         │ bg #e9e9e9, Arial 10px/13px, color #50504f, center-aligned                            │
+     ├───────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+     │ ISI/PI Block      │ Prescribing information text, bg #50504f, white text                                  │
+     ├───────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+     │ Adverse Event Box │ Bordered section with reporting instructions                                          │
+     ├───────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+     │ Reference Block   │ Dark bg (#50504f), Arial 12px/15px, white text, approved="true"                       │
+     ├───────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+     │ Footer            │ bg #000000, logo, address, links (Privacy, Preference, Unsubscribe), approval code    │
+     ├───────────────────┼───────────────────────────────────────────────────────────────────────────────────────┤
+     │ Copyright         │ bg #50504f, Arial 10px/15px, white text                                               │
+     └───────────────────┴───────────────────────────────────────────────────────────────────────────────────────┘
+
+     3. HTML Preprocessing Strategy
+
+     The ~2855-line HTML has significant MSO/Outlook boilerplate. Preprocessing will:
+     1. Strip MSO conditional comments — reduces ~30-40% noise
+     2. Extract <style> blocks separately for responsive style analysis
+     3. Split body by section_* divs into semantic chunks (~20 sections)
+     4. Group chunks by visual role (preheader, hero, claims, body, CTA, references, footer)
+
+     4. Ground-Truth Validation
+
+     Before LLM calls, regex-parse all style="..." attributes to build a ground-truth inventory. After extraction, verify every LLM-output token value exists in
+      the source HTML. Report match/mismatch statistics.
+
+     Implementation Steps
+
+     Step 1: Setup
+
+     - Convert azure.js → azure.ts with env var support
+     - Add zod as direct dependency (bun add zod)
+     - Create directory structure (schemas/, extractors/, prompts/, utils/, output/)
+
+     Step 2: Zod Schemas (schemas/)
+
+     - primitive-tokens.ts — ColorToken, TypographyToken, SpacingToken, BorderToken
+     - semantic-tokens.ts — SemanticColorTokens, SemanticTypographyTokens (pharma-named)
+     - component-tokens.ts — CTAButtonToken, CTALinkToken, ClaimBlockToken, ISIBlockToken, AdverseEventBlockToken, ReferenceBlockToken, FooterToken,
+     PreheaderToken, LayoutToken
+     - index.ts — Master DesignTokenOutput schema combining all tiers + metadata
+
+     Step 3: HTML Preprocessor (extractors/html-preprocessor.ts, utils/)
+
+     - html-chunker.ts — Split by section_* class divs, group into semantic chunks
+     - style-parser.ts — Regex extract all inline style="" values, deduplicate
+     - html-preprocessor.ts — Orchestrate: strip MSO → extract styles → chunk → return
+
+     Step 4: LLM Prompts (prompts/)
+
+     - system-prompt.ts — Pharma-domain expertise (ISI, fair balance, claims, PI, HCP context)
+     - extraction-prompt.ts — Per-chunk: extract exact CSS properties, element types, text context, approved flags
+     - classification-prompt.ts — Aggregate: classify into semantic tokens, map to components
+
+     Step 5: Extraction Pipeline (extractors/, agent.ts)
+
+     - style-extractor.ts — Pass 1: for each chunk, call generateObject() with chunk extraction schema
+     - semantic-classifier.ts — Pass 2: call generateObject() with full DesignTokenOutput schema on merged results
+     - token-assembler.ts — Merge pass results, deduplicate, cross-validate against regex ground truth
+     - agent.ts — Orchestrate the full pipeline: preprocess → extract → classify → assemble → output
+
+     Step 6: CLI Entry (index.ts)
+
+     - Read HTML from file path (CLI arg or default)
+     - Call extractDesignTokens() from agent
+     - Write output to output/design-tokens.json
+     - Print summary statistics
+
+     Verification Plan
+
+     1. Run: bun run index.ts "ModCon TRO Emailer.html"
+     2. Check output: Verify output/design-tokens.json contains all expected sections
+     3. Validate tokens: Confirm CTA button token matches bgcolor="#003593", padding 14px 23px, etc.
+     4. Completeness: Verify all colors (#003593, #003594, #004092, #01714f, #35b376, #50504f, #e9e9e9, #dddced, #000000, #ffffff) appear in primitive tokens   
+     5. Cross-validation: Check regex ground-truth match percentage (target: >95%)
+     6. Round-trip: Manually compare a few component tokens' CSS values against the source HTML inline styles
+
+     Dependencies
+
+     - Existing: ai, @ai-sdk/azure, bun, typescript
+     - To add: zod
+     - No other external dependencies needed (Bun has built-in fs)
+
+     Environment Setup Required
+
+     - AZURE_RESOURCE_NAME env var
+     - AZURE_API_KEY env var
+     - Azure OpenAI deployment with GPT-4o or equivalent

@@ -1,0 +1,22 @@
+{
+  "colorValidation": {
+    "matched": 6,
+    "unmatched": [],
+    "missingFromOutput": [],
+    "totalInHtml": 6,
+    "totalInOutput": 6,
+    "matchPercentage": 100
+  },
+  "sectionCoverage": {
+    "hasPreheader": true,
+    "hasCtaButton": true,
+    "hasClaimBlocks": true,
+    "hasIsiBlock": true,
+    "hasAdverseEventBlock": true,
+    "hasReferenceBlock": true,
+    "hasFooter": true,
+    "hasSectionCallouts": true,
+    "missingExpected": []
+  },
+  "warnings": []
+}
