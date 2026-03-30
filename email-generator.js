@@ -145,8 +145,8 @@ function buildCtaButton(tokens, href, label) {
 // ─── Main generator ───────────────────────────────────────────────────────────
 
 export function generateEmail(tokens, moduleData) {
-  const mod = Array.isArray(moduleData) ? moduleData[0] : moduleData;
-  if (!mod) throw new Error('moduleData is empty');
+  const modules = Array.isArray(moduleData) ? moduleData : [moduleData];
+  if (modules.length === 0) throw new Error('moduleData is empty');
 
   const { wrapperStyle, maxWidth } = buildEmailWrapper(tokens);
 
@@ -173,108 +173,112 @@ export function generateEmail(tokens, moduleData) {
     return num;
   }
 
-  // ─── Gather content in placement order ──────────────────────────────────────
+  // ─── Gather content in placement order from ALL modules ─────────────────────
 
   const sections = [];
 
-  // 1. Claims from module
-  if (mod.claims && mod.claims.length > 0) {
-    for (const claim of mod.claims) {
-      // Claim matchText
-      const claimStyle = { ...claimTypo };
-      // Override with claim-level style if provided
-      if (claim['font-size']) claimStyle['font-size'] = claim['font-size'];
-      if (claim['line-height']) claimStyle['line-height'] = claim['line-height'];
-      if (claim['font-weight']) claimStyle['font-weight'] = claim['font-weight'];
-      if (claim.color) claimStyle.color = claim.color;
-      if (claim.align) claimStyle['text-align'] = claim.align;
+  for (const mod of modules) {
+    // 1. Claims from module
+    if (mod.claims && mod.claims.length > 0) {
+      for (const claim of mod.claims) {
+        // Claim matchText
+        const claimStyle = { ...claimTypo };
+        // Override with claim-level style if provided
+        if (claim['font-size']) claimStyle['font-size'] = claim['font-size'];
+        if (claim['line-height']) claimStyle['line-height'] = claim['line-height'];
+        if (claim['font-weight']) claimStyle['font-weight'] = claim['font-weight'];
+        if (claim.color) claimStyle.color = claim.color;
+        if (claim.align) claimStyle['text-align'] = claim.align;
 
-      // Collect footnote markers and reference numbers for superscript
-      const supParts = [];
-      if (claim.footnotes) {
-        allFootnotes.push(claim.footnotes);
-        supParts.push('*');
-      }
-      const claimRefNums = [];
-      if (claim.references && claim.references.length > 0) {
-        for (const ref of claim.references) {
-          claimRefNums.push(getRefNumber(ref.documentName));
+        // Collect footnote markers and reference numbers for superscript
+        const supParts = [];
+        if (claim.footnotes) {
+          allFootnotes.push(claim.footnotes);
+          supParts.push('*');
         }
-        supParts.push(claimRefNums.join(','));
-      }
-      const superscript = supParts.length > 0 ? supParts.join(',') : '';
+        const claimRefNums = [];
+        if (claim.references && claim.references.length > 0) {
+          for (const ref of claim.references) {
+            claimRefNums.push(getRefNumber(ref.documentName));
+          }
+          supParts.push(claimRefNums.join(','));
+        }
+        const superscript = supParts.length > 0 ? supParts.join(',') : '';
 
-      sections.push({ type: 'claim', text: claim.matchText, style: claimStyle, padding: claim['padding-bottom'], superscript });
-      if (claim.abbreviation) {
-        claim.abbreviation.split(',').forEach(a => abbreviationSet.add(a.trim()));
-      }
+        sections.push({ type: 'claim', text: claim.matchText, style: claimStyle, padding: claim['padding-bottom'], superscript });
+        if (claim.abbreviation) {
+          claim.abbreviation.split(',').forEach(a => abbreviationSet.add(a.trim()));
+        }
 
-      // 2. Related claims from this claim
-      if (claim.relatedClaims && claim.relatedClaims.length > 0) {
-        for (const rc of claim.relatedClaims) {
-          const rcRefNums = [];
-          if (rc.references) {
-            for (const ref of rc.references) {
-              rcRefNums.push(getRefNumber(ref.documentName));
+        // 2. Related claims from this claim
+        if (claim.relatedClaims && claim.relatedClaims.length > 0) {
+          for (const rc of claim.relatedClaims) {
+            const rcRefNums = [];
+            if (rc.references) {
+              for (const ref of rc.references) {
+                rcRefNums.push(getRefNumber(ref.documentName));
+              }
+            }
+            const rcSup = rcRefNums.length > 0 ? rcRefNums.join(',') : '';
+            sections.push({ type: 'related-claim', text: rc.matchText, style: componentClaimTypo, superscript: rcSup });
+            if (rc.abbreviation) {
+              rc.abbreviation.split(',').forEach(a => abbreviationSet.add(a.trim()));
             }
           }
-          const rcSup = rcRefNums.length > 0 ? rcRefNums.join(',') : '';
-          sections.push({ type: 'related-claim', text: rc.matchText, style: componentClaimTypo, superscript: rcSup });
-          if (rc.abbreviation) {
-            rc.abbreviation.split(',').forEach(a => abbreviationSet.add(a.trim()));
-          }
         }
       }
     }
-  }
 
-  // 3. Reusable texts from module
-  if (mod.reusableTexts && mod.reusableTexts.length > 0) {
-    for (const rt of mod.reusableTexts) {
-      sections.push({ type: 'reusable-text', text: rt.matchText, style: bodyTypo });
+    // 3. Reusable texts from module
+    if (mod.reusableTexts && mod.reusableTexts.length > 0) {
+      for (const rt of mod.reusableTexts) {
+        sections.push({ type: 'reusable-text', text: rt.matchText, style: bodyTypo });
+      }
     }
-  }
 
-  // 4-6. Components
-  if (mod.components && mod.components.length > 0) {
-    for (const comp of mod.components) {
-      // Component image
-      sections.push({ type: 'component-image', url: comp.componentUrl, alt: comp.title || comp.componentName || 'Component' });
+    // 4-6. Components
+    if (mod.components && mod.components.length > 0) {
+      for (const comp of mod.components) {
+        // Component image
+        sections.push({ type: 'component-image', url: comp.componentUrl, alt: comp.title || comp.componentName || 'Component' });
 
-      // Component related claims
-      if (comp.relatedClaims && comp.relatedClaims.length > 0) {
-        for (const rc of comp.relatedClaims) {
-          const rcRefNums = [];
-          if (rc.references) {
-            for (const ref of rc.references) {
-              rcRefNums.push(getRefNumber(ref.documentName));
+        // Component related claims
+        if (comp.relatedClaims && comp.relatedClaims.length > 0) {
+          for (const rc of comp.relatedClaims) {
+            const rcRefNums = [];
+            if (rc.references) {
+              for (const ref of rc.references) {
+                rcRefNums.push(getRefNumber(ref.documentName));
+              }
+            }
+            const rcSup = rcRefNums.length > 0 ? rcRefNums.join(',') : '';
+            sections.push({ type: 'component-claim', text: rc.matchText, style: componentClaimTypo, superscript: rcSup });
+            if (rc.abbreviation) {
+              rc.abbreviation.split(',').forEach(a => abbreviationSet.add(a.trim()));
             }
           }
-          const rcSup = rcRefNums.length > 0 ? rcRefNums.join(',') : '';
-          sections.push({ type: 'component-claim', text: rc.matchText, style: componentClaimTypo, superscript: rcSup });
-          if (rc.abbreviation) {
-            rc.abbreviation.split(',').forEach(a => abbreviationSet.add(a.trim()));
+        }
+
+        // Component related reusable texts
+        if (comp.relatedReusableTexts && comp.relatedReusableTexts.length > 0) {
+          for (const rt of comp.relatedReusableTexts) {
+            sections.push({ type: 'component-reusable', text: rt.matchText, style: bodyTypo });
           }
         }
       }
-
-      // Component related reusable texts
-      if (comp.relatedReusableTexts && comp.relatedReusableTexts.length > 0) {
-        for (const rt of comp.relatedReusableTexts) {
-          sections.push({ type: 'component-reusable', text: rt.matchText, style: bodyTypo });
-        }
-      }
     }
-  }
+  } // end for each module
 
   // ─── Build HTML ──────────────────────────────────────────────────────────────
 
+  const firstMod = modules[0];
+
   let html = `<!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="${mod.languageName === 'Spanish' ? 'es' : 'en'}">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="${firstMod.languageName === 'Spanish' ? 'es' : 'en'}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${escapeHtml(mod.moduleName || mod.productName || 'Email')}</title>
+  <title>${escapeHtml(firstMod.moduleName || firstMod.productName || 'Email')}</title>
   <style type="text/css">
     body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
     table, td { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
@@ -354,7 +358,7 @@ export function generateEmail(tokens, moduleData) {
   }
 
   // ── CTA Button ──
-  const ctaHref = mod.moduleDamUrl || mod.cmsdDocUrl || '#';
+  const ctaHref = firstMod.moduleDamUrl || firstMod.cmsdDocUrl || '#';
   const ctaLabel = 'Learn more';
   html += buildSectionOpen(tokens, 'white');
   html += buildCtaButton(tokens, ctaHref, ctaLabel);
@@ -424,7 +428,7 @@ export function generateEmail(tokens, moduleData) {
   };
   html += buildSectionOpenCustom(tokens, footerBg);
 
-  const approvalCode = mod.approvalCode || tokens?.metadata?.approvalCode || '';
+  const approvalCode = firstMod.approvalCode || tokens?.metadata?.approvalCode || '';
   if (approvalCode) {
     const approvalStyle = {
       ...footerTextStyle,
