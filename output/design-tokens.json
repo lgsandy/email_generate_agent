@@ -1,609 +1,530 @@
 {
   "metadata": {
     "source": "ProjectID_00644.html",
-    "extractedAt": "2026-03-27T00:00:00.000Z",
+    "extractedAt": "2026-03-30T00:00:00.000Z",
     "emailType": "pharma-marketing-hcp",
     "brand": "Biktarvy",
     "approvalCode": null
   },
-  "tier1": {
-    "primitives": {
-      "colors": {
-        "brand-red-strong": "#c00000",
-        "brand-red-primary": "#cf0a2c",
-        "neutral-black": "#000000",
-        "neutral-gray-medium": "#707070",
-        "neutral-gray-light": "#9baab1",
-        "neutral-white": "#ffffff"
+  "primitiveTokens": {
+    "colors": [
+      {
+        "name": "text-black",
+        "value": "#000000",
+        "opacity": null
       },
-      "typography": {
-        "typo-hero-img-fallback": {
-          "font-family": null,
-          "font-size": "13px",
-          "font-weight": null,
-          "line-height": null
-        },
-        "typo-footnote-gray-10-13": {
-          "font-family": "Arial",
-          "font-size": "10px",
-          "font-weight": null,
-          "line-height": "13px"
-        },
-        "typo-preheader-13-15": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "font-weight": null,
-          "line-height": "15px"
-        },
-        "typo-greeting-13-15": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "font-weight": null,
-          "line-height": "15px"
-        },
-        "typo-claim-red-14-17-bold": {
-          "font-family": "Arial",
-          "font-size": "14px",
-          "font-weight": "700",
-          "line-height": "17px"
-        },
-        "typo-subheading-12-15": {
-          "font-family": "Arial",
-          "font-size": "12px",
-          "font-weight": null,
-          "line-height": "15px"
-        },
-        "typo-scientific-12-15": {
-          "font-family": "Arial",
-          "font-size": "12px",
-          "font-weight": null,
-          "line-height": "15px"
-        },
-        "typo-heading-20-25": {
-          "font-family": "Arial",
-          "font-size": "20px",
-          "font-weight": null,
-          "line-height": "25px"
-        },
-        "typo-footer-13-15": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "font-weight": null,
-          "line-height": "15px"
-        },
-        "typo-cta-13-120": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "font-weight": "normal",
-          "line-height": "120%"
-        }
+      {
+        "name": "text-muted-gray",
+        "value": "#707070",
+        "opacity": null
       },
-      "spacing": {
-        "space-0": "0px",
-        "space-5": "5px",
-        "space-10": "10px",
-        "space-20": "20px",
-        "space-24": "24px",
-        "space-25": "25px",
-        "space-30": "30px",
-        "space-vertical-5-5": "5px 0",
-        "space-vertical-20-0": "20px 0",
-        "space-vertical-20-20": "20px 0",
-        "space-horizontal-10-25": "10px 25px",
-        "space-horizontal-10-24": "10px 24px",
-        "space-horizontal-10-25-cta": "10px 25px"
+      {
+        "name": "footer-bg-gray",
+        "value": "#9baab1",
+        "opacity": null
       },
-      "borders": {
-        "border-none": "none",
-        "border-radius-0": "0px",
-        "border-radius-3": "3px",
-        "border-radius-none": "none",
-        "img-border-0": "0"
+      {
+        "name": "claim-red-dark",
+        "value": "#c00000",
+        "opacity": null
+      },
+      {
+        "name": "brand-red-primary",
+        "value": "#cf0a2c",
+        "opacity": null
+      },
+      {
+        "name": "base-white",
+        "value": "#ffffff",
+        "opacity": null
+      }
+    ],
+    "typography": [
+      {
+        "name": "img-alt-13",
+        "fontFamily": "Arial",
+        "fontSize": "13px",
+        "fontWeight": "normal",
+        "lineHeight": "normal",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "fineprint-10-muted",
+        "fontFamily": "Arial",
+        "fontSize": "10px",
+        "fontWeight": "normal",
+        "lineHeight": "13px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "preheader-13-center",
+        "fontFamily": "Arial",
+        "fontSize": "13px",
+        "fontWeight": "normal",
+        "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "body-13-left",
+        "fontFamily": "Arial",
+        "fontSize": "13px",
+        "fontWeight": "normal",
+        "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "claim-14-red-bold",
+        "fontFamily": "Arial",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "17px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "subheading-12-left",
+        "fontFamily": "Arial",
+        "fontSize": "12px",
+        "fontWeight": "normal",
+        "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "scientific-12-left",
+        "fontFamily": "Arial",
+        "fontSize": "12px",
+        "fontWeight": "normal",
+        "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "cta-13",
+        "fontFamily": "Arial",
+        "fontSize": "13px",
+        "fontWeight": "normal",
+        "lineHeight": "120%",
+        "letterSpacing": null,
+        "textTransform": "none"
+      },
+      {
+        "name": "heading-20-left",
+        "fontFamily": "Arial",
+        "fontSize": "20px",
+        "fontWeight": "normal",
+        "lineHeight": "25px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "footer-13-left",
+        "fontFamily": "Arial",
+        "fontSize": "13px",
+        "fontWeight": "normal",
+        "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      }
+    ],
+    "spacing": [
+      {
+        "name": "layout-margin-auto",
+        "value": "0px auto",
+        "context": "outer-wrapper-margin"
+      },
+      {
+        "name": "section-padding-none",
+        "value": "0px",
+        "context": "td-padding-reset"
+      },
+      {
+        "name": "section-padding-vertical-5",
+        "value": "5px",
+        "context": "hero-body-td-padding-top-bottom"
+      },
+      {
+        "name": "section-padding-vertical-10",
+        "value": "10px",
+        "context": "generic-td-padding-vertical"
+      },
+      {
+        "name": "section-padding-vertical-20",
+        "value": "20px 0",
+        "context": "section-top-bottom"
+      },
+      {
+        "name": "section-padding-vertical-20-only",
+        "value": "20px",
+        "context": "section-top-bottom-equal"
+      },
+      {
+        "name": "section-padding-bottom-30",
+        "value": "30px",
+        "context": "cta-wrapper-bottom"
+      },
+      {
+        "name": "content-padding-10-25",
+        "value": "10px 25px",
+        "context": "generic-content-td"
+      },
+      {
+        "name": "content-padding-5-25",
+        "value": "5px 25px",
+        "context": "hero-claim-td"
+      },
+      {
+        "name": "content-padding-cta",
+        "value": "10px 25px",
+        "context": "cta-button-padding"
+      },
+      {
+        "name": "content-padding-24-cta",
+        "value": "10px 24px 30px 24px",
+        "context": "cta-outer-td"
+      },
+      {
+        "name": "content-padding-25-all",
+        "value": "10px 25px 10px 25px",
+        "context": "body-block-td"
+      },
+      {
+        "name": "content-padding-hero-note",
+        "value": "5px 0px 5px 0px",
+        "context": "hero-note-td"
+      },
+      {
+        "name": "content-padding-body-block",
+        "value": "0px 0px 0px 0px",
+        "context": "body-block-inner-td"
+      }
+    ],
+    "borders": [
+      {
+        "name": "img-border-none",
+        "width": "0",
+        "style": "none",
+        "color": "#000000",
+        "radius": "0px"
+      },
+      {
+        "name": "cta-td-border-none",
+        "width": "0",
+        "style": "none",
+        "color": "#000000",
+        "radius": "3px"
+      },
+      {
+        "name": "body-block-border-none",
+        "width": "0",
+        "style": "none",
+        "color": "#000000",
+        "radius": "0px"
+      }
+    ]
+  },
+  "semanticTokens": {
+    "colors": {
+      "brandPrimary": "#cf0a2c",
+      "brandSecondary": "#c00000",
+      "brandAccent": "#cf0a2c",
+      "claimHighlight": "#c00000",
+      "claimReference": "#cf0a2c",
+      "textPrimary": "#000000",
+      "textSecondary": "#707070",
+      "textInverse": "#ffffff",
+      "backgroundPrimary": "#ffffff",
+      "backgroundSecondary": "#9baab1",
+      "backgroundCallout": "#ffffff",
+      "backgroundFooterPrimary": "#9baab1",
+      "backgroundFooterSecondary": "#9baab1",
+      "linkDefault": "#cf0a2c",
+      "linkFooter": "#000000"
+    },
+    "typography": {
+      "heading": {
+        "name": "heading",
+        "fontFamily": "Arial",
+        "fontSize": "20px",
+        "fontWeight": "normal",
+        "lineHeight": "25px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      "subheading": {
+        "name": "subheading",
+        "fontFamily": "Arial",
+        "fontSize": "12px",
+        "fontWeight": "normal",
+        "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      "bodyText": {
+        "name": "bodyText",
+        "fontFamily": "Arial",
+        "fontSize": "13px",
+        "fontWeight": "normal",
+        "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      "claimText": {
+        "name": "claimText",
+        "fontFamily": "Arial",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "17px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      "scientificClaim": {
+        "name": "scientificClaim",
+        "fontFamily": "Arial",
+        "fontSize": "12px",
+        "fontWeight": "normal",
+        "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      "footnoteText": {
+        "name": "footnoteText",
+        "fontFamily": "Arial",
+        "fontSize": "10px",
+        "fontWeight": "normal",
+        "lineHeight": "13px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      "disclaimerText": {
+        "name": "disclaimerText",
+        "fontFamily": "Arial",
+        "fontSize": "10px",
+        "fontWeight": "normal",
+        "lineHeight": "13px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      "referenceText": {
+        "name": "referenceText",
+        "fontFamily": "Arial",
+        "fontSize": "10px",
+        "fontWeight": "normal",
+        "lineHeight": "13px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      "adverseEventText": {
+        "name": "adverseEventText",
+        "fontFamily": "Arial",
+        "fontSize": "10px",
+        "fontWeight": "normal",
+        "lineHeight": "13px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      "legalText": {
+        "name": "legalText",
+        "fontFamily": "Arial",
+        "fontSize": "13px",
+        "fontWeight": "normal",
+        "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      "footerText": {
+        "name": "footerText",
+        "fontFamily": "Arial",
+        "fontSize": "13px",
+        "fontWeight": "normal",
+        "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      "ctaButtonText": {
+        "name": "ctaButtonText",
+        "fontFamily": "Arial",
+        "fontSize": "13px",
+        "fontWeight": "normal",
+        "lineHeight": "120%",
+        "letterSpacing": null,
+        "textTransform": "none"
+      },
+      "approvalCode": {
+        "name": "approvalCode",
+        "fontFamily": "Arial",
+        "fontSize": "10px",
+        "fontWeight": "normal",
+        "lineHeight": "13px",
+        "letterSpacing": null,
+        "textTransform": null
       }
     }
   },
-  "tier2": {
-    "semantic": {
-      "colors": {
-        "brandPrimary": "#cf0a2c",
-        "brandSecondary": "#c00000",
-        "brandAccent": "#c00000",
-        "claimHighlight": "#c00000",
-        "claimReference": "#707070",
-        "textPrimary": "#000000",
-        "textSecondary": "#707070",
-        "textInverse": "#ffffff",
-        "backgroundPrimary": "#ffffff",
-        "backgroundSecondary": "#9baab1",
-        "backgroundCallout": "#ffffff",
-        "backgroundFooterPrimary": "#9baab1",
-        "backgroundFooterSecondary": "#9baab1",
-        "linkDefault": "#000000",
-        "linkFooter": "#000000"
+  "componentTokens": {
+    "ctaButton": {
+      "background": "#cf0a2c",
+      "color": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": "13px",
+      "fontWeight": "normal",
+      "lineHeight": "120%",
+      "padding": "10px 25px",
+      "borderRadius": "3px",
+      "border": "0 none #000000",
+      "textDecoration": "none !important",
+      "textTransform": "none",
+      "display": "inline-block",
+      "textContent": "Learn More"
+    },
+    "ctaLinks": [
+      {
+        "color": "#cf0a2c",
+        "textDecoration": "none !important",
+        "fontWeight": "normal",
+        "cursor": "auto",
+        "display": "inline-block",
+        "context": "inline-text"
       },
-      "typography": {
-        "heading": {
-          "font-family": "Arial",
-          "font-size": "20px",
-          "font-weight": null,
-          "line-height": "25px"
-        },
-        "subheading": {
-          "font-family": "Arial",
-          "font-size": "12px",
-          "font-weight": null,
-          "line-height": "15px"
-        },
-        "bodyText": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "font-weight": null,
-          "line-height": "15px"
-        },
-        "claimText": {
-          "font-family": "Arial",
-          "font-size": "14px",
-          "font-weight": "700",
-          "line-height": "17px"
-        },
-        "scientificClaim": {
-          "font-family": "Arial",
-          "font-size": "12px",
-          "font-weight": null,
-          "line-height": "15px"
-        },
-        "footnoteText": {
-          "font-family": "Arial",
-          "font-size": "10px",
-          "font-weight": null,
-          "line-height": "13px"
-        },
-        "disclaimerText": {
-          "font-family": "Arial",
-          "font-size": "10px",
-          "font-weight": null,
-          "line-height": "13px"
-        },
-        "referenceText": {
-          "font-family": "Arial",
-          "font-size": "10px",
-          "font-weight": null,
-          "line-height": "13px"
-        },
-        "adverseEventText": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "font-weight": null,
-          "line-height": "15px"
-        },
-        "legalText": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "font-weight": null,
-          "line-height": "15px"
-        },
-        "footerText": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "font-weight": null,
-          "line-height": "15px"
-        },
-        "ctaButtonText": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "font-weight": "normal",
-          "line-height": "120%"
-        },
-        "approvalCode": {
-          "font-family": "Arial",
-          "font-size": "10px",
-          "font-weight": null,
-          "line-height": "13px"
+      {
+        "color": "#000000",
+        "textDecoration": "none",
+        "fontWeight": "normal",
+        "cursor": "auto",
+        "display": "inline",
+        "context": "footer"
+      }
+    ],
+    "claimBlocks": [
+      {
+        "type": "efficacy",
+        "fontFamily": "Arial",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "17px",
+        "color": "#c00000",
+        "textAlign": "center",
+        "backgroundColor": null,
+        "padding": "0px",
+        "approved": true,
+        "hasCitations": true,
+        "citationStyle": {
+          "element": "sup",
+          "idPattern": "data-ref"
+        }
+      },
+      {
+        "type": "statistical",
+        "fontFamily": "Arial",
+        "fontSize": "12px",
+        "fontWeight": "normal",
+        "lineHeight": "15px",
+        "color": "#000000",
+        "textAlign": "left",
+        "backgroundColor": null,
+        "padding": "0px",
+        "approved": true,
+        "hasCitations": true,
+        "citationStyle": {
+          "element": "sup",
+          "idPattern": "data-ref"
         }
       }
-    }
-  },
-  "tier3": {
-    "components": {
-      "layout": {
-        "emailWrapper": {
-          "margin": "0px auto",
-          "max-width": "600px"
-        },
-        "fullWidthTable": {
-          "width": "100%"
-        },
-        "heroCell": {
-          "direction": "ltr",
-          "font-size": "0px",
-          "padding": "0px",
-          "text-align": "center"
-        },
-        "inlineBlockFull": {
-          "font-size": "0px",
-          "text-align": "left",
-          "direction": "ltr",
-          "display": "inline-block",
-          "vertical-align": "top",
-          "width": "100%"
-        },
-        "heroInnerCell": {
-          "font-size": "0px",
-          "padding": "10px 25px",
-          "padding-top": "10px",
-          "padding-right": "0px",
-          "padding-bottom": "10px",
-          "padding-left": "0px",
-          "word-break": "break-word"
-        },
-        "heroImageCell": {
-          "width": "600px"
-        },
-        "bodySectionWrapper": {
-          "background": "#ffffff",
-          "background-color": "#ffffff",
-          "margin": "0px auto",
-          "border-radius": "0px",
-          "max-width": "600px"
-        },
-        "bodySectionTable": {
-          "background": "#ffffff",
-          "background-color": "#ffffff",
-          "width": "100%",
-          "border-radius": "0px"
-        },
-        "bodySectionCell": {
-          "border-radius": "0px",
-          "direction": "ltr",
-          "font-size": "0px",
-          "padding": "20px 0",
-          "padding-bottom": "0px",
-          "padding-left": "0px",
-          "padding-right": "0px",
-          "padding-top": "0px",
-          "text-align": "center"
-        },
-        "separateTable": {
-          "border-collapse": "separate"
-        },
-        "separateCell": {
-          "border": "none",
-          "border-radius": "none",
-          "vertical-align": "top",
-          "border-collapse": "separate",
-          "padding-top": "0px",
-          "padding-right": "0px",
-          "padding-bottom": "0px",
-          "padding-left": "0px"
-        },
-        "contentCell-10-25": {
-          "font-size": "0px",
-          "padding": "10px 25px",
-          "padding-top": "10px",
-          "padding-right": "25px",
-          "padding-bottom": "10px",
-          "padding-left": "25px",
-          "word-break": "break-word"
-        },
-        "contentCell-5-25-20": {
-          "font-size": "0px",
-          "padding": "10px 25px",
-          "padding-top": "5px",
-          "padding-right": "25px",
-          "padding-bottom": "20px",
-          "padding-left": "25px",
-          "word-break": "break-word"
-        },
-        "contentCell-5-25-5": {
-          "font-size": "0px",
-          "padding": "10px 25px",
-          "padding-top": "5px",
-          "padding-right": "25px",
-          "padding-bottom": "5px",
-          "padding-left": "25px",
-          "word-break": "break-word"
-        },
-        "contentCell-plain-10-25": {
-          "font-size": "0px",
-          "padding": "10px 25px",
-          "word-break": "break-word"
-        },
-        "centeredRow-20": {
-          "direction": "ltr",
-          "font-size": "0px",
-          "padding": "20px 0",
-          "padding-bottom": "20px",
-          "padding-left": "0px",
-          "padding-right": "0px",
-          "padding-top": "20px",
-          "text-align": "center"
-        },
-        "centeredRow-20-noOverride": {
-          "direction": "ltr",
-          "font-size": "0px",
-          "padding": "20px 0",
-          "text-align": "center"
-        },
-        "fixedWidth-550": {
-          "width": "550px"
-        },
-        "footerLogoCell": {
-          "font-size": "0px",
-          "padding": "10px 25px",
-          "padding-top": "10px",
-          "padding-right": "25px",
-          "padding-bottom": "10px",
-          "padding-left": "25px",
-          "word-break": "break-word"
-        },
-        "footerLogoWidth": {
-          "width": "149px"
-        }
-      },
-      "ctaButton": {
-        "containerCell": {
-          "border": "none",
-          "border-radius": "3px",
-          "cursor": "auto",
-          "mso-padding-alt": "10px 25px",
-          "background": "#CF0A2C"
-        },
-        "link": {
-          "display": "inline-block",
-          "background": "#CF0A2C",
-          "color": "#ffffff !important",
-          "-webkit-text-fill-color": "#ffffff !important",
-          "font-family": "Arial",
-          "font-size": "13px",
-          "font-weight": "normal",
-          "line-height": "120%",
-          "margin": "0",
-          "text-decoration": "none !important",
-          "text-transform": "none",
-          "padding": "10px 25px",
-          "mso-padding-alt": "0px",
-          "border-radius": "3px"
-        },
-        "labelSpan": {
-          "color": "#ffffff",
-          "text-decoration": "none",
-          "-webkit-text-fill-color": "#ffffff"
-        },
-        "wrapperTable": {
-          "border-collapse": "separate",
-          "line-height": "100%"
-        },
-        "outerCell": {
-          "border-radius": "0px",
-          "direction": "ltr",
-          "font-size": "0px",
-          "padding": "20px 0",
-          "text-align": "center"
-        },
-        "outerPaddingCell": {
-          "font-size": "0px",
-          "padding": "10px 25px",
-          "padding-top": "10px",
-          "padding-right": "24px",
-          "padding-bottom": "30px",
-          "padding-left": "24px",
-          "word-break": "break-word"
-        }
-      },
-      "ctaLinks": {
-        "bodyLink": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "line-height": "15px",
-          "color": "#000000",
-          "text-align": "left"
-        },
-        "footerLink": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "line-height": "15px",
-          "color": "#000000",
-          "text-align": "left"
-        },
-        "aeLink": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "line-height": "15px",
-          "color": "#000000",
-          "text-align": "left"
-        }
-      },
-      "claimBlocks": {
-        "efficacyClaimMain": {
-          "wrapperCell": {
-            "font-size": "0px",
-            "padding": "10px 25px",
-            "padding-top": "5px",
-            "padding-right": "25px",
-            "padding-bottom": "20px",
-            "padding-left": "25px",
-            "word-break": "break-word"
-          },
-          "text": {
-            "font-family": "Arial",
-            "font-size": "14px",
-            "font-weight": "700",
-            "line-height": "17px",
-            "text-align": "center",
-            "color": "#c00000"
-          }
-        },
-        "subheadingClaim": {
-          "wrapperCell": {
-            "font-size": "0px",
-            "padding": "10px 25px",
-            "padding-top": "5px",
-            "padding-right": "25px",
-            "padding-bottom": "5px",
-            "padding-left": "25px",
-            "word-break": "break-word"
-          },
-          "text": {
-            "font-family": "Arial",
-            "font-size": "12px",
-            "line-height": "15px",
-            "text-align": "left",
-            "color": "#000000"
-          }
-        },
-        "scientificFootnoteClaim": {
-          "wrapperCell": {
-            "font-size": "0px",
-            "padding": "10px 25px",
-            "padding-top": "5px",
-            "padding-right": "25px",
-            "padding-bottom": "5px",
-            "padding-left": "25px",
-            "word-break": "break-word"
-          },
-          "text": {
-            "font-family": "Arial",
-            "font-size": "12px",
-            "line-height": "15px",
-            "text-align": "left",
-            "color": "#000000"
-          }
-        }
-      },
-      "isiBlock": {
-        "note": "No explicit ISI block styles present in provided snippet."
-      },
-      "adverseEventBlock": {
-        "note": "No explicit adverse event reporting block styles present in provided snippet."
-      },
-      "referenceBlock": {
-        "wrapperDiv": {
-          "margin": "0px auto",
-          "max-width": "600px"
-        },
-        "textApproved": {
-          "font-family": "Arial",
-          "font-size": "10px",
-          "line-height": "13px",
-          "text-align": "left",
-          "color": "#707070"
-        },
-        "textUnapproved": {
-          "color": "#707070"
-        }
-      },
-      "sectionCallouts": {
-        "heroImage": {
-          "border": "0",
-          "display": "block",
-          "outline": "none",
-          "text-decoration": "none",
-          "height": "auto",
-          "width": "100%",
-          "font-size": "13px"
-        },
-        "taglineHeading": {
-          "wrapperRow": {
-            "direction": "ltr",
-            "font-size": "0px",
-            "padding": "20px 0",
-            "padding-bottom": "20px",
-            "padding-left": "0px",
-            "padding-right": "0px",
-            "padding-top": "20px",
-            "text-align": "center"
-          },
-          "innerCell": {
-            "font-size": "0px",
-            "padding": "0px",
-            "word-break": "break-word"
-          },
-          "text": {
-            "font-family": "Arial",
-            "font-size": "20px",
-            "line-height": "25px",
-            "text-align": "left",
-            "color": "#000000"
-          }
-        }
-      },
-      "preheader": {
-        "wrapperDiv": {
-          "margin": "0px auto",
-          "max-width": "600px"
-        },
-        "cell": {
-          "font-size": "0px",
-          "padding": "0px",
-          "word-break": "break-word"
-        },
-        "text": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "line-height": "15px",
-          "text-align": "center",
-          "color": "#000000"
-        }
-      },
-      "footer": {
-        "logoImage": {
-          "border": "0",
-          "display": "block",
-          "outline": "none",
-          "text-decoration": "none",
-          "height": "auto",
-          "width": "100%",
-          "font-size": "13px"
-        },
-        "addressWrapperDiv": {
-          "background": "#9baab1",
-          "background-color": "#9baab1",
-          "margin": "0px auto",
-          "max-width": "600px"
-        },
-        "addressTable": {
-          "background": "#9baab1",
-          "background-color": "#9baab1",
-          "width": "100%"
-        },
-        "addressRow": {
-          "direction": "ltr",
-          "font-size": "0px",
-          "padding": "20px 0",
-          "padding-bottom": "20px",
-          "padding-left": "0px",
-          "padding-right": "0px",
-          "padding-top": "20px",
-          "text-align": "center"
-        },
-        "addressInlineBlock": {
-          "font-size": "0px",
-          "text-align": "left",
-          "direction": "ltr",
-          "display": "inline-block",
-          "vertical-align": "top",
-          "width": "100%"
-        },
-        "addressInnerTable": {
-          "vertical-align": "top"
-        },
-        "addressCell": {
-          "font-size": "0px",
-          "padding": "10px 25px",
-          "padding-top": "10px",
-          "padding-right": "25px",
-          "padding-bottom": "10px",
-          "padding-left": "25px",
-          "word-break": "word-break"
-        },
-        "addressText": {
-          "font-family": "Arial",
-          "font-size": "13px",
-          "line-height": "15px",
-          "text-align": "left",
-          "color": "#000000"
-        }
+    ],
+    "isiBlock": {
+      "headerFontFamily": "Arial",
+      "headerFontSize": "10px",
+      "headerFontWeight": "normal",
+      "headerLineHeight": "13px",
+      "headerColor": "#000000",
+      "bodyFontFamily": "Arial",
+      "bodyFontSize": "10px",
+      "bodyFontWeight": "normal",
+      "bodyLineHeight": "13px",
+      "bodyColor": "#000000",
+      "backgroundColor": "#ffffff",
+      "padding": "0px"
+    },
+    "adverseEventBlock": {
+      "headerFontFamily": "Arial",
+      "headerFontSize": "10px",
+      "headerFontWeight": "normal",
+      "headerLineHeight": "13px",
+      "headerColor": "#000000",
+      "bodyFontFamily": "Arial",
+      "bodyFontSize": "10px",
+      "bodyFontWeight": "normal",
+      "bodyLineHeight": "13px",
+      "bodyColor": "#000000",
+      "containerBorder": "0 none #000000",
+      "containerPadding": "0px",
+      "backgroundColor": "#ffffff",
+      "linkColor": "#cf0a2c",
+      "linkTextDecoration": "none"
+    },
+    "referenceBlock": {
+      "fontFamily": "Arial",
+      "fontSize": "10px",
+      "fontWeight": "normal",
+      "lineHeight": "13px",
+      "color": "#707070",
+      "backgroundColor": "#ffffff",
+      "padding": "0px",
+      "textAlign": "left"
+    },
+    "sectionCallouts": [
+      {
+        "backgroundColor": "#ffffff",
+        "fontFamily": "Arial",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "17px",
+        "color": "#c00000",
+        "textAlign": "center",
+        "padding": "0px"
       }
+    ],
+    "preheader": {
+      "backgroundColor": "#ffffff",
+      "fontFamily": "Arial",
+      "fontSize": "13px",
+      "fontWeight": "normal",
+      "lineHeight": "15px",
+      "color": "#000000",
+      "textAlign": "center",
+      "padding": "0px"
+    },
+    "footer": {
+      "backgroundColor": "#9baab1",
+      "logoWidth": "149px",
+      "addressFontFamily": "Arial",
+      "addressFontSize": "13px",
+      "addressFontWeight": "normal",
+      "addressLineHeight": "15px",
+      "addressColor": "#000000",
+      "addressTextAlign": "left",
+      "linkColor": "#000000",
+      "linkTextDecoration": "none",
+      "approvalCodeFontSize": "10px",
+      "approvalCodeColor": "#000000",
+      "copyrightFontSize": "13px",
+      "copyrightColor": "#000000",
+      "copyrightBackgroundColor": "#9baab1"
+    },
+    "layout": {
+      "maxWidth": "600px",
+      "columnWidths": [
+        "100%",
+        "600px",
+        "550px",
+        "149px"
+      ],
+      "sectionPadding": "0px",
+      "direction": "ltr"
     }
   }
 }

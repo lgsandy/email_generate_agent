@@ -33,14 +33,14 @@ export const ClaimBlockToken = z.object({
   lineHeight: z.string().describe('Claim text line height'),
   color: z.string().describe('Claim text color'),
   textAlign: z.string().describe('Text alignment'),
-  backgroundColor: z.string().optional().describe('Background color if in a callout block'),
+  backgroundColor: z.string().nullable().describe('Background color if in a callout block, null if none'),
   padding: z.string().describe('Padding around claim text'),
   approved: z.boolean().describe('Whether the claim has approved="true" attribute'),
   hasCitations: z.boolean().describe('Whether the claim contains <sup> citation references'),
   citationStyle: z.object({
     element: z.string().describe('Citation element, typically "sup"'),
     idPattern: z.string().describe('Citation ID pattern if present'),
-  }).optional().describe('Citation formatting details if hasCitations is true'),
+  }).nullable().describe('Citation formatting details if hasCitations is true, null otherwise'),
 });
 
 export const ISIBlockToken = z.object({

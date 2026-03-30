@@ -20,36 +20,31 @@ import { readFile, writeFile, mkdir } from 'fs/promises';
 
 function resolveColor(tokens, ref) {
   if (!ref) return '#000000';
-  // If it's already a hex value
   if (ref.startsWith('#')) return ref;
-  // Resolve from tier1 primitives
-  const colors = tokens?.tier1?.primitives?.colors || {};
-  return colors[ref] || ref;
+  const colors = tokens?.primitiveTokens?.colors || [];
+  const found = colors.find(c => c.name === ref);
+  return found?.value || ref;
 }
 
-function resolveTypography(tokens, ref) {
-  if (!ref) return {};
-  const typo = tokens?.tier1?.primitives?.typography || {};
-  return typo[ref] || {};
-}
-
-function getComponent(tokens, path) {
-  const components = tokens?.tier3?.components || {};
-  const parts = path.split('.');
-  let obj = components;
-  for (const p of parts) {
-    obj = obj?.[p];
-    if (!obj) return {};
-  }
-  return obj;
+function getComponent(tokens, name) {
+  return tokens?.componentTokens?.[name] || {};
 }
 
 function getSemanticTypo(tokens, name) {
-  return tokens?.tier2?.semantic?.typography?.[name] || {};
+  const typo = tokens?.semanticTokens?.typography?.[name] || {};
+  // Convert TypographyToken fields to CSS properties
+  const css = {};
+  if (typo.fontFamily) css['font-family'] = typo.fontFamily;
+  if (typo.fontSize) css['font-size'] = typo.fontSize;
+  if (typo.fontWeight) css['font-weight'] = typo.fontWeight;
+  if (typo.lineHeight) css['line-height'] = typo.lineHeight;
+  if (typo.letterSpacing) css['letter-spacing'] = typo.letterSpacing;
+  if (typo.textTransform) css['text-transform'] = typo.textTransform;
+  return css;
 }
 
 function getSemanticColor(tokens, name) {
-  return tokens?.tier2?.semantic?.colors?.[name] || null;
+  return tokens?.semanticTokens?.colors?.[name] || null;
 }
 
 function styleStr(obj) {
@@ -64,22 +59,22 @@ function styleStr(obj) {
 
 function buildEmailWrapper(tokens) {
   const layout = getComponent(tokens, 'layout');
-  const wrapperStyle = styleStr(layout.emailWrapper || { margin: '0px auto', 'max-width': '600px' });
-  return { wrapperStyle, maxWidth: layout.emailWrapper?.['max-width'] || '600px' };
+  const maxWidth = layout.maxWidth || '600px';
+  const wrapperStyle = `margin: 0px auto; max-width: ${maxWidth}`;
+  return { wrapperStyle, maxWidth };
 }
 
 function buildSectionOpen(tokens, bg = 'white') {
   const layout = getComponent(tokens, 'layout');
-  const sectionStyle = bg === 'grey'
-    ? styleStr(layout.sectionGrey || { background: '#e4e4e4', margin: '0px auto', 'max-width': '600px' })
-    : styleStr(layout.sectionWhite || { background: '#ffffff', margin: '0px auto', 'max-width': '600px' });
-  const tableStyle = bg === 'grey'
-    ? styleStr(layout.fullWidthTableGrey || { background: '#e4e4e4', width: '100%' })
-    : styleStr(layout.fullWidthTableWhite || { background: '#ffffff', width: '100%' });
+  const maxWidth = layout.maxWidth || '600px';
+  const bgColor = bg === 'grey' ? '#e4e4e4' : '#ffffff';
+  const sectionStyle = `background: ${bgColor}; background-color: ${bgColor}; margin: 0px auto; max-width: ${maxWidth}`;
+  const tableStyle = `background: ${bgColor}; background-color: ${bgColor}; width: 100%`;
+  const cellStyle = `direction: ${layout.direction || 'ltr'}; font-size: 0px; padding: 0; text-align: center`;
 
   return `<div style="${sectionStyle}">
   <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="${tableStyle}">
-    <tbody><tr><td style="${styleStr(layout.columnFull || {})}">
+    <tbody><tr><td style="${cellStyle}">
       <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"><tbody>`;
 }
 
@@ -95,8 +90,9 @@ function buildSectionClose() {
 }
 
 function buildCell(tokens, cellStyleOverride, innerHtml) {
-  const baseCell = getComponent(tokens, 'layout.cellBase');
-  const cellStyle = cellStyleOverride ? styleStr(cellStyleOverride) : styleStr(baseCell);
+  const layout = getComponent(tokens, 'layout');
+  const baseStyle = { 'font-size': '0px', 'padding': layout.sectionPadding || '10px 25px', 'word-break': 'break-word' };
+  const cellStyle = cellStyleOverride ? styleStr(cellStyleOverride) : styleStr(baseStyle);
   return `<tr><td align="left" style="${cellStyle}">${innerHtml}</td></tr>`;
 }
 
@@ -117,29 +113,28 @@ function escapeHtml(str) {
 // ─── Red top rule divider ─────────────────────────────────────────────────────
 
 function buildRedTopRule(tokens) {
-  const rule = getComponent(tokens, 'sectionCallouts.redTopRule.p');
-  const ruleStyle = Object.keys(rule).length
-    ? styleStr(rule)
-    : 'border-top: solid 10px #cf0a2b; font-size: 1px; margin: 0px auto; width: 100%';
-  return `<tr><td style="${styleStr(getComponent(tokens, 'layout.cellBase'))}"><p style="${ruleStyle}">&nbsp;</p></td></tr>`;
+  const brandAccent = getSemanticColor(tokens, 'brandAccent') || getSemanticColor(tokens, 'brandPrimary') || '#cf0a2c';
+  const ruleStyle = `border-top: solid 10px ${brandAccent}; font-size: 1px; margin: 0px auto; width: 100%`;
+  const layout = getComponent(tokens, 'layout');
+  const cellStyle = `font-size: 0px; padding: ${layout.sectionPadding || '10px 25px'}; word-break: break-word`;
+  return `<tr><td style="${cellStyle}"><p style="${ruleStyle}">&nbsp;</p></td></tr>`;
 }
 
 // ─── CTA Button ───────────────────────────────────────────────────────────────
 
 function buildCtaButton(tokens, href, label) {
-  const ctaWrapper = getComponent(tokens, 'ctaButton.cell');
-  const ctaLink = getComponent(tokens, 'ctaButton.link');
-  const ctaSpan = getComponent(tokens, 'ctaButton.labelSpan');
-
-  const wrapperBg = ctaWrapper.background || '#CF0A2C';
-  const btnRadius = ctaWrapper['border-radius'] || '3px';
+  const cta = getComponent(tokens, 'ctaButton');
+  const bgColor = cta.background || '#CF0A2C';
+  const borderRadius = cta.borderRadius || '3px';
+  const cellStyle = `background: ${bgColor}; border-radius: ${borderRadius}; border: ${cta.border || 'none'}; padding: ${cta.padding || '10px 25px'}; cursor: pointer`;
+  const linkStyle = `color: ${cta.color || '#ffffff'}; font-family: ${cta.fontFamily || 'Arial'}; font-size: ${cta.fontSize || '13px'}; font-weight: ${cta.fontWeight || 'normal'}; line-height: ${cta.lineHeight || '120%'}; text-decoration: ${cta.textDecoration || 'none'}; text-transform: ${cta.textTransform || 'none'}; display: ${cta.display || 'inline-block'}`;
 
   return `<tr><td align="center" style="font-size: 0px; padding: 10px 25px; word-break: break-word;">
   <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse: separate; line-height: 100%;">
     <tbody><tr>
-      <td align="center" bgcolor="${wrapperBg}" role="presentation" style="${styleStr(ctaWrapper)}" valign="middle">
-        <a href="${href}" target="_blank" style="${styleStr(ctaLink)}">
-          <span style="${styleStr(ctaSpan)}">${escapeHtml(label)}</span>
+      <td align="center" bgcolor="${bgColor}" role="presentation" style="${cellStyle}" valign="middle">
+        <a href="${href}" target="_blank" style="${linkStyle}">
+          ${escapeHtml(label)}
         </a>
       </td>
     </tr></tbody>
@@ -164,10 +159,11 @@ export function generateEmail(tokens, moduleData) {
   const referenceTypo = getSemanticTypo(tokens, 'referenceText');
   const approvalCodeTypo = getSemanticTypo(tokens, 'approvalCode');
 
-  // Collect all footnotes and deduplicated references
+  // Collect all footnotes, deduplicated references, and abbreviations
   const allFootnotes = [];
   const referenceMap = new Map(); // documentName -> reference number (1-based)
   const allReferences = []; // ordered unique reference strings
+  const abbreviationSet = new Set(); // deduplicated abbreviation entries
 
   function getRefNumber(documentName) {
     if (referenceMap.has(documentName)) return referenceMap.get(documentName);
@@ -209,6 +205,9 @@ export function generateEmail(tokens, moduleData) {
       const superscript = supParts.length > 0 ? supParts.join(',') : '';
 
       sections.push({ type: 'claim', text: claim.matchText, style: claimStyle, padding: claim['padding-bottom'], superscript });
+      if (claim.abbreviation) {
+        claim.abbreviation.split(',').forEach(a => abbreviationSet.add(a.trim()));
+      }
 
       // 2. Related claims from this claim
       if (claim.relatedClaims && claim.relatedClaims.length > 0) {
@@ -221,6 +220,9 @@ export function generateEmail(tokens, moduleData) {
           }
           const rcSup = rcRefNums.length > 0 ? rcRefNums.join(',') : '';
           sections.push({ type: 'related-claim', text: rc.matchText, style: componentClaimTypo, superscript: rcSup });
+          if (rc.abbreviation) {
+            rc.abbreviation.split(',').forEach(a => abbreviationSet.add(a.trim()));
+          }
         }
       }
     }
@@ -251,7 +253,7 @@ export function generateEmail(tokens, moduleData) {
           const rcSup = rcRefNums.length > 0 ? rcRefNums.join(',') : '';
           sections.push({ type: 'component-claim', text: rc.matchText, style: componentClaimTypo, superscript: rcSup });
           if (rc.abbreviation) {
-            sections.push({ type: 'abbreviation', text: rc.abbreviation, style: footnoteTypo });
+            rc.abbreviation.split(',').forEach(a => abbreviationSet.add(a.trim()));
           }
         }
       }
@@ -346,15 +348,6 @@ export function generateEmail(tokens, moduleData) {
         break;
       }
 
-      case 'abbreviation': {
-        const cellPadding = {
-          'font-size': '0px',
-          'padding': '5px 25px',
-          'word-break': 'break-word',
-        };
-        html += buildCell(tokens, cellPadding, buildTextBlock(section.text, section.style));
-        break;
-      }
     }
 
     html += buildSectionClose();
@@ -369,29 +362,78 @@ export function generateEmail(tokens, moduleData) {
 
   // ── References section ──
   if (allReferences.length > 0) {
-    html += buildSectionOpen(tokens, 'white');
+    const refBlock = getComponent(tokens, 'referenceBlock');
+    const refBg = refBlock.backgroundColor || '#ffffff';
+    html += buildSectionOpenCustom(tokens, refBg);
     const refCell = {
       'font-size': '0px',
-      'padding': '5px 25px',
-      'padding-bottom': '10px',
+      'padding': refBlock.padding || '5px 25px',
       'word-break': 'break-word',
     };
+    const refStyle = {
+      'font-family': refBlock.fontFamily || referenceTypo['font-family'],
+      'font-size': refBlock.fontSize || referenceTypo['font-size'],
+      'font-weight': refBlock.fontWeight || referenceTypo['font-weight'],
+      'line-height': refBlock.lineHeight || referenceTypo['line-height'],
+      'color': refBlock.color || referenceTypo['color'] || '#707070',
+      'text-align': refBlock.textAlign || 'left',
+    };
     const refLines = allReferences.map((r, i) => `${i + 1}. ${r}`).join('<br/>');
-    html += buildCell(tokens, refCell, `<div style="${styleStr(referenceTypo)}"><p style="margin: 0;">${refLines}</p></div>`);
+    html += buildCell(tokens, refCell, `<div style="${styleStr(refStyle)}"><p style="margin: 0;">${refLines}</p></div>`);
+    html += buildSectionClose();
+  }
+
+  // ── Abbreviations section ──
+  if (abbreviationSet.size > 0) {
+    const refBlock = getComponent(tokens, 'referenceBlock');
+    const abbrevBg = refBlock.backgroundColor || '#ffffff';
+    html += buildSectionOpenCustom(tokens, abbrevBg);
+    const abbrevCell = {
+      'font-size': '0px',
+      'padding': refBlock.padding || '5px 25px',
+      'word-break': 'break-word',
+    };
+    const abbrevStyle = {
+      'font-family': refBlock.fontFamily || referenceTypo['font-family'] || 'Arial',
+      'font-size': refBlock.fontSize || referenceTypo['font-size'] || '10px',
+      'font-weight': refBlock.fontWeight || referenceTypo['font-weight'] || '400',
+      'line-height': refBlock.lineHeight || referenceTypo['line-height'] || '13px',
+      'color': refBlock.color || referenceTypo['color'] || '#707070',
+      'text-align': refBlock.textAlign || 'left',
+    };
+    const abbrevLines = [...abbreviationSet].sort().join('; ');
+    html += buildCell(tokens, abbrevCell, `<div style="${styleStr(abbrevStyle)}"><p style="margin: 0;">${escapeHtml(abbrevLines)}</p></div>`);
     html += buildSectionClose();
   }
 
   // ── Footer section (with footnotes) ──
-  const footerBg = getSemanticColor(tokens, 'backgroundFooterPrimary') || '#9baab1';
-  const footerAddressCell = getComponent(tokens, 'footer.addressCell');
-  const footerCellStyle = Object.keys(footerAddressCell).length
-    ? footerAddressCell
-    : { 'font-size': '0px', 'padding': '10px 25px', 'word-break': 'break-word' };
+  const footer = getComponent(tokens, 'footer');
+  const footerBg = footer.backgroundColor || getSemanticColor(tokens, 'backgroundFooterPrimary') || '#9baab1';
+  const footerCellStyle = {
+    'font-size': '0px',
+    'padding': '10px 25px',
+    'word-break': 'break-word',
+  };
+  const footerTextStyle = {
+    'font-family': footer.addressFontFamily || 'Arial',
+    'font-size': footer.addressFontSize || '13px',
+    'font-weight': footer.addressFontWeight || '400',
+    'line-height': footer.addressLineHeight || '15px',
+    'color': footer.addressColor || '#000000',
+    'text-align': footer.addressTextAlign || 'left',
+  };
   html += buildSectionOpenCustom(tokens, footerBg);
+
   const approvalCode = mod.approvalCode || tokens?.metadata?.approvalCode || '';
   if (approvalCode) {
-    html += buildCell(tokens, footerCellStyle, buildTextBlock(approvalCode, approvalCodeTypo));
+    const approvalStyle = {
+      ...footerTextStyle,
+      'font-size': footer.approvalCodeFontSize || approvalCodeTypo['font-size'] || '10px',
+      'color': footer.approvalCodeColor || approvalCodeTypo['color'] || '#707070',
+    };
+    html += buildCell(tokens, footerCellStyle, buildTextBlock(approvalCode, approvalStyle));
   }
+
   // Footnotes in footer
   if (allFootnotes.length > 0) {
     const fnCell = {

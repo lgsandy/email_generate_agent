@@ -20,7 +20,7 @@ export const DesignTokenOutput = z.object({
     extractedAt: z.string().describe('ISO timestamp of extraction'),
     emailType: z.string().describe('Email type, e.g. "pharma-marketing-hcp"'),
     brand: z.string().describe('Brand/product name identified in the email'),
-    approvalCode: z.string().optional().describe('Regulatory approval code if found'),
+    approvalCode: z.string().nullable().describe('Regulatory approval code if found, null if not present'),
   }),
   primitiveTokens: PrimitiveTokens,
   semanticTokens: z.object({

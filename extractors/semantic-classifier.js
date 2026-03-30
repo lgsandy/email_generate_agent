@@ -3,7 +3,7 @@
  * Takes merged raw styles and classifies them into the full DesignTokenOutput schema.
  */
 
-import { generateObject, generateText } from 'ai';
+import { generateText, Output } from 'ai';
 import { model } from '../azure.js';
 import { SYSTEM_PROMPT } from '../prompts/system-prompt.js';
 import { buildClassificationPrompt } from '../prompts/classification-prompt.js';
@@ -19,26 +19,14 @@ export async function classifyTokens(mergedStyles, inventory, sourceFilename) {
 
   const { output } = await generateText({
     model,
-    schema: DesignTokenOutput,
+    output: Output.object({
+      schema: DesignTokenOutput,
+    }),
     system: SYSTEM_PROMPT,
     prompt,
     temperature: 0,
   });
 
   console.log('Pass 2 complete: Design tokens classified\n');
-  return parseLLMJson(output);
-}
-function parseLLMJson(text) {
-  if (!text) return null;
-
-  // 1. Remove ```json or ``` wrappers
-  const cleaned = text.replace(/```json|```/g, "").trim();
-
-  // 2. Parse JSON safely
-  try {
-    return JSON.parse(cleaned);
-  } catch (err) {
-    console.error("Invalid JSON:", err);
-    return null;
-  }
+  return output;
 }

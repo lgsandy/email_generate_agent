@@ -3,7 +3,7 @@ import { z } from 'zod';
 export const ColorToken = z.object({
   name: z.string().describe('Semantic name for the color, e.g. "brand-blue-primary"'),
   value: z.string().describe('Hex color value, e.g. "#003593"'),
-  opacity: z.number().optional().describe('Opacity if applicable, 0-1'),
+  opacity: z.number().nullable().describe('Opacity if applicable 0-1, null if not set'),
 });
 
 export const TypographyToken = z.object({
@@ -12,8 +12,8 @@ export const TypographyToken = z.object({
   fontSize: z.string().describe('Font size with unit, e.g. "13px"'),
   fontWeight: z.string().describe('Font weight, e.g. "700" or "bold"'),
   lineHeight: z.string().describe('Line height with unit, e.g. "15px" or "120%"'),
-  letterSpacing: z.string().optional().describe('Letter spacing if set'),
-  textTransform: z.string().optional().describe('Text transform if set, e.g. "uppercase"'),
+  letterSpacing: z.string().nullable().describe('Letter spacing if set, null if not set'),
+  textTransform: z.string().nullable().describe('Text transform if set e.g. "uppercase", null if not set'),
 });
 
 export const SpacingToken = z.object({

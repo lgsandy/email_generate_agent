@@ -15,21 +15,21 @@ export function buildClassificationPrompt(mergedStyles, inventory, sourceFilenam
 
   return `You are given the extracted styles from a pharmaceutical marketing email (${sourceFilename}).
 
-Your task is to classify these styles into a complete design token system with three tiers:
+Your task is to classify these styles into a complete design token system with three sections: primitiveTokens, semanticTokens, and componentTokens.
 
-## Tier 1: Primitive Tokens
+## primitiveTokens
 Extract all unique raw CSS values:
 - **colors**: Every unique hex color with a descriptive name (e.g., "brand-blue-primary" for #003593)
 - **typography**: Every unique font-family/size/weight/line-height combination
 - **spacing**: Key padding/margin values used across the email
 - **borders**: Every unique border style
 
-## Tier 2: Semantic Tokens
+## semanticTokens
 Map primitive tokens to pharma-email-meaningful names:
 - **colors**: brandPrimary, brandSecondary, brandAccent, claimHighlight, claimReference, textPrimary, textSecondary, textInverse, backgroundPrimary, backgroundSecondary, backgroundCallout, backgroundFooterPrimary, backgroundFooterSecondary, linkDefault, linkFooter
 - **typography**: heading, subheading, bodyText, claimText, scientificClaim, footnoteText, disclaimerText, referenceText, adverseEventText, legalText, footerText, ctaButtonText, approvalCode
 
-## Tier 3: Component Tokens
+## componentTokens
 Build complete component definitions with ALL CSS properties needed to recreate each element:
 - **ctaButton**: The primary call-to-action button with all its styles
 - **ctaLinks**: Each distinct link style variant (body, footer, AE block)

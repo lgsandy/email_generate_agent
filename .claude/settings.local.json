@@ -6,7 +6,8 @@
       "Bash(rm -f index.ts)",
       "Bash(ls *.js *.ts)",
       "Bash(bun run:*)",
-      "Bash(echo \"EXIT: $?\")"
+      "Bash(echo \"EXIT: $?\")",
+      "WebFetch(domain:ai-sdk.dev)"
     ]
   }
 }
