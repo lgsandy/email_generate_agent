@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "source": "ProjectID_00644.html",
-    "extractedAt": "2026-03-30T00:00:00.000Z",
+    "source": "sample.html",
+    "extractedAt": "2026-03-31T00:00:00.000Z",
     "emailType": "pharma-marketing-hcp",
     "brand": "Biktarvy",
-    "approvalCode": null
+    "approvalCode": "ES-BVY-XXXX"
   },
   "primitiveTokens": {
     "colors": [
@@ -14,18 +14,23 @@
         "opacity": null
       },
       {
+        "name": "accent-teal",
+        "value": "#6ecbb8",
+        "opacity": null
+      },
+      {
         "name": "text-muted-gray",
         "value": "#707070",
         "opacity": null
       },
       {
-        "name": "footer-bg-gray",
-        "value": "#9baab1",
+        "name": "brand-red-dark",
+        "value": "#c00000",
         "opacity": null
       },
       {
-        "name": "claim-red-dark",
-        "value": "#c00000",
+        "name": "brand-red-divider",
+        "value": "#cf0a2b",
         "opacity": null
       },
       {
@@ -34,50 +39,42 @@
         "opacity": null
       },
       {
-        "name": "base-white",
+        "name": "background-gray-light",
+        "value": "#e4e4e4",
+        "opacity": null
+      },
+      {
+        "name": "text-cream",
+        "value": "#edebe3",
+        "opacity": null
+      },
+      {
+        "name": "white",
         "value": "#ffffff",
         "opacity": null
       }
     ],
     "typography": [
       {
-        "name": "img-alt-13",
+        "name": "img-fallback-13",
         "fontFamily": "Arial",
         "fontSize": "13px",
-        "fontWeight": "normal",
-        "lineHeight": "normal",
-        "letterSpacing": null,
-        "textTransform": null
-      },
-      {
-        "name": "fineprint-10-muted",
-        "fontFamily": "Arial",
-        "fontSize": "10px",
-        "fontWeight": "normal",
+        "fontWeight": "400",
         "lineHeight": "13px",
         "letterSpacing": null,
         "textTransform": null
       },
       {
-        "name": "preheader-13-center",
+        "name": "body-13-15",
         "fontFamily": "Arial",
         "fontSize": "13px",
-        "fontWeight": "normal",
+        "fontWeight": "400",
         "lineHeight": "15px",
         "letterSpacing": null,
         "textTransform": null
       },
       {
-        "name": "body-13-left",
-        "fontFamily": "Arial",
-        "fontSize": "13px",
-        "fontWeight": "normal",
-        "lineHeight": "15px",
-        "letterSpacing": null,
-        "textTransform": null
-      },
-      {
-        "name": "claim-14-red-bold",
+        "name": "sci-claim-14-17-bold-red",
         "fontFamily": "Arial",
         "fontSize": "14px",
         "fontWeight": "700",
@@ -86,143 +83,208 @@
         "textTransform": null
       },
       {
-        "name": "subheading-12-left",
+        "name": "sci-claim-12-14",
         "fontFamily": "Arial",
         "fontSize": "12px",
-        "fontWeight": "normal",
+        "fontWeight": "400",
+        "lineHeight": "14px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "heading-12-15",
+        "fontFamily": "Arial",
+        "fontSize": "12px",
+        "fontWeight": "400",
         "lineHeight": "15px",
         "letterSpacing": null,
         "textTransform": null
       },
       {
-        "name": "scientific-12-left",
+        "name": "footer-logo-12-14",
         "fontFamily": "Arial",
         "fontSize": "12px",
-        "fontWeight": "normal",
+        "fontWeight": "400",
+        "lineHeight": "14px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "claim-14-17-bold-cream",
+        "fontFamily": "Arial",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "17px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "body-12-15",
+        "fontFamily": "Arial",
+        "fontSize": "12px",
+        "fontWeight": "400",
         "lineHeight": "15px",
         "letterSpacing": null,
         "textTransform": null
       },
       {
-        "name": "cta-13",
+        "name": "cta-button-13-120",
         "fontFamily": "Arial",
         "fontSize": "13px",
-        "fontWeight": "normal",
+        "fontWeight": "400",
         "lineHeight": "120%",
         "letterSpacing": null,
         "textTransform": "none"
       },
       {
-        "name": "heading-20-left",
+        "name": "cta-link-15",
         "fontFamily": "Arial",
-        "fontSize": "20px",
-        "fontWeight": "normal",
-        "lineHeight": "25px",
+        "fontSize": "15px",
+        "fontWeight": "400",
+        "lineHeight": "15px",
         "letterSpacing": null,
         "textTransform": null
       },
       {
-        "name": "footer-13-left",
+        "name": "reference-10-13-muted",
         "fontFamily": "Arial",
-        "fontSize": "13px",
-        "fontWeight": "normal",
+        "fontSize": "10px",
+        "fontWeight": "400",
+        "lineHeight": "13px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "pi-ref-11-17",
+        "fontFamily": "Arial",
+        "fontSize": "11px",
+        "fontWeight": "400",
+        "lineHeight": "17px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "footer-10-15",
+        "fontFamily": "Arial",
+        "fontSize": "10px",
+        "fontWeight": "400",
         "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "divider-10-15",
+        "fontFamily": "Arial",
+        "fontSize": "10px",
+        "fontWeight": "400",
+        "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "hero-heading-16-14-bold",
+        "fontFamily": "Arial",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "lineHeight": "14px",
         "letterSpacing": null,
         "textTransform": null
       }
     ],
     "spacing": [
       {
-        "name": "layout-margin-auto",
-        "value": "0px auto",
-        "context": "outer-wrapper-margin"
-      },
-      {
-        "name": "section-padding-none",
-        "value": "0px",
-        "context": "td-padding-reset"
-      },
-      {
-        "name": "section-padding-vertical-5",
-        "value": "5px",
-        "context": "hero-body-td-padding-top-bottom"
-      },
-      {
-        "name": "section-padding-vertical-10",
-        "value": "10px",
-        "context": "generic-td-padding-vertical"
-      },
-      {
-        "name": "section-padding-vertical-20",
+        "name": "section-padding-20-0",
         "value": "20px 0",
-        "context": "section-top-bottom"
+        "context": "td layout-wrapper general"
       },
       {
-        "name": "section-padding-vertical-20-only",
-        "value": "20px",
-        "context": "section-top-bottom-equal"
-      },
-      {
-        "name": "section-padding-bottom-30",
-        "value": "30px",
-        "context": "cta-wrapper-bottom"
-      },
-      {
-        "name": "content-padding-10-25",
+        "name": "section-padding-10-25",
         "value": "10px 25px",
-        "context": "generic-content-td"
+        "context": "td content default"
       },
       {
-        "name": "content-padding-5-25",
+        "name": "section-padding-5-25-20-25",
+        "value": "5px 25px 20px 25px",
+        "context": "scientific-claim td"
+      },
+      {
+        "name": "section-padding-5-25",
         "value": "5px 25px",
-        "context": "hero-claim-td"
+        "context": "compact content rows"
       },
       {
-        "name": "content-padding-cta",
-        "value": "10px 25px",
-        "context": "cta-button-padding"
-      },
-      {
-        "name": "content-padding-24-cta",
+        "name": "section-padding-10-25-30-24",
         "value": "10px 24px 30px 24px",
-        "context": "cta-outer-td"
+        "context": "cta-button container td"
       },
       {
-        "name": "content-padding-25-all",
-        "value": "10px 25px 10px 25px",
-        "context": "body-block-td"
+        "name": "cta-padding-10-25",
+        "value": "10px 25px",
+        "context": "cta-button a"
       },
       {
-        "name": "content-padding-hero-note",
-        "value": "5px 0px 5px 0px",
-        "context": "hero-note-td"
+        "name": "bordered-claim-padding-0-10",
+        "value": "0px 10px",
+        "context": "teal bordered claim td"
       },
       {
-        "name": "content-padding-body-block",
-        "value": "0px 0px 0px 0px",
-        "context": "body-block-inner-td"
+        "name": "logo-cell-padding-10-25",
+        "value": "10px 25px",
+        "context": "footer-logo td"
+      },
+      {
+        "name": "cta-link-icon-padding-10",
+        "value": "10px",
+        "context": "cta-link icon td"
+      },
+      {
+        "name": "pi-ref-padding-10-25",
+        "value": "10px 25px",
+        "context": "pi-reference td"
+      },
+      {
+        "name": "footer-address-padding-10-25-0-25",
+        "value": "10px 25px 0px 25px",
+        "context": "footer-address td"
+      },
+      {
+        "name": "divider-padding-0",
+        "value": "0px",
+        "context": "divider td"
+      },
+      {
+        "name": "layout-zero-padding",
+        "value": "0px",
+        "context": "various layout-wrapper tds"
       }
     ],
     "borders": [
       {
-        "name": "img-border-none",
+        "name": "image-border-none",
         "width": "0",
         "style": "none",
         "color": "#000000",
         "radius": "0px"
       },
       {
-        "name": "cta-td-border-none",
-        "width": "0",
+        "name": "teal-claim-border",
+        "width": "3px",
+        "style": "solid",
+        "color": "#6ecbb8",
+        "radius": "10px"
+      },
+      {
+        "name": "cta-button-border-none",
+        "width": "0px",
         "style": "none",
         "color": "#000000",
         "radius": "3px"
       },
       {
-        "name": "body-block-border-none",
-        "width": "0",
-        "style": "none",
-        "color": "#000000",
+        "name": "divider-top-red",
+        "width": "10px",
+        "style": "solid",
+        "color": "#cf0a2b",
         "radius": "0px"
       }
     ]
@@ -231,17 +293,17 @@
     "colors": {
       "brandPrimary": "#cf0a2c",
       "brandSecondary": "#c00000",
-      "brandAccent": "#cf0a2c",
-      "claimHighlight": "#c00000",
-      "claimReference": "#cf0a2c",
+      "brandAccent": "#6ecbb8",
+      "claimHighlight": "#cf0a2c",
+      "claimReference": "#707070",
       "textPrimary": "#000000",
       "textSecondary": "#707070",
       "textInverse": "#ffffff",
       "backgroundPrimary": "#ffffff",
-      "backgroundSecondary": "#9baab1",
-      "backgroundCallout": "#ffffff",
-      "backgroundFooterPrimary": "#9baab1",
-      "backgroundFooterSecondary": "#9baab1",
+      "backgroundSecondary": "#e4e4e4",
+      "backgroundCallout": "#cf0a2c",
+      "backgroundFooterPrimary": "#e4e4e4",
+      "backgroundFooterSecondary": "#e4e4e4",
       "linkDefault": "#cf0a2c",
       "linkFooter": "#000000"
     },
@@ -249,9 +311,9 @@
       "heading": {
         "name": "heading",
         "fontFamily": "Arial",
-        "fontSize": "20px",
-        "fontWeight": "normal",
-        "lineHeight": "25px",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "lineHeight": "14px",
         "letterSpacing": null,
         "textTransform": null
       },
@@ -259,7 +321,7 @@
         "name": "subheading",
         "fontFamily": "Arial",
         "fontSize": "12px",
-        "fontWeight": "normal",
+        "fontWeight": "400",
         "lineHeight": "15px",
         "letterSpacing": null,
         "textTransform": null
@@ -267,8 +329,8 @@
       "bodyText": {
         "name": "bodyText",
         "fontFamily": "Arial",
-        "fontSize": "13px",
-        "fontWeight": "normal",
+        "fontSize": "12px",
+        "fontWeight": "400",
         "lineHeight": "15px",
         "letterSpacing": null,
         "textTransform": null
@@ -285,9 +347,9 @@
       "scientificClaim": {
         "name": "scientificClaim",
         "fontFamily": "Arial",
-        "fontSize": "12px",
-        "fontWeight": "normal",
-        "lineHeight": "15px",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "17px",
         "letterSpacing": null,
         "textTransform": null
       },
@@ -295,7 +357,7 @@
         "name": "footnoteText",
         "fontFamily": "Arial",
         "fontSize": "10px",
-        "fontWeight": "normal",
+        "fontWeight": "400",
         "lineHeight": "13px",
         "letterSpacing": null,
         "textTransform": null
@@ -303,9 +365,9 @@
       "disclaimerText": {
         "name": "disclaimerText",
         "fontFamily": "Arial",
-        "fontSize": "10px",
-        "fontWeight": "normal",
-        "lineHeight": "13px",
+        "fontSize": "11px",
+        "fontWeight": "400",
+        "lineHeight": "17px",
         "letterSpacing": null,
         "textTransform": null
       },
@@ -313,7 +375,7 @@
         "name": "referenceText",
         "fontFamily": "Arial",
         "fontSize": "10px",
-        "fontWeight": "normal",
+        "fontWeight": "400",
         "lineHeight": "13px",
         "letterSpacing": null,
         "textTransform": null
@@ -321,17 +383,17 @@
       "adverseEventText": {
         "name": "adverseEventText",
         "fontFamily": "Arial",
-        "fontSize": "10px",
-        "fontWeight": "normal",
-        "lineHeight": "13px",
+        "fontSize": "11px",
+        "fontWeight": "400",
+        "lineHeight": "17px",
         "letterSpacing": null,
         "textTransform": null
       },
       "legalText": {
         "name": "legalText",
         "fontFamily": "Arial",
-        "fontSize": "13px",
-        "fontWeight": "normal",
+        "fontSize": "10px",
+        "fontWeight": "400",
         "lineHeight": "15px",
         "letterSpacing": null,
         "textTransform": null
@@ -339,8 +401,8 @@
       "footerText": {
         "name": "footerText",
         "fontFamily": "Arial",
-        "fontSize": "13px",
-        "fontWeight": "normal",
+        "fontSize": "10px",
+        "fontWeight": "400",
         "lineHeight": "15px",
         "letterSpacing": null,
         "textTransform": null
@@ -349,7 +411,7 @@
         "name": "ctaButtonText",
         "fontFamily": "Arial",
         "fontSize": "13px",
-        "fontWeight": "normal",
+        "fontWeight": "400",
         "lineHeight": "120%",
         "letterSpacing": null,
         "textTransform": "none"
@@ -358,8 +420,8 @@
         "name": "approvalCode",
         "fontFamily": "Arial",
         "fontSize": "10px",
-        "fontWeight": "normal",
-        "lineHeight": "13px",
+        "fontWeight": "400",
+        "lineHeight": "15px",
         "letterSpacing": null,
         "textTransform": null
       }
@@ -375,7 +437,7 @@
       "lineHeight": "120%",
       "padding": "10px 25px",
       "borderRadius": "3px",
-      "border": "0 none #000000",
+      "border": "0px none #000000",
       "textDecoration": "none !important",
       "textTransform": "none",
       "display": "inline-block",
@@ -384,24 +446,24 @@
     "ctaLinks": [
       {
         "color": "#cf0a2c",
-        "textDecoration": "none !important",
-        "fontWeight": "normal",
-        "cursor": "auto",
-        "display": "inline-block",
+        "textDecoration": "none",
+        "fontWeight": "400",
+        "cursor": "pointer",
+        "display": "block",
         "context": "inline-text"
       },
       {
         "color": "#000000",
-        "textDecoration": "none",
-        "fontWeight": "normal",
-        "cursor": "auto",
+        "textDecoration": "underline",
+        "fontWeight": "400",
+        "cursor": "pointer",
         "display": "inline",
         "context": "footer"
       }
     ],
     "claimBlocks": [
       {
-        "type": "efficacy",
+        "type": "statistical",
         "fontFamily": "Arial",
         "fontSize": "14px",
         "fontWeight": "700",
@@ -414,15 +476,32 @@
         "hasCitations": true,
         "citationStyle": {
           "element": "sup",
-          "idPattern": "data-ref"
+          "idPattern": ""
         }
       },
       {
-        "type": "statistical",
+        "type": "efficacy",
+        "fontFamily": "Arial",
+        "fontSize": "14px",
+        "fontWeight": "700",
+        "lineHeight": "17px",
+        "color": "#edebe3",
+        "textAlign": "center",
+        "backgroundColor": "#cf0a2c",
+        "padding": "10px 25px",
+        "approved": true,
+        "hasCitations": true,
+        "citationStyle": {
+          "element": "sup",
+          "idPattern": ""
+        }
+      },
+      {
+        "type": "general",
         "fontFamily": "Arial",
         "fontSize": "12px",
-        "fontWeight": "normal",
-        "lineHeight": "15px",
+        "fontWeight": "400",
+        "lineHeight": "14px",
         "color": "#000000",
         "textAlign": "left",
         "backgroundColor": null,
@@ -431,99 +510,103 @@
         "hasCitations": true,
         "citationStyle": {
           "element": "sup",
-          "idPattern": "data-ref"
+          "idPattern": ""
         }
       }
     ],
     "isiBlock": {
       "headerFontFamily": "Arial",
-      "headerFontSize": "10px",
-      "headerFontWeight": "normal",
-      "headerLineHeight": "13px",
+      "headerFontSize": "11px",
+      "headerFontWeight": "400",
+      "headerLineHeight": "17px",
       "headerColor": "#000000",
       "bodyFontFamily": "Arial",
-      "bodyFontSize": "10px",
-      "bodyFontWeight": "normal",
-      "bodyLineHeight": "13px",
+      "bodyFontSize": "11px",
+      "bodyFontWeight": "400",
+      "bodyLineHeight": "17px",
       "bodyColor": "#000000",
-      "backgroundColor": "#ffffff",
-      "padding": "0px"
+      "backgroundColor": "#e4e4e4",
+      "padding": "10px 25px"
     },
     "adverseEventBlock": {
       "headerFontFamily": "Arial",
-      "headerFontSize": "10px",
-      "headerFontWeight": "normal",
-      "headerLineHeight": "13px",
+      "headerFontSize": "11px",
+      "headerFontWeight": "400",
+      "headerLineHeight": "17px",
       "headerColor": "#000000",
       "bodyFontFamily": "Arial",
-      "bodyFontSize": "10px",
-      "bodyFontWeight": "normal",
-      "bodyLineHeight": "13px",
+      "bodyFontSize": "11px",
+      "bodyFontWeight": "400",
+      "bodyLineHeight": "17px",
       "bodyColor": "#000000",
-      "containerBorder": "0 none #000000",
+      "containerBorder": "0px none #000000",
       "containerPadding": "0px",
-      "backgroundColor": "#ffffff",
-      "linkColor": "#cf0a2c",
-      "linkTextDecoration": "none"
+      "backgroundColor": "#e4e4e4",
+      "linkColor": "#000000",
+      "linkTextDecoration": "underline"
     },
     "referenceBlock": {
       "fontFamily": "Arial",
       "fontSize": "10px",
-      "fontWeight": "normal",
+      "fontWeight": "400",
       "lineHeight": "13px",
       "color": "#707070",
       "backgroundColor": "#ffffff",
-      "padding": "0px",
+      "padding": "5px 25px",
       "textAlign": "left"
     },
     "sectionCallouts": [
       {
-        "backgroundColor": "#ffffff",
+        "backgroundColor": "#cf0a2c",
         "fontFamily": "Arial",
         "fontSize": "14px",
         "fontWeight": "700",
         "lineHeight": "17px",
-        "color": "#c00000",
+        "color": "#edebe3",
         "textAlign": "center",
-        "padding": "0px"
+        "padding": "10px 25px"
       }
     ],
     "preheader": {
       "backgroundColor": "#ffffff",
       "fontFamily": "Arial",
       "fontSize": "13px",
-      "fontWeight": "normal",
+      "fontWeight": "400",
       "lineHeight": "15px",
       "color": "#000000",
-      "textAlign": "center",
+      "textAlign": "left",
       "padding": "0px"
     },
     "footer": {
-      "backgroundColor": "#9baab1",
-      "logoWidth": "149px",
+      "backgroundColor": "#e4e4e4",
+      "logoWidth": "236px",
       "addressFontFamily": "Arial",
-      "addressFontSize": "13px",
-      "addressFontWeight": "normal",
+      "addressFontSize": "10px",
+      "addressFontWeight": "400",
       "addressLineHeight": "15px",
       "addressColor": "#000000",
       "addressTextAlign": "left",
       "linkColor": "#000000",
-      "linkTextDecoration": "none",
+      "linkTextDecoration": "underline",
       "approvalCodeFontSize": "10px",
       "approvalCodeColor": "#000000",
-      "copyrightFontSize": "13px",
+      "copyrightFontSize": "10px",
       "copyrightColor": "#000000",
-      "copyrightBackgroundColor": "#9baab1"
+      "copyrightBackgroundColor": "#e4e4e4"
     },
     "layout": {
       "maxWidth": "600px",
       "columnWidths": [
-        "100%",
-        "600px",
+        "548px",
         "550px",
-        "149px"
+        "170px",
+        "160px",
+        "200px",
+        "100px",
+        "28px",
+        "236px"
       ],
-      "sectionPadding": "0px",
+      "sectionPadding": "20px 0",
       "direction": "ltr"
     }
   }

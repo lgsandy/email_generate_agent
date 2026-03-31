@@ -159,6 +159,27 @@ export function generateEmail(tokens, moduleData) {
   const referenceTypo = getSemanticTypo(tokens, 'referenceText');
   const approvalCodeTypo = getSemanticTypo(tokens, 'approvalCode');
 
+  // Use claimBlocks component tokens for richer claim styling (bold, color, alignment)
+  const claimBlocks = tokens?.componentTokens?.claimBlocks || [];
+
+  // Build a style object for each claimBlock variant
+  function buildClaimBlockStyle(block) {
+    return {
+      'font-family': block.fontFamily || claimTypo['font-family'] || 'Arial',
+      'font-size': block.fontSize || claimTypo['font-size'] || '12px',
+      'font-weight': block.fontWeight || claimTypo['font-weight'] || '400',
+      'line-height': block.lineHeight || claimTypo['line-height'] || '14px',
+      'color': block.color || claimTypo['color'],
+      'text-align': block.textAlign || claimTypo['text-align'] || 'left',
+    };
+  }
+
+  // Resolve the callout border (only if a claim-related border exists in design tokens)
+  const calloutBorder = (tokens?.primitiveTokens?.borders || []).find(b => b.name.includes('claim'));
+  const calloutBorderStyle = calloutBorder
+    ? `border: ${calloutBorder.width} ${calloutBorder.style} ${calloutBorder.color}; border-radius: ${calloutBorder.radius}`
+    : '';
+
   // Collect all footnotes, deduplicated references, and abbreviations
   const allFootnotes = [];
   const referenceMap = new Map(); // documentName -> reference number (1-based)
@@ -177,18 +198,36 @@ export function generateEmail(tokens, moduleData) {
 
   const sections = [];
 
+  let moduleIndex = 0;
   for (const mod of modules) {
     // 1. Claims from module
     if (mod.claims && mod.claims.length > 0) {
-      for (const claim of mod.claims) {
-        // Claim matchText
-        const claimStyle = { ...claimTypo };
+      const totalClaims = mod.claims.length;
+      for (let claimIdx = 0; claimIdx < totalClaims; claimIdx++) {
+        const claim = mod.claims[claimIdx];
+        const isFirstClaim = claimIdx === 0;
+        const isLastClaim = claimIdx === totalClaims - 1;
+
+        // First claim: cycle through claimBlocks per module; rest get regular claimText
+        let claimStyle;
+        let cellBgColor = null;
+        if (isFirstClaim && claimBlocks.length > 0) {
+          const block = claimBlocks[moduleIndex % claimBlocks.length];
+          claimStyle = { ...buildClaimBlockStyle(block) };
+          if (block.backgroundColor) cellBgColor = block.backgroundColor;
+        } else {
+          claimStyle = { ...claimTypo };
+        }
+
         // Override with claim-level style if provided
         if (claim['font-size']) claimStyle['font-size'] = claim['font-size'];
         if (claim['line-height']) claimStyle['line-height'] = claim['line-height'];
         if (claim['font-weight']) claimStyle['font-weight'] = claim['font-weight'];
         if (claim.color) claimStyle.color = claim.color;
         if (claim.align) claimStyle['text-align'] = claim.align;
+
+        // Last claim of each module gets the callout border
+        const border = isLastClaim && calloutBorderStyle ? calloutBorderStyle : null;
 
         // Collect footnote markers and reference numbers for superscript
         const supParts = [];
@@ -205,7 +244,7 @@ export function generateEmail(tokens, moduleData) {
         }
         const superscript = supParts.length > 0 ? supParts.join(',') : '';
 
-        sections.push({ type: 'claim', text: claim.matchText, style: claimStyle, padding: claim['padding-bottom'], superscript });
+        sections.push({ type: 'claim', text: claim.matchText, style: claimStyle, padding: claim['padding-bottom'], superscript, cellBgColor, border });
         if (claim.abbreviation) {
           claim.abbreviation.split(',').forEach(a => abbreviationSet.add(a.trim()));
         }
@@ -239,10 +278,12 @@ export function generateEmail(tokens, moduleData) {
     // 4-6. Components
     if (mod.components && mod.components.length > 0) {
       for (const comp of mod.components) {
-        // Component image
-        sections.push({ type: 'component-image', url: comp.componentUrl, alt: comp.title || comp.componentName || 'Component' });
+        const isDataVisual = comp.classification === 'Data Infographic'
+          || comp.classification === 'Data Chart'
+          || comp.subType === 'Data Graphic';
 
-        // Component related claims
+        // Build related claims data for this component
+        const compRelatedClaims = [];
         if (comp.relatedClaims && comp.relatedClaims.length > 0) {
           for (const rc of comp.relatedClaims) {
             const rcRefNums = [];
@@ -252,11 +293,27 @@ export function generateEmail(tokens, moduleData) {
               }
             }
             const rcSup = rcRefNums.length > 0 ? rcRefNums.join(',') : '';
-            sections.push({ type: 'component-claim', text: rc.matchText, style: componentClaimTypo, superscript: rcSup });
+            compRelatedClaims.push({ text: rc.matchText, style: componentClaimTypo, superscript: rcSup });
             if (rc.abbreviation) {
               rc.abbreviation.split(',').forEach(a => abbreviationSet.add(a.trim()));
             }
           }
+        }
+
+        if (isDataVisual) {
+          // 1-column layout: full-width image then related claims below
+          sections.push({ type: 'component-image', url: comp.componentUrl, alt: comp.title || comp.componentName || 'Component' });
+          for (const rc of compRelatedClaims) {
+            sections.push({ type: 'component-claim', ...rc });
+          }
+        } else {
+          // 2-column layout: related claims (80%) | image (20%)
+          sections.push({
+            type: 'component-two-col',
+            url: comp.componentUrl,
+            alt: comp.title || comp.componentName || 'Component',
+            relatedClaims: compRelatedClaims,
+          });
         }
 
         // Component related reusable texts
@@ -267,6 +324,7 @@ export function generateEmail(tokens, moduleData) {
         }
       }
     }
+    moduleIndex++;
   } // end for each module
 
   // ─── Build HTML ──────────────────────────────────────────────────────────────
@@ -310,13 +368,25 @@ export function generateEmail(tokens, moduleData) {
           'font-size': '0px',
           'padding': '10px 25px',
           'padding-top': '5px',
-          'padding-right': '25px',
-          'padding-bottom': section.padding || '20px',
-          'padding-left': '25px',
+          'padding-right': section.border ? '0px' : '25px',
+          'padding-bottom': section.border ? '5px' : (section.padding || '20px'),
+          'padding-left': section.border ? '0px' : '25px',
           'word-break': 'break-word',
         };
+        // Add cell background color if present (e.g. efficacy claimBlock)
+        if (section.cellBgColor) cellPadding['background'] = section.cellBgColor;
         const claimHtml = escapeHtml(section.text) + (section.superscript ? `<sup>${escapeHtml(section.superscript)}</sup>` : '');
-        html += buildCell(tokens, cellPadding, `<div style="${styleStr(section.style)}"><p style="margin: 0;">${claimHtml}</p></div>`);
+        const innerDiv = `<div style="${styleStr(section.style)}"><p style="margin: 0;">${claimHtml}</p></div>`;
+
+        if (section.border) {
+          // Wrap in a bordered container (teal callout border)
+          const borderWrapperStyle = `${section.border}; padding: 0px 10px`;
+          html += `<tr><td align="left" style="font-size: 0px; padding: 5px 25px; word-break: break-word;"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%" style="border-collapse: separate;"><tbody><tr><td style="${borderWrapperStyle}"><table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"><tbody>`;
+          html += buildCell(tokens, cellPadding, innerDiv);
+          html += `</tbody></table></td></tr></tbody></table></td></tr>`;
+        } else {
+          html += buildCell(tokens, cellPadding, innerDiv);
+        }
         break;
       }
 
@@ -349,6 +419,35 @@ export function generateEmail(tokens, moduleData) {
           'word-break': 'break-word',
         };
         html += buildCell(tokens, cellPadding, buildImageBlock(section.url, section.alt));
+        break;
+      }
+
+      case 'component-two-col': {
+        // 2-column layout: 80% relatedClaims text (left) | 20% image (right)
+        const claimTexts = (section.relatedClaims || []).map(rc => {
+          const rcHtml = escapeHtml(rc.text) + (rc.superscript ? `<sup>${escapeHtml(rc.superscript)}</sup>` : '');
+          return `<div style="${styleStr(rc.style)}"><p style="margin: 0;">${rcHtml}</p></div>`;
+        });
+        const leftContent = claimTexts.length > 0
+          ? claimTexts.join('')
+          : `<div style="font-family: Arial; font-size: 12px; line-height: 14px; text-align: left; color: #000000;"><div>${escapeHtml(section.alt)}</div></div>`;
+
+        html += `<tr><td style="direction: ltr; font-size: 0px; padding: 0; text-align: center;">
+      <div style="font-size: 0px; text-align: left; direction: ltr; display: inline-block; vertical-align: middle; width: 80%;">
+        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align: middle;" width="100%"><tbody>
+          <tr><td align="left" style="font-size: 0px; padding: 10px 25px; padding-right: 0px; word-break: break-word;">
+            ${leftContent}
+          </td></tr>
+        </tbody></table>
+      </div>
+      <div style="font-size: 0px; text-align: left; direction: ltr; display: inline-block; vertical-align: middle; width: 20%;">
+        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align: middle;" width="100%"><tbody>
+          <tr><td align="center" style="font-size: 0px; padding: 5px 20px 5px 0px; word-break: break-word;">
+            <img src="${section.url}" alt="${escapeHtml(section.alt)}" width="100" style="border: 0; display: block; outline: none; text-decoration: none; height: auto; width: 100%; font-size: 13px;" />
+          </td></tr>
+        </tbody></table>
+      </div>
+    </td></tr>`;
         break;
       }
 

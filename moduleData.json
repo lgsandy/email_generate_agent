@@ -1,10 +1,10 @@
 [
   {
-    "moduleId": "e3700864-2eae-416f-9c61-8906c328aa59",
-    "moduleName": "TEST GEN AI ",
-    "moduleDamId": "V3Q000000007004",
-    "moduleDamName": "CM-001947",
-    "nextUniqueModuleCode": "BI_Module_013",
+    "moduleId": "61ec37be-7ecf-4792-8cdf-d25427d10d07",
+    "moduleName": "BIktarvy Testing",
+    "moduleDamId": "V3Q000000006024",
+    "moduleDamName": "CM-001903",
+    "nextUniqueModuleCode": "BI_Module_007",
     "source": "PromoMats",
     "eDetailSourceDocNum": null,
     "eDetailDocUrl": null,
@@ -12,32 +12,32 @@
     "productDamId": "00P000000000H01",
     "countryName": "Spain",
     "countryDamId": "spain",
-    "topicDamId": "V6G000000001002",
-    "topicName": "Efficacy",
-    "subtopicDamId": "V6F000000001027",
-    "subtopicName": "Sustained Viral Suppression",
+    "topicDamId": "V6G000000001007",
+    "topicName": "Customer Experience",
+    "subtopicDamId": null,
+    "subtopicName": null,
     "languageDamId": "V5B000000001026",
     "languageName": "Spanish",
-    "therapeuticAreaDamId": "V1L000000001012",
-    "therapeuticAreaName": "Emerging Viruses",
-    "audienceDamId": "V3T000000001004",
-    "audienceName": "Internal",
+    "therapeuticAreaDamId": "V1L000000001010",
+    "therapeuticAreaName": "Cell Therapy",
+    "audienceDamId": "V3T000000001002",
+    "audienceName": "Payer",
     "usageGuidelines": null,
     "brandStyleGuidelines": "",
-    "communicationObjectives": "Educate healthcare professionals about the new indication and efficacy data for Biktarvy",
+    "communicationObjectives": "TEST",
     "creativeAgencyName": "21GRAMS",
     "creativeAgencyDamId": "V3A000000001002",
     "contentToneName": null,
     "contentToneDamId": null,
     "mlrStatus": "Available for Use",
     "createdByName": "Kishan Kamal",
-    "moduleDamUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#object/content_module__v/V3Q000000007004",
-    "componentUrl": "https://d2ssk39mx0njby.cloudfront.net/components/e3700864-2eae-416f-9c61-8906c328aa59/9eb304b8-e5f5-4890-abd8-abc08a35b0a6/8741_1_0.png",
-    "componentThumbnailUrl": "https://d2ssk39mx0njby.cloudfront.net/components-thumbnails/e3700864-2eae-416f-9c61-8906c328aa59/9eb304b8-e5f5-4890-abd8-abc08a35b0a6/8741_1_0.png",
-    "approvedDateTime": "2026-01-17T11:52:39.000+0000",
-    "createdDateTime": "2026-01-17T11:49:37.000+0000",
+    "moduleDamUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#object/content_module__v/V3Q000000006024",
+    "componentUrl": "https://d1t0wo1ho6nrgc.cloudfront.net/components/61ec37be-7ecf-4792-8cdf-d25427d10d07/f001a9a3-1cfe-4fd3-ab31-2d771b8830e2/13033_1_0.png",
+    "componentThumbnailUrl": "https://d1t0wo1ho6nrgc.cloudfront.net/components-thumbnails/61ec37be-7ecf-4792-8cdf-d25427d10d07/f001a9a3-1cfe-4fd3-ab31-2d771b8830e2/13033_1_0.png",
+    "approvedDateTime": "2026-03-04T09:52:20.000+0000",
+    "createdDateTime": "2026-01-14T04:56:36.000+0000",
     "editedByName": "Kishan Kamal",
-    "editedDateTime": "2026-01-17T11:52:49.000+0000",
+    "editedDateTime": "2026-03-04T09:52:23.000+0000",
     "strategicObjectives": [],
     "segments": [
       {
@@ -48,52 +48,88 @@
     "indications": [],
     "claims": [
       {
-        "claimName": "CL-005465",
-        "claimDamId": "V1X00000000B103",
-        "claimId": "48fc12b7-e505-40ef-bdb9-fb700664852e",
-        "matchText": "BIKTARVY® ha demostrado altas tasas de supresión virológica INDEPENDIENTEMENTE DE LA ADHERENCIA",
+        "claimName": "CL-005573",
+        "claimDamId": "V1X00000000C166",
+        "claimId": "7cdb8881-e979-4310-917c-5ea01350a458",
+        "matchText": "Aproximadamente el 60% de los pacientes no son completamente adherentes al TAR",
         "topicDamId": "V6G000000001002",
         "topicName": "Efficacy",
-        "subtopicName": "Sustained Viral Suppression",
-        "subtopicDamId": "V6F000000001027",
         "mustUse": true,
-        "footnotes": "Todos los tratamientos deben tomarse conforme a las pautas posológicas establecidas en su ficha técnica.",
+        "footnotes": "Se ha realizado un estudio descriptivo transversal con dos grupos de población HUVN",
+        "abbreviation": "Spain abbreviation",
         "mlrStatus": "Available for Use",
         "country": "Spain",
-        "indicationNames": "HIV Treatment",
+        "indicationNames": "MDS",
+        "matchTextVariants": [
+          {
+            "id": "4e80169b-90b3-4886-bd09-da22f2e79487",
+            "matchText": "Biktarvy, is a fixed-dose combination antiretroviral medication for the treatment of HIV/AIDS and as post-exposure prophylaxis to prevent HIV infection following potential exposure"
+          }
+        ],
+        "references": [
+          {
+            "id": "93780d41-d587-481c-9287-7e9c60907c91",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/8887/1/0",
+            "documentName": "Citation"
+          }
+        ],
+        "relatedClaims": []
+      },
+      {
+        "claimName": "CL-005556",
+        "claimDamId": "V1X00000000C160",
+        "claimId": "0b6cf06e-5975-43c3-b9e8-b764ab382b72",
+        "matchText": "\"Prevalencia de síntomas molestos en PVIH virológicamente suprimidas\ncon BIKTARVY vs. DTG/ABC/3TC\"",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "mustUse": true,
+        "abbreviation": "3TC: lamivudina; ABC: abacavir; DTG: dolutegravir; PVIH: personas con VIH; VIH: virus de inmunodeficiencia humana.",
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "3L LBCL",
         "matchTextVariants": [],
         "references": [
           {
-            "id": "74f6af71-8c65-4a70-83f8-e2c6beafc43d",
-            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/9032/1/0",
-            "documentName": "Roden L, et al. Antiretroviral (ART) Virologic Suppression (VS) and\nPatient Reported Outcomes (PROs) in the Clinical Opportunities and Management to Exploit Bictegravir/Emtricitabine/Tenofovir Alafenamide (B/F/TAF) as an Asynchronous\nConnection Key (COMEBACK) Study. Presented at IDWeek 2022, Poster 1466"
-          },
-          {
-            "id": "9b753a3f-c6eb-4a27-90d6-3af37f4618cb",
-            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/9031/1/0",
-            "documentName": "Martorell C, et al. Efficacy and Safety of B/F/TAF in Hispanic/Latine Adults With HIV-1 Initiating First-Line Therapy: 5-Year Follow-Up From Two Phase 3 Studies. Poster\npresented at AIDS 2024, the 25th International AIDS Conference; July 22-26, 2024; Munich, Germany."
+            "id": "6ae673dd-e88e-4478-8e38-84da92800d6e",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/8758/1/0",
+            "documentName": "Rossetti B, et al. Evolution of\nSelf-reported Neuropsychiatric Symptoms After Switching from Dolutegravir/Abacavir/Lamivudine to Bictegravir/Emtricitabine/Tenofovir Alafenamide: Results\nfrom the Randomized DOBINeuro Trial. Infect Dis Ther. 2025 Jan;14(1):293-304. doi: 10.1007/s40121-024-01083-1."
           }
         ],
-        "relatedClaims": [],
-        "font-size": "14px",
-        "line-height": "17px",
-        "font-weight": "700",
-        "align": "center",
-        "color": "#c00000",
-        "padding-bottom": "20px"
+        "relatedClaims": []
+      },
+      {
+        "claimName": "CL-006156",
+        "claimDamId": "V1X00000000M009",
+        "claimId": "3b71e444-a9b3-4bbb-b338-bbabfb2336ad",
+        "matchText": "\"Adherencia subóptima se asocia con: \n- No supresión virológica (OR: 2,24; IC 95%: 1,66–3,02)\n- Resistencia emergente al tratamiento\"",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "mustUse": true,
+        "footnotes": "La adherencia subóptima se definió como un informe de ≥1 razón por la que faltó al tratamiento antirretroviral ≥5 veces en el último mes.\nDatos de encuestas de adultos VIH+ confirmados en tratamiento antirretroviral en 25 países durante 2019 (EE. UU. [n = 400], Sudáfrica [n = 179], Rusia [n = 150], Reino Unido [n = 123], Australia [n = 120], Canadá [n = 120], Francia [n = 120], Alemania [n = 120], Italia [n = 120], España [n = 120], Japón [n = 75], México [n = 63], Portugal [n = 60], Brasil [n=58], Suiza [n=55], Taiwán [n=55], Países Bajos [n=51], Argentina [n=50], Austria [n=50], Bélgica [n=50], Chile [n=50], China [n=50], Irlanda [n=50], Polonia [n=50] y Corea del Sur [n=50]); La no supresión virológica fue autoinformada.",
+        "abbreviation": "IC: intervalo de confianza; OR: odds ratio; VIH: virus de inmunodeficiencia humana.",
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "2L LBCL",
+        "matchTextVariants": [],
+        "references": [
+          {
+            "id": "77382184-2bd1-4385-8c93-63e01f607229",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/8854/1/0",
+            "documentName": "de Los Rios P, et al. Prevalence, determinants, and impact of suboptimal adherence to HIV medication in 25 countries. Prev Med. 2020 Oct;139:106182. doi: 10.1016/j.ypmed.2020.106182."
+          }
+        ],
+        "relatedClaims": []
       }
     ],
     "reusableTexts": [
       {
-        "reusableTextId": "f4bf0f1b-2dae-4ede-a01a-e1d20396dcf8",
-        "reusableTextName": "RT-002174",
-        "reusableTextDamId": "V1X00000000C106",
-        "topicName": "Efficacy",
-        "topicDamId": "V6G000000001002",
-        "subtopicName": "Sustained Viral Suppression",
-        "subtopicDamId": "V6F000000001027",
+        "reusableTextId": "a3312bb9-d171-43f1-a48c-1a8c493f970c",
+        "reusableTextName": "RT-002161",
+        "reusableTextDamId": "V1X00000000C099",
+        "topicName": "Customer Experience",
+        "topicDamId": "V6G000000001007",
         "mustUse": true,
-        "matchText": "Timeline de participantes (ejemplo)",
+        "matchText": "¿RECONOCES A ESTE PACIENTE EN TU CONSULTA?",
         "mlrStatus": "Available for Use",
         "country": "Spain",
         "indicationNames": "HIV Treatment",
@@ -102,75 +138,448 @@
     ],
     "components": [
       {
-        "componentId": "9eb304b8-e5f5-4890-abd8-abc08a35b0a6",
-        "componentDocNumber": "COMP-0085",
-        "componentDamId": "8741_1_0",
-        "componentUrl": "https://d2ssk39mx0njby.cloudfront.net/components/e3700864-2eae-416f-9c61-8906c328aa59/9eb304b8-e5f5-4890-abd8-abc08a35b0a6/8741_1_0.png",
-        "subType": "Data Graphic",
-        "classification": "Data Chart",
-        "topicDamId": "V6G000000001002",
-        "topicName": "Efficacy",
-        "subtopicDamId": "V6F000000001027",
-        "subtopicName": "Sustained Viral Suppression",
-        "componentName": "Biktarvy_Data Graphic_Efficacy_MK Media",
-        "title": "DTG/3TC Adherencia",
-        "mustUse": false,
+        "componentId": "f001a9a3-1cfe-4fd3-ab31-2d771b8830e2",
+        "componentDocNumber": "COMP-0817",
+        "componentDamId": "13033_1_0",
+        "componentUrl": "https://d1t0wo1ho6nrgc.cloudfront.net/components/61ec37be-7ecf-4792-8cdf-d25427d10d07/f001a9a3-1cfe-4fd3-ab31-2d771b8830e2/13033_1_0.png",
+        "subType": "Image",
+        "classification": "Photo",
+        "topicDamId": "V6G000000001008",
+        "topicName": "General Asset",
+        "componentName": "\"Gilead_Logo_standard_RGB\"",
+        "title": "\"Gilead_Logo_standard_RGB\"",
+        "mustUse": true,
         "mlrStatus": "Available for Use",
         "country": "Spain",
-        "relatedClaims": [
+        "relatedClaims": [],
+        "relatedReusableTexts": []
+      }
+    ],
+    "businessRules": [],
+    "cmsdDocId": "8888",
+    "cmsdMajorV": null,
+    "cmsdMinorV": null,
+    "cmsdDocUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/8888",
+    "logos": [
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/modulePreviewArrow.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/mustUseGreenDot.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/mustUseRedDot.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/final-status.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/statusDraft.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/statusApproved.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/Intermediate.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/infoIcon.svg"
+    ],
+    "sourceModuleDamName": null,
+    "sourceModuleMlrStatus": null,
+    "sourceModuleDamUrl": null,
+    "sourceModuleId": null,
+    "moduleDraftElementIncluded": null,
+    "businessRulePublished": null,
+    "hasUnpublishedBusinessRules": false,
+    "buisnessRuleSaved": null
+  },
+  {
+    "moduleId": "9f0844a8-09cc-4552-bdd2-87a2f81de18e",
+    "moduleName": "Module13",
+    "moduleDamId": "V3Q00000000H009",
+    "moduleDamName": "CM-002071",
+    "nextUniqueModuleCode": "BI_Module_325",
+    "source": "PromoMats",
+    "eDetailSourceDocNum": null,
+    "eDetailDocUrl": null,
+    "productName": "Biktarvy",
+    "productDamId": "00P000000000H01",
+    "countryName": "Spain",
+    "countryDamId": "spain",
+    "topicDamId": "V6G000000001002",
+    "topicName": "Efficacy",
+    "subtopicDamId": null,
+    "subtopicName": null,
+    "languageDamId": "V5B000000001026",
+    "languageName": "Spanish",
+    "therapeuticAreaDamId": "V1L000000001013",
+    "therapeuticAreaName": "Does not Apply",
+    "audienceDamId": "V3T000000001003",
+    "audienceName": "Professional",
+    "usageGuidelines": null,
+    "brandStyleGuidelines": "",
+    "communicationObjectives": "Address socioeconomic and emotional factors influencing HIV treatment outcomes.\n",
+    "creativeAgencyName": "21GRAMS",
+    "creativeAgencyDamId": "V3A000000001002",
+    "contentToneName": null,
+    "contentToneDamId": null,
+    "mlrStatus": "Available for Use",
+    "createdByName": "Vaidehi Joshi",
+    "moduleDamUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#object/content_module__v/V3Q00000000H009",
+    "componentUrl": "https://d1t0wo1ho6nrgc.cloudfront.net/components/6b90ff66-f712-423b-a2d8-932e291ed3f8/7ccda75e-98cb-4866-aa9b-f58a0ce535e2/8884_1_0.png",
+    "componentThumbnailUrl": "https://d1t0wo1ho6nrgc.cloudfront.net/components-thumbnails/6b90ff66-f712-423b-a2d8-932e291ed3f8/7ccda75e-98cb-4866-aa9b-f58a0ce535e2/8884_1_0.png",
+    "approvedDateTime": "2026-02-24T10:42:22.000+0000",
+    "createdDateTime": "2026-02-12T11:41:48.000+0000",
+    "editedByName": "Vaidehi Joshi",
+    "editedDateTime": "2026-02-24T10:42:25.000+0000",
+    "strategicObjectives": [],
+    "segments": [
+      {
+        "segmentDamId": "esbvyexpertise_driven_agents_of_chang__c",
+        "segmentName": "ES-BVY-Expertise Driven: Agents of Change"
+      }
+    ],
+    "indications": [],
+    "claims": [
+      {
+        "claimName": "CL-005527",
+        "claimDamId": "V1X00000000C140",
+        "claimId": "f23cbca8-4012-4ab6-b6e4-47d06d7c247d",
+        "matchText": "Aproximadamente el 60% de los pacientes no son completamente adherentes al TAR",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "mustUse": true,
+        "abbreviation": "TAR: tratamiento antirretroviral.",
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "3L LBCL,HIV Prevention (PrEP),MM",
+        "matchTextVariants": [],
+        "references": [
           {
-            "id": "d3075a82-f33b-42c4-87f4-ab099fe4fdb9",
-            "claimName": "CL-005489",
-            "claimDamId": "V1X00000000B115",
-            "mlrStatus": "Available for Use",
-            "matchText": "Porcentaje de participantes con ARN VIH-1 <200 c/mL de acuerdo a la adherencia individual calculado como medias de PDC:",
-            "abbreviation": "ARN: ácido ribonucleico,PDC: proporción de días cubiertos,VIH: virus de inmunodeficiencia humana",
-            "references": [
-              {
-                "id": "0e59d46b-63bb-455d-99db-cd53025abcc8",
-                "documentName": "Maggiolo F, et al. Real World Data on Forgiveness to Uncomplete Adherence to Bictegravir/ Emtricitabine/Tenofovir Alafenamide. J Int Assoc Provid AIDS Care. 2022 Jan-Dec;21:23259582221140208.\ndoi: 10.1177/23259582221140208",
-                "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/9000/1/0"
-              },
-              {
-                "id": "316cfe9b-8bce-4b7c-96b2-b71e73f2f4a8",
-                "documentName": "Maggiolo F, et al. Adherence to and Forgiveness of 3TC/DTG in a Real-World Cohort. J Int Assoc Provid AIDS Care. 2022 Jan-Dec;21:23259582221101815. doi: 10.1177/23259582221101815",
-                "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/9063/1/0"
-              }
-            ],
-            "matchTextVariants": []
+            "id": "c303266b-38e8-43a0-9d71-561981a9fa26",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/8753/1/0",
+            "documentName": "McComsey G.A, et al. Real-World Adherence to Antiretroviral Therapy Among HIV-1 Patients Across the United States. Adv Ther. 2021 Sep;38(9):4961-4974. doi: 10.1007/s12325-021-01883-8."
           }
         ],
+        "relatedClaims": []
+      },
+      {
+        "claimName": "CL-005528",
+        "claimDamId": "V1X00000000C141",
+        "claimId": "41e3e7a4-ab57-4dd7-bea0-1a9dbcb54c2d",
+        "matchText": "La adherencia subóptima se asocia con resistencia emergente al tratamiento",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "mustUse": true,
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "2L LBCL",
+        "matchTextVariants": [],
+        "references": [
+          {
+            "id": "b9dd7759-15b9-4733-ade3-d02278d33029",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/8754/1/0",
+            "documentName": "Carr A, et al. HIV drug resistance in the era of contemporary antiretroviral therapy: A clinical perspective. Antivir Ther. 2023 Oct;28(5):1-15. doi: 10.1177/13596535231201162."
+          }
+        ],
+        "relatedClaims": []
+      },
+      {
+        "claimName": "CL-005529",
+        "claimDamId": "V1X00000000C142",
+        "claimId": "c4a1c769-9247-434f-b019-d1c38cecc4b4",
+        "matchText": "La adherencia subóptima se asocia con una no supresión virológica (OR: 2,24; IC 95%: 1,66–3,02)",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "mustUse": true,
+        "footnotes": "La adherencia subóptima se definió como un informe de ≥1 razón por la que faltó al tratamiento antirretroviral ≥5 veces en el último mes.\nDatos de encuestas de adultos VIH+ confirmados en tratamiento antirretroviral en 25 países durante 2019 (EE. UU. [n = 400], Sudáfrica [n = 179], Rusia [n = 150], Reino Unido [n = 123], Australia [n = 120], Canadá [n = 120], Francia [n = 120], Alemania [n = 120], Italia [n = 120], España [n = 120], Japón [n = 75], México [n = 63], Portugal [n = 60], Brasil [n=58], Suiza [n=55], Taiwán [n=55], Países Bajos [n=51], Argentina [n=50], Austria [n=50], Bélgica [n=50], Chile [n=50], China [n=50], Irlanda [n=50], Polonia [n=50] y Corea del Sur [n=50]); La no supresión virológica fue autoinformada.",
+        "abbreviation": "IC: intervalo de confianza; OR: odds ratio; VIH: virus de inmunodeficiencia humana.",
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "aALL",
+        "matchTextVariants": [],
+        "references": [
+          {
+            "id": "5368da1d-1ff4-4a74-9344-2eb8b12caefb",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/8854/1/0",
+            "documentName": "de Los Rios P, et al. Prevalence, determinants, and impact of suboptimal adherence to HIV medication in 25 countries. Prev Med. 2020 Oct;139:106182. doi: 10.1016/j.ypmed.2020.106182."
+          }
+        ],
+        "relatedClaims": []
+      },
+      {
+        "claimName": "CL-005530",
+        "claimDamId": "V1X00000000C143",
+        "claimId": "9d63efab-4991-465e-ad40-56742788b9b3",
+        "matchText": "Biktarvy es el único regimen basado en INI con 0 resistencias en todos sus ensayos clínicos, tanto en población naïve como pretratada",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "mustUse": false,
+        "footnotes": "Revisión sistemática donde se describen las mutaciones de resistencia y fracasos virológicos observados con los últimos INI aprobados: dolutegravir, bictegravir y cabotegravir. La revisión sistemática se llevó a cabo siguiendo los estándares habituales y, adicionalmente, se aplicaron las directrices de PRISMA.",
+        "abbreviation": "INI: inhibidor de integrasa.",
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "3L LBCL",
+        "matchTextVariants": [],
+        "references": [
+          {
+            "id": "d65a5b1d-70f1-4979-ba2c-199f30a506f7",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/8860/1/0",
+            "documentName": "Blanco JL, et al. HIV-1 resistance and virological failure to treatment with the integrase inhibitors bictegravir, cabotegravir and dolutegravir: a systematic literature review. AIDS reviews. 2024."
+          }
+        ],
+        "relatedClaims": []
+      },
+      {
+        "claimName": "CL-005531",
+        "claimDamId": "V1X00000000C144",
+        "claimId": "093d0256-95d2-408c-b748-e7d21bcb6040",
+        "matchText": "Mutaciones de resistencia asociadas con el tratamiento. Pacientes con TAR previo",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "mustUse": false,
+        "abbreviation": "TAR: tratamiento antirretroviral.",
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "3L LBCL",
+        "matchTextVariants": [],
+        "references": [
+          {
+            "id": "5943b48e-61fe-46a0-8bcb-415cf467d25b",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/8860/1/0",
+            "documentName": "Blanco JL, et al. HIV-1 resistance and virological failure to treatment with the integrase inhibitors bictegravir, cabotegravir and dolutegravir: a systematic literature review. AIDS reviews. 2024."
+          }
+        ],
+        "relatedClaims": []
+      }
+    ],
+    "reusableTexts": [
+      {
+        "reusableTextId": "74eb1bcb-d573-4cdd-865c-70deed96023d",
+        "reusableTextName": "RT-002178",
+        "reusableTextDamId": "V1X00000000C169",
+        "topicName": "Efficacy",
+        "topicDamId": "V6G000000001002",
+        "mustUse": true,
+        "matchText": "Solicita aquí el acceso completo al contenido, materiales y recursos proporcionados por el equipo de información médica",
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "3L LBCL",
+        "matchTextVariants": []
+      }
+    ],
+    "components": [
+      {
+        "componentId": "7ccda75e-98cb-4866-aa9b-f58a0ce535e2",
+        "componentDocNumber": "COMP-0112",
+        "componentDamId": "8884_1_0",
+        "componentUrl": "https://d1t0wo1ho6nrgc.cloudfront.net/components/6b90ff66-f712-423b-a2d8-932e291ed3f8/7ccda75e-98cb-4866-aa9b-f58a0ce535e2/8884_1_0.png",
+        "subType": "Image",
+        "classification": "Illustration",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "componentName": "Advertencia de Riesgo: Símbolo de Precaución ante Situaciones Peligrosas",
+        "title": "Advertencia de Riesgo: Símbolo de Precaución ante Situaciones Peligrosas",
+        "mustUse": true,
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "relatedClaims": [],
         "relatedReusableTexts": []
       },
       {
-        "componentId": "4fc90774-0e21-4287-b787-49a43f162828",
-        "componentDocNumber": "COMP-0088",
-        "componentDamId": "8743_1_0",
-        "componentUrl": "https://d2ssk39mx0njby.cloudfront.net/components/fd6224c7-201f-4158-a2cf-4bcd2045c5bb/4fc90774-0e21-4287-b787-49a43f162828/8743_1_0.png",
+        "componentId": "c990fbdf-7694-4a74-9fcc-7ef194d65723",
+        "componentDocNumber": "COMP-0114",
+        "componentDamId": "8886_1_0",
+        "componentUrl": "https://d1t0wo1ho6nrgc.cloudfront.net/components/e3fa38de-9e99-4119-893d-20fe25a1ced6/c990fbdf-7694-4a74-9fcc-7ef194d65723/8886_1_0.png",
         "subType": "Data Graphic",
         "classification": "Data Chart",
         "topicDamId": "V6G000000001002",
         "topicName": "Efficacy",
-        "subtopicDamId": "V6F000000001027",
-        "subtopicName": "Sustained Viral Suppression",
-        "componentName": "Biktarvy_Data Graphic_Efficacy_MK Media",
-        "title": "ARN del VIH-1 < 50 c/mL (ausente=excluido)",
+        "componentName": "Mutaciones de resistencia asociados con el tratamiento. Pacientes con TAR previo",
+        "title": "Mutaciones de resistencia asociados con el tratamiento. Pacientes con TAR previo",
+        "mustUse": false,
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "relatedClaims": [],
+        "relatedReusableTexts": []
+      },
+      {
+        "componentId": "0c1fcd18-f2c3-45ac-942a-0322f67ce686",
+        "componentDocNumber": "COMP-0113",
+        "componentDamId": "8885_1_0",
+        "componentUrl": "https://d1t0wo1ho6nrgc.cloudfront.net/components/6b90ff66-f712-423b-a2d8-932e291ed3f8/0c1fcd18-f2c3-45ac-942a-0322f67ce686/8885_1_0.png",
+        "subType": "Image",
+        "classification": "Illustration",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "componentName": "Representación Gráfica del Virus: Indicador de Amenaza Biológica o Infección",
+        "title": "Representación Gráfica del Virus: Indicador de Amenaza Biológica o Infección",
+        "mustUse": false,
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "relatedClaims": [],
+        "relatedReusableTexts": []
+      }
+    ],
+    "businessRules": [],
+    "cmsdDocId": "12314",
+    "cmsdMajorV": null,
+    "cmsdMinorV": null,
+    "cmsdDocUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/12314",
+    "logos": [
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/modulePreviewArrow.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/mustUseGreenDot.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/mustUseRedDot.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/final-status.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/statusDraft.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/statusApproved.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/Intermediate.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/infoIcon.svg"
+    ],
+    "sourceModuleDamName": null,
+    "sourceModuleMlrStatus": null,
+    "sourceModuleDamUrl": null,
+    "sourceModuleId": null,
+    "moduleDraftElementIncluded": null,
+    "businessRulePublished": null,
+    "hasUnpublishedBusinessRules": false,
+    "buisnessRuleSaved": null
+  },
+  {
+    "moduleId": "7acba1c3-1c92-4077-9e68-b57f02eb166b",
+    "moduleName": "Module 37 ",
+    "moduleDamId": "V3Q00000000G015",
+    "moduleDamName": "CM-002096",
+    "nextUniqueModuleCode": "BI_Module_352",
+    "source": "PromoMats",
+    "eDetailSourceDocNum": null,
+    "eDetailDocUrl": null,
+    "productName": "Biktarvy",
+    "productDamId": "00P000000000H01",
+    "countryName": "Spain",
+    "countryDamId": "spain",
+    "topicDamId": "V6G000000001002",
+    "topicName": "Efficacy",
+    "subtopicDamId": null,
+    "subtopicName": null,
+    "languageDamId": "V5B000000001026",
+    "languageName": "Spanish",
+    "therapeuticAreaDamId": "V1L000000001013",
+    "therapeuticAreaName": "Does not Apply",
+    "audienceDamId": "V3T000000001003",
+    "audienceName": "Professional",
+    "usageGuidelines": null,
+    "brandStyleGuidelines": "",
+    "communicationObjectives": "Provide updated VHB 2025 guidelines for unprotected HIV patients.\n",
+    "creativeAgencyName": "21GRAMS",
+    "creativeAgencyDamId": "V3A000000001002",
+    "contentToneName": null,
+    "contentToneDamId": null,
+    "mlrStatus": "Available for Use",
+    "createdByName": "Vaidehi Joshi",
+    "moduleDamUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#object/content_module__v/V3Q00000000G015",
+    "componentUrl": "https://d1t0wo1ho6nrgc.cloudfront.net/components/23dca590-e7be-45b6-98c6-e5796507d168/dbc4993a-0c4c-41fb-be9c-2e169dca6f70/9962_1_0.jpeg",
+    "componentThumbnailUrl": "https://d1t0wo1ho6nrgc.cloudfront.net/components-thumbnails/23dca590-e7be-45b6-98c6-e5796507d168/dbc4993a-0c4c-41fb-be9c-2e169dca6f70/9962_1_0.jpeg",
+    "approvedDateTime": "2026-02-24T10:09:46.000+0000",
+    "createdDateTime": "2026-02-16T09:25:37.000+0000",
+    "editedByName": "Vaidehi Joshi",
+    "editedDateTime": "2026-02-24T10:09:48.000+0000",
+    "strategicObjectives": [],
+    "segments": [
+      {
+        "segmentDamId": "esbvyexpertise_driven_agents_of_chang__c",
+        "segmentName": "ES-BVY-Expertise Driven: Agents of Change"
+      }
+    ],
+    "indications": [],
+    "claims": [
+      {
+        "claimName": "CL-005843",
+        "claimDamId": "V1X00000000D125",
+        "claimId": "36939229-664b-4e86-b731-41048e787b7a",
+        "matchText": "BIKTARVY® fue más eficaz que los regímenes basados en DTG para alcanzar y mantener la supresión virológica en PVIH con adherencia subóptima (<85%)",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "subtopicName": "Broad Applicability",
+        "subtopicDamId": "V6F000000001007",
+        "mustUse": true,
+        "footnotes": "Análisis retrospectivo de la adherencia al tratamiento en 5 ensayos clínicos y su efecto sobre los resultados virológicos, que incluye un total de 2.622 PVIH naïve y virológicamente suprimidos (1.306 con BIKTARVY®  y 1.316 con DTG + 2 NRTIs).",
+        "abbreviation": "DTG: dolutegravir; PVIH: personas con VIH",
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "HIV Treatment",
+        "matchTextVariants": [],
+        "references": [
+          {
+            "id": "fdba3c21-34f2-4223-bfb4-ad3b5ce6a81f",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/10022/1/0",
+            "documentName": "Andreatta K, et al. Efficacy of Bictegravir/Emtricitabine/Tenofovir Alafenamide (B/F/TAF) Versus Dolutegravir (DTG)-Based 3-Drug Regimens in Adults With HIV Who Have Suboptimal Antiretroviral\nAdherence. Póster 1613189 presentado en el IDWeek 2023. 11-15 octubre. Boston, EEUU"
+          }
+        ],
+        "relatedClaims": []
+      },
+      {
+        "claimName": "CL-005846",
+        "claimDamId": "V1X00000000D128",
+        "claimId": "dd8080b7-44cd-4f2b-8608-3d1c087f82b6",
+        "matchText": "Supresión virológica en participantes con baja adherencia (<85%)",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "subtopicName": "Broad Applicability",
+        "subtopicDamId": "V6F000000001007",
+        "mustUse": true,
+        "footnotes": "Estudios en pacientes naïve y switch en la semana 48 y estudios en paciente naïve en la semana 96 y 144",
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "HIV Treatment",
+        "matchTextVariants": [],
+        "references": [
+          {
+            "id": "10a611fc-2de7-4121-a3ad-fdff6fe07b89",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/10022/1/0",
+            "documentName": "Andreatta K, et al. Efficacy of Bictegravir/Emtricitabine/Tenofovir Alafenamide (B/F/TAF) Versus Dolutegravir (DTG)-Based 3-Drug Regimens in Adults With HIV Who Have Suboptimal Antiretroviral\nAdherence. Póster 1613189 presentado en el IDWeek 2023. 11-15 octubre. Boston, EEUU"
+          }
+        ],
+        "relatedClaims": []
+      },
+      {
+        "claimName": "CL-005847",
+        "claimDamId": "V1X00000000D129",
+        "claimId": "ac2145d2-6154-4d69-b719-ca2367a65c05",
+        "matchText": "Altas tasas de supresión virológica en los pacientes que reciben BIKTARVY® independientemente de la adherencia",
+        "topicDamId": "V6G000000001002",
+        "topicName": "Efficacy",
+        "subtopicName": "Broad Applicability",
+        "subtopicDamId": "V6F000000001007",
+        "mustUse": false,
+        "mlrStatus": "Available for Use",
+        "country": "Spain",
+        "indicationNames": "HIV Treatment",
+        "matchTextVariants": [],
+        "references": [
+          {
+            "id": "d8518c65-d6af-440a-ae5f-3bca715e2af3",
+            "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/10022/1/0",
+            "documentName": "Andreatta K, et al. Efficacy of Bictegravir/Emtricitabine/Tenofovir Alafenamide (B/F/TAF) Versus Dolutegravir (DTG)-Based 3-Drug Regimens in Adults With HIV Who Have Suboptimal Antiretroviral\nAdherence. Póster 1613189 presentado en el IDWeek 2023. 11-15 octubre. Boston, EEUU"
+          }
+        ],
+        "relatedClaims": []
+      }
+    ],
+    "reusableTexts": [],
+    "components": [
+      {
+        "componentId": "dbc4993a-0c4c-41fb-be9c-2e169dca6f70",
+        "componentDocNumber": "COMP-0531",
+        "componentDamId": "9962_1_0",
+        "componentUrl": "https://d1t0wo1ho6nrgc.cloudfront.net/components/23dca590-e7be-45b6-98c6-e5796507d168/dbc4993a-0c4c-41fb-be9c-2e169dca6f70/9962_1_0.jpeg",
+        "subType": "",
+        "classification": "Data Infographic",
+        "topicDamId": "V6G000000001009",
+        "topicName": "Disease",
+        "componentName": "Supresión virólogica",
         "mustUse": false,
         "mlrStatus": "Available for Use",
         "country": "Spain",
         "relatedClaims": [
           {
-            "id": "ac2e4a0d-a100-424d-83be-7cc4243e32d1",
-            "claimName": "CL-005491",
-            "claimDamId": "V1X00000000B116",
+            "id": "dd8080b7-44cd-4f2b-8608-3d1c087f82b6",
+            "claimName": "CL-005846",
+            "claimDamId": "V1X00000000D128",
             "mlrStatus": "Available for Use",
-            "matchText": "ARN del VIH-1 < 50 c/mL (ausente=excluido)",
-            "abbreviation": "ARN: ácido ribonucleico,VIH: virus de inmunodeficiencia humana",
+            "matchText": "Supresión virológica en participantes con baja adherencia (<85%)",
+            "footnotes": "Estudios en pacientes naïve y switch en la semana 48 y estudios en paciente naïve en la semana 96 y 144",
             "references": [
               {
-                "id": "9205321a-c4f2-46e9-8374-0fdfb762fd0b",
-                "documentName": "Martorell C, et al. Efficacy and Safety of B/F/TAF in Hispanic/Latine Adults With HIV-1 Initiating First-Line Therapy: 5-Year Follow-Up From Two Phase 3 Studies. Poster\npresented at AIDS 2024, the 25th International AIDS Conference; July 22-26, 2024; Munich, Germany.",
-                "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/9031/1/0"
+                "id": "10a611fc-2de7-4121-a3ad-fdff6fe07b89",
+                "documentName": "Andreatta K, et al. Efficacy of Bictegravir/Emtricitabine/Tenofovir Alafenamide (B/F/TAF) Versus Dolutegravir (DTG)-Based 3-Drug Regimens in Adults With HIV Who Have Suboptimal Antiretroviral\nAdherence. Póster 1613189 presentado en el IDWeek 2023. 11-15 octubre. Boston, EEUU",
+                "documentUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/10022/1/0"
               }
             ],
             "matchTextVariants": []
@@ -180,19 +589,19 @@
       }
     ],
     "businessRules": [],
-    "cmsdDocId": "9573",
+    "cmsdDocId": "12340",
     "cmsdMajorV": null,
     "cmsdMinorV": null,
-    "cmsdDocUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/9573",
+    "cmsdDocUrl": "https://sb-gilead-poc-global-promomats.veevavault.com/ui/#doc_info/12340",
     "logos": [
-      "https://d2ssk39mx0njby.cloudfront.net/LOGO/modulePreviewArrow.svg",
-      "https://d2ssk39mx0njby.cloudfront.net/LOGO/mustUseGreenDot.svg",
-      "https://d2ssk39mx0njby.cloudfront.net/LOGO/mustUseRedDot.svg",
-      "https://d2ssk39mx0njby.cloudfront.net/LOGO/final-status.svg",
-      "https://d2ssk39mx0njby.cloudfront.net/LOGO/statusDraft.svg",
-      "https://d2ssk39mx0njby.cloudfront.net/LOGO/statusApproved.svg",
-      "https://d2ssk39mx0njby.cloudfront.net/LOGO/Intermediate.svg",
-      "https://d2ssk39mx0njby.cloudfront.net/LOGO/infoIcon.svg"
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/modulePreviewArrow.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/mustUseGreenDot.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/mustUseRedDot.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/final-status.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/statusDraft.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/statusApproved.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/Intermediate.svg",
+      "https://d1t0wo1ho6nrgc.cloudfront.net/LOGO/infoIcon.svg"
     ],
     "sourceModuleDamName": null,
     "sourceModuleMlrStatus": null,
