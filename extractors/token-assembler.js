@@ -6,15 +6,17 @@ import { generateValidationReport } from '../utils/style-parser.js';
 import { normalizeColor } from '../utils/token-deduplicator.js';
 
 /**
- * Extract all color values from the design token output
+ * Extract all color values from the design token output.
+ * Supports both schema shapes: direct (primitiveTokens.*) and tiered (tier1.primitives.*)
  */
 function extractOutputColors(tokens) {
   if (!tokens || typeof tokens !== "object") return [];
 
   const colors = [];
 
-  // ✅ Tier 1: Primitive colors (array OR object)
-  const primitiveColors = tokens?.tier1?.primitives?.colors;
+  // Primitive colors — try both paths
+  const primitiveColors = tokens?.primitiveTokens?.colors
+    || tokens?.tier1?.primitives?.colors;
 
   if (Array.isArray(primitiveColors)) {
     primitiveColors.forEach((c) => {
@@ -26,8 +28,9 @@ function extractOutputColors(tokens) {
     });
   }
 
-  // ✅ Tier 2: Semantic colors (object)
-  const semanticColors = tokens?.tier2?.semantic?.colors;
+  // Semantic colors — try both paths
+  const semanticColors = tokens?.semanticTokens?.colors
+    || tokens?.tier2?.semantic?.colors;
 
   if (semanticColors && typeof semanticColors === "object") {
     Object.values(semanticColors).forEach((val) => {
@@ -39,8 +42,24 @@ function extractOutputColors(tokens) {
     });
   }
 
-  // ✅ Normalize + dedupe
-  return [...new Set(colors.map(normalizeColor))];
+  // Also extract colors from componentTokens (CTA, claims, reference, footer, etc.)
+  const components = tokens?.componentTokens || tokens?.tier3?.components || {};
+  function collectComponentColors(obj) {
+    if (!obj || typeof obj !== 'object') return;
+    for (const [key, val] of Object.entries(obj)) {
+      if (typeof val === 'string' && (key.toLowerCase().includes('color') || key.toLowerCase().includes('background'))) {
+        if (val.startsWith('#') || val.startsWith('rgb')) colors.push(val);
+      } else if (Array.isArray(val)) {
+        val.forEach(item => collectComponentColors(item));
+      } else if (typeof val === 'object') {
+        collectComponentColors(val);
+      }
+    }
+  }
+  collectComponentColors(components);
+
+  // Normalize + dedupe
+  return [...new Set(colors.map(c => normalizeColor(c)).filter(Boolean))];
 }
 
 /**

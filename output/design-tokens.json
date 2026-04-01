@@ -1,7 +1,7 @@
 {
   "metadata": {
     "source": "sample.html",
-    "extractedAt": "2026-03-31T00:00:00.000Z",
+    "extractedAt": "2026-04-01T00:00:00.000Z",
     "emailType": "pharma-marketing-hcp",
     "brand": "Biktarvy",
     "approvalCode": "ES-BVY-XXXX"
@@ -14,7 +14,7 @@
         "opacity": null
       },
       {
-        "name": "accent-teal",
+        "name": "border-teal",
         "value": "#6ecbb8",
         "opacity": null
       },
@@ -56,16 +56,16 @@
     ],
     "typography": [
       {
-        "name": "img-fallback-13",
+        "name": "typo-hero-img-fallback",
         "fontFamily": "Arial",
         "fontSize": "13px",
         "fontWeight": "400",
-        "lineHeight": "13px",
+        "lineHeight": "normal",
         "letterSpacing": null,
         "textTransform": null
       },
       {
-        "name": "body-13-15",
+        "name": "typo-greeting",
         "fontFamily": "Arial",
         "fontSize": "13px",
         "fontWeight": "400",
@@ -74,7 +74,7 @@
         "textTransform": null
       },
       {
-        "name": "sci-claim-14-17-bold-red",
+        "name": "typo-claim-red-center",
         "fontFamily": "Arial",
         "fontSize": "14px",
         "fontWeight": "700",
@@ -83,7 +83,7 @@
         "textTransform": null
       },
       {
-        "name": "sci-claim-12-14",
+        "name": "typo-claim-subtitle",
         "fontFamily": "Arial",
         "fontSize": "12px",
         "fontWeight": "400",
@@ -92,7 +92,7 @@
         "textTransform": null
       },
       {
-        "name": "heading-12-15",
+        "name": "typo-heading-small",
         "fontFamily": "Arial",
         "fontSize": "12px",
         "fontWeight": "400",
@@ -101,7 +101,7 @@
         "textTransform": null
       },
       {
-        "name": "footer-logo-12-14",
+        "name": "typo-body-12-14",
         "fontFamily": "Arial",
         "fontSize": "12px",
         "fontWeight": "400",
@@ -110,7 +110,16 @@
         "textTransform": null
       },
       {
-        "name": "claim-14-17-bold-cream",
+        "name": "typo-body-12-15",
+        "fontFamily": "Arial",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "lineHeight": "15px",
+        "letterSpacing": null,
+        "textTransform": null
+      },
+      {
+        "name": "typo-claim-on-red",
         "fontFamily": "Arial",
         "fontSize": "14px",
         "fontWeight": "700",
@@ -119,25 +128,25 @@
         "textTransform": null
       },
       {
-        "name": "body-12-15",
+        "name": "typo-body-13-15",
         "fontFamily": "Arial",
-        "fontSize": "12px",
+        "fontSize": "13px",
         "fontWeight": "400",
         "lineHeight": "15px",
         "letterSpacing": null,
         "textTransform": null
       },
       {
-        "name": "cta-button-13-120",
+        "name": "typo-heading-main",
         "fontFamily": "Arial",
-        "fontSize": "13px",
-        "fontWeight": "400",
-        "lineHeight": "120%",
+        "fontSize": "16px",
+        "fontWeight": "700",
+        "lineHeight": "14px",
         "letterSpacing": null,
-        "textTransform": "none"
+        "textTransform": null
       },
       {
-        "name": "cta-link-15",
+        "name": "typo-cta-link",
         "fontFamily": "Arial",
         "fontSize": "15px",
         "fontWeight": "400",
@@ -146,7 +155,7 @@
         "textTransform": null
       },
       {
-        "name": "reference-10-13-muted",
+        "name": "typo-reference",
         "fontFamily": "Arial",
         "fontSize": "10px",
         "fontWeight": "400",
@@ -155,7 +164,7 @@
         "textTransform": null
       },
       {
-        "name": "pi-ref-11-17",
+        "name": "typo-pi-reference",
         "fontFamily": "Arial",
         "fontSize": "11px",
         "fontWeight": "400",
@@ -164,7 +173,7 @@
         "textTransform": null
       },
       {
-        "name": "footer-10-15",
+        "name": "typo-footer-address",
         "fontFamily": "Arial",
         "fontSize": "10px",
         "fontWeight": "400",
@@ -173,115 +182,96 @@
         "textTransform": null
       },
       {
-        "name": "divider-10-15",
+        "name": "typo-cta-button",
         "fontFamily": "Arial",
-        "fontSize": "10px",
+        "fontSize": "13px",
         "fontWeight": "400",
-        "lineHeight": "15px",
+        "lineHeight": "120%",
         "letterSpacing": null,
-        "textTransform": null
-      },
-      {
-        "name": "hero-heading-16-14-bold",
-        "fontFamily": "Arial",
-        "fontSize": "16px",
-        "fontWeight": "700",
-        "lineHeight": "14px",
-        "letterSpacing": null,
-        "textTransform": null
+        "textTransform": "none"
       }
     ],
     "spacing": [
       {
-        "name": "section-padding-20-0",
+        "name": "layout-margin-auto",
+        "value": "0px auto",
+        "context": "container-margin-horizontal"
+      },
+      {
+        "name": "section-padding-vertical-20",
         "value": "20px 0",
-        "context": "td layout-wrapper general"
+        "context": "section-padding"
       },
       {
-        "name": "section-padding-10-25",
+        "name": "cell-padding-10-25",
         "value": "10px 25px",
-        "context": "td content default"
+        "context": "content-cell-padding"
       },
       {
-        "name": "section-padding-5-25-20-25",
+        "name": "cell-padding-5-25-20-25",
         "value": "5px 25px 20px 25px",
-        "context": "scientific-claim td"
+        "context": "claim-block-padding"
       },
       {
-        "name": "section-padding-5-25",
+        "name": "cell-padding-5-25",
         "value": "5px 25px",
-        "context": "compact content rows"
+        "context": "tight-vertical-padding"
       },
       {
-        "name": "section-padding-10-25-30-24",
+        "name": "cell-padding-10-25-30-24",
         "value": "10px 24px 30px 24px",
-        "context": "cta-button container td"
+        "context": "cta-section-padding"
       },
       {
-        "name": "cta-padding-10-25",
-        "value": "10px 25px",
-        "context": "cta-button a"
+        "name": "cell-padding-15-0-10-0",
+        "value": "15px 0px 10px 0px",
+        "context": "divider-above-heading"
       },
       {
-        "name": "bordered-claim-padding-0-10",
-        "value": "0px 10px",
-        "context": "teal bordered claim td"
-      },
-      {
-        "name": "logo-cell-padding-10-25",
-        "value": "10px 25px",
-        "context": "footer-logo td"
-      },
-      {
-        "name": "cta-link-icon-padding-10",
+        "name": "cell-padding-10",
         "value": "10px",
-        "context": "cta-link icon td"
+        "context": "icon-cell-padding"
       },
       {
-        "name": "pi-ref-padding-10-25",
-        "value": "10px 25px",
-        "context": "pi-reference td"
+        "name": "cell-padding-0",
+        "value": "0px",
+        "context": "no-padding"
       },
       {
-        "name": "footer-address-padding-10-25-0-25",
+        "name": "cell-padding-10-25-top0",
+        "value": "0px 25px 0px 25px",
+        "context": "pi-footer-padding"
+      },
+      {
+        "name": "cell-padding-10-25-bottom0",
         "value": "10px 25px 0px 25px",
-        "context": "footer-address td"
-      },
-      {
-        "name": "divider-padding-0",
-        "value": "0px",
-        "context": "divider td"
-      },
-      {
-        "name": "layout-zero-padding",
-        "value": "0px",
-        "context": "various layout-wrapper tds"
+        "context": "body-bottom-padding"
       }
     ],
     "borders": [
       {
-        "name": "image-border-none",
+        "name": "border-none",
         "width": "0",
         "style": "none",
         "color": "#000000",
         "radius": "0px"
       },
       {
-        "name": "teal-claim-border",
+        "name": "border-claim-callout",
         "width": "3px",
         "style": "solid",
         "color": "#6ecbb8",
         "radius": "10px"
       },
       {
-        "name": "cta-button-border-none",
-        "width": "0px",
+        "name": "border-cta-td",
+        "width": "0",
         "style": "none",
         "color": "#000000",
         "radius": "3px"
       },
       {
-        "name": "divider-top-red",
+        "name": "border-divider-top-red",
         "width": "10px",
         "style": "solid",
         "color": "#cf0a2b",
@@ -301,11 +291,11 @@
       "textInverse": "#ffffff",
       "backgroundPrimary": "#ffffff",
       "backgroundSecondary": "#e4e4e4",
-      "backgroundCallout": "#cf0a2c",
+      "backgroundCallout": "#ffffff",
       "backgroundFooterPrimary": "#e4e4e4",
       "backgroundFooterSecondary": "#e4e4e4",
       "linkDefault": "#cf0a2c",
-      "linkFooter": "#000000"
+      "linkFooter": "#cf0a2c"
     },
     "typography": {
       "heading": {
@@ -329,7 +319,7 @@
       "bodyText": {
         "name": "bodyText",
         "fontFamily": "Arial",
-        "fontSize": "12px",
+        "fontSize": "13px",
         "fontWeight": "400",
         "lineHeight": "15px",
         "letterSpacing": null,
@@ -338,9 +328,9 @@
       "claimText": {
         "name": "claimText",
         "fontFamily": "Arial",
-        "fontSize": "14px",
-        "fontWeight": "700",
-        "lineHeight": "17px",
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "lineHeight": "14px",
         "letterSpacing": null,
         "textTransform": null
       },
@@ -383,9 +373,9 @@
       "adverseEventText": {
         "name": "adverseEventText",
         "fontFamily": "Arial",
-        "fontSize": "11px",
+        "fontSize": "10px",
         "fontWeight": "400",
-        "lineHeight": "17px",
+        "lineHeight": "15px",
         "letterSpacing": null,
         "textTransform": null
       },
@@ -437,7 +427,7 @@
       "lineHeight": "120%",
       "padding": "10px 25px",
       "borderRadius": "3px",
-      "border": "0px none #000000",
+      "border": "0 none #000000",
       "textDecoration": "none !important",
       "textTransform": "none",
       "display": "inline-block",
@@ -448,17 +438,9 @@
         "color": "#cf0a2c",
         "textDecoration": "none",
         "fontWeight": "400",
-        "cursor": "pointer",
+        "cursor": "auto",
         "display": "block",
         "context": "inline-text"
-      },
-      {
-        "color": "#000000",
-        "textDecoration": "underline",
-        "fontWeight": "400",
-        "cursor": "pointer",
-        "display": "inline",
-        "context": "footer"
       }
     ],
     "claimBlocks": [
@@ -471,7 +453,7 @@
         "color": "#c00000",
         "textAlign": "center",
         "backgroundColor": null,
-        "padding": "0px",
+        "padding": "5px 25px 20px 25px",
         "approved": true,
         "hasCitations": true,
         "citationStyle": {
@@ -488,7 +470,7 @@
         "color": "#edebe3",
         "textAlign": "center",
         "backgroundColor": "#cf0a2c",
-        "padding": "10px 25px",
+        "padding": "5px 25px 5px 25px",
         "approved": true,
         "hasCitations": true,
         "citationStyle": {
@@ -505,7 +487,7 @@
         "color": "#000000",
         "textAlign": "left",
         "backgroundColor": null,
-        "padding": "0px",
+        "padding": "5px 25px 5px 25px",
         "approved": true,
         "hasCitations": true,
         "citationStyle": {
@@ -526,24 +508,24 @@
       "bodyLineHeight": "17px",
       "bodyColor": "#000000",
       "backgroundColor": "#e4e4e4",
-      "padding": "10px 25px"
+      "padding": "0px 25px 0px 25px"
     },
     "adverseEventBlock": {
       "headerFontFamily": "Arial",
-      "headerFontSize": "11px",
+      "headerFontSize": "10px",
       "headerFontWeight": "400",
-      "headerLineHeight": "17px",
+      "headerLineHeight": "15px",
       "headerColor": "#000000",
       "bodyFontFamily": "Arial",
-      "bodyFontSize": "11px",
+      "bodyFontSize": "10px",
       "bodyFontWeight": "400",
-      "bodyLineHeight": "17px",
+      "bodyLineHeight": "15px",
       "bodyColor": "#000000",
-      "containerBorder": "0px none #000000",
+      "containerBorder": "0 none #000000",
       "containerPadding": "0px",
       "backgroundColor": "#e4e4e4",
-      "linkColor": "#000000",
-      "linkTextDecoration": "underline"
+      "linkColor": "#cf0a2c",
+      "linkTextDecoration": "none"
     },
     "referenceBlock": {
       "fontFamily": "Arial",
@@ -552,19 +534,19 @@
       "lineHeight": "13px",
       "color": "#707070",
       "backgroundColor": "#ffffff",
-      "padding": "5px 25px",
+      "padding": "5px 25px 5px 25px",
       "textAlign": "left"
     },
     "sectionCallouts": [
       {
-        "backgroundColor": "#cf0a2c",
+        "backgroundColor": "#ffffff",
         "fontFamily": "Arial",
-        "fontSize": "14px",
-        "fontWeight": "700",
-        "lineHeight": "17px",
-        "color": "#edebe3",
-        "textAlign": "center",
-        "padding": "10px 25px"
+        "fontSize": "12px",
+        "fontWeight": "400",
+        "lineHeight": "15px",
+        "color": "#000000",
+        "textAlign": "left",
+        "padding": "5px 25px 5px 25px"
       }
     ],
     "preheader": {
@@ -575,7 +557,7 @@
       "lineHeight": "15px",
       "color": "#000000",
       "textAlign": "left",
-      "padding": "0px"
+      "padding": "20px 0"
     },
     "footer": {
       "backgroundColor": "#e4e4e4",
@@ -586,8 +568,8 @@
       "addressLineHeight": "15px",
       "addressColor": "#000000",
       "addressTextAlign": "left",
-      "linkColor": "#000000",
-      "linkTextDecoration": "underline",
+      "linkColor": "#cf0a2c",
+      "linkTextDecoration": "none",
       "approvalCodeFontSize": "10px",
       "approvalCodeColor": "#000000",
       "copyrightFontSize": "10px",
@@ -599,12 +581,12 @@
       "columnWidths": [
         "548px",
         "550px",
+        "236px",
+        "200px",
         "170px",
         "160px",
-        "200px",
         "100px",
-        "28px",
-        "236px"
+        "28px"
       ],
       "sectionPadding": "20px 0",
       "direction": "ltr"

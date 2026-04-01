@@ -1,21 +1,11 @@
 {
   "colorValidation": {
-    "matched": 0,
+    "matched": 9,
     "unmatched": [],
-    "missingFromOutput": [
-      "#ffffff",
-      "#cf0a2c",
-      "#e4e4e4",
-      "#000000",
-      "#c00000",
-      "#6ecbb8",
-      "#edebe3",
-      "#707070",
-      "#cf0a2b"
-    ],
+    "missingFromOutput": [],
     "totalInHtml": 9,
-    "totalInOutput": 0,
-    "matchPercentage": 0
+    "totalInOutput": 9,
+    "matchPercentage": 100
   },
   "sectionCoverage": {
     "hasPreheader": true,
@@ -28,7 +18,5 @@
     "hasSectionCallouts": true,
     "missingExpected": []
   },
-  "warnings": [
-    "9 colors in HTML missing from output: #ffffff, #cf0a2c, #e4e4e4, #000000, #c00000, #6ecbb8, #edebe3, #707070, #cf0a2b"
-  ]
+  "warnings": []
 }

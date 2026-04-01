@@ -52,12 +52,39 @@ export function mergeChunkExtractions(chunkResults) {
 }
 
 /**
- * Normalize a hex color to lowercase 6-digit format
+ * Named CSS colors mapping (common ones used in emails)
+ */
+const NAMED_COLORS = {
+  black: '#000000', white: '#ffffff', red: '#ff0000', blue: '#0000ff',
+  green: '#008000', yellow: '#ffff00', orange: '#ffa500', purple: '#800080',
+  gray: '#808080', grey: '#808080', transparent: null,
+};
+
+/**
+ * Normalize a color value to lowercase 6-digit hex format.
+ * Handles: hex (#abc, #aabbcc), rgb(r,g,b), and named CSS colors.
  */
 export function normalizeColor(color) {
-  let hex = color.trim().toLowerCase();
-  if (hex.startsWith('#') && hex.length === 4) {
-    hex = `#${hex[1]}${hex[1]}${hex[2]}${hex[2]}${hex[3]}${hex[3]}`;
+  let val = color.trim().toLowerCase().replace(/!important/g, '').trim();
+
+  // Named color
+  if (NAMED_COLORS[val] !== undefined) {
+    return NAMED_COLORS[val];
   }
-  return hex;
+
+  // rgb(r, g, b)
+  const rgbMatch = val.match(/rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)/);
+  if (rgbMatch) {
+    const r = Math.min(255, parseInt(rgbMatch[1], 10));
+    const g = Math.min(255, parseInt(rgbMatch[2], 10));
+    const b = Math.min(255, parseInt(rgbMatch[3], 10));
+    return `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
+  }
+
+  // 3-digit hex → 6-digit
+  if (val.startsWith('#') && val.length === 4) {
+    val = `#${val[1]}${val[1]}${val[2]}${val[2]}${val[3]}${val[3]}`;
+  }
+
+  return val;
 }

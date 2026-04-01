@@ -47,11 +47,49 @@ export function parseStyleString(style) {
 }
 
 /**
- * Extract all hex colors from a string
+ * Extract all colors (hex, rgb, named) from a CSS value string
  */
 function extractColors(value) {
-  const colorRegex = /#[0-9a-fA-F]{3,8}\b/g;
-  return value.match(colorRegex) || [];
+  const colors = [];
+
+  // Hex colors
+  const hexMatches = value.match(/#[0-9a-fA-F]{3,8}\b/g);
+  if (hexMatches) colors.push(...hexMatches);
+
+  // RGB colors
+  const rgbRegex = /rgb\(\s*\d{1,3}\s*,\s*\d{1,3}\s*,\s*\d{1,3}\s*\)/gi;
+  const rgbMatches = value.match(rgbRegex);
+  if (rgbMatches) colors.push(...rgbMatches);
+
+  return colors;
+}
+
+/**
+ * Extract CSS declarations from <style> blocks in the HTML
+ */
+function extractStyleBlockDeclarations(html) {
+  const styleBlockRegex = /<style[^>]*>([\s\S]*?)<\/style>/gi;
+  const declarations = [];
+  let match;
+
+  while ((match = styleBlockRegex.exec(html)) !== null) {
+    const cssContent = match[1];
+    // Extract property declarations from CSS rules (skip @media, selectors, etc.)
+    const ruleRegex = /\{([^}]+)\}/g;
+    let ruleMatch;
+    while ((ruleMatch = ruleRegex.exec(cssContent)) !== null) {
+      declarations.push(ruleMatch[1].trim());
+    }
+  }
+
+  return declarations;
+}
+
+/**
+ * Check if a CSS value is valid (not containing undefined/null placeholder values)
+ */
+function isValidCssValue(value) {
+  return value && !value.includes('undefined') && !value.includes('null');
 }
 
 /**
@@ -79,11 +117,17 @@ export function buildStyleInventory(html) {
   let bgMatch;
   while ((bgMatch = bgcolorRegex.exec(html)) !== null) {
     const color = bgMatch[1].trim().toLowerCase();
-    inventory.allColors.add(color);
-    inventory.allBackgroundColors.add(color);
+    if (isValidCssValue(color)) {
+      inventory.allColors.add(color);
+      inventory.allBackgroundColors.add(color);
+    }
   }
 
-  for (const raw of rawStyles) {
+  // Extract styles from <style> blocks as well (class-based styles)
+  const styleBlockDeclarations = extractStyleBlockDeclarations(html);
+  const allStyleStrings = [...rawStyles, ...styleBlockDeclarations];
+
+  for (const raw of allStyleStrings) {
     const properties = parseStyleString(raw);
 
     // Deduplicate by normalized key-value
@@ -99,27 +143,37 @@ export function buildStyleInventory(html) {
 
     // Collect colors from all properties
     for (const value of Object.values(properties)) {
+      if (!isValidCssValue(value)) continue;
       for (const color of extractColors(value)) {
         inventory.allColors.add(color.toLowerCase());
       }
     }
 
-    // Collect specific property values
-    if (properties['font-size']) inventory.allFontSizes.add(properties['font-size']);
-    if (properties['font-family']) inventory.allFontFamilies.add(properties['font-family']);
-    if (properties['font-weight']) inventory.allFontWeights.add(properties['font-weight']);
-    if (properties['line-height']) inventory.allLineHeights.add(properties['line-height']);
-    if (properties['background-color']) {
+    // Collect specific property values (skip undefined/invalid values)
+    if (properties['font-size'] && isValidCssValue(properties['font-size'])) {
+      inventory.allFontSizes.add(properties['font-size']);
+    }
+    if (properties['font-family'] && isValidCssValue(properties['font-family'])) {
+      inventory.allFontFamilies.add(properties['font-family']);
+    }
+    if (properties['font-weight'] && isValidCssValue(properties['font-weight'])) {
+      inventory.allFontWeights.add(properties['font-weight']);
+    }
+    if (properties['line-height'] && isValidCssValue(properties['line-height'])) {
+      inventory.allLineHeights.add(properties['line-height']);
+    }
+    if (properties['background-color'] && isValidCssValue(properties['background-color'])) {
       inventory.allBackgroundColors.add(properties['background-color'].toLowerCase());
     }
-    if (properties['background']) {
+    if (properties['background'] && isValidCssValue(properties['background'])) {
       for (const color of extractColors(properties['background'])) {
         inventory.allBackgroundColors.add(color.toLowerCase());
       }
     }
 
-    // Collect padding values
+    // Collect padding and border values
     for (const [key, value] of Object.entries(properties)) {
+      if (!isValidCssValue(value)) continue;
       if (key.startsWith('padding')) {
         inventory.allPaddings.add(`${key}: ${value}`);
       }

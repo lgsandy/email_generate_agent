@@ -24,11 +24,11 @@ Design tokens have three tiers:
    - colors[]: { name, value } — resolve color references by matching the "name" field to get the hex "value"
    - typography[]: { name, fontFamily, fontSize, fontWeight, lineHeight, letterSpacing, textTransform }
    - spacing[]: { name, value, context } — use the "context" field to determine where each spacing value applies
-   - borders[]: { name, width, style, color, radius } — IMPORTANT: "divider-top-red" is the red brand divider; "teal-claim-border" is the callout border for claims
+   - borders[]: { name, width, style, color, radius } — Use borders by matching their "name" to the appropriate context. If a specific border token is not found, derive the color from semanticTokens.colors instead.
 
 2. **semanticTokens**: Named mappings
    - colors: { brandPrimary, brandSecondary, brandAccent, claimHighlight, claimReference, textPrimary, textSecondary, backgroundPrimary, backgroundSecondary, backgroundFooterPrimary, backgroundFooterSecondary, linkDefault, linkFooter, ... }
-     IMPORTANT: brandAccent is the teal accent color, NOT the red brand color. For red brand color, use brandPrimary or brandSecondary.
+     IMPORTANT: Use the actual hex values from the provided tokens. brandPrimary is the main brand color, brandAccent is the accent color (used for borders/highlights). Do NOT hardcode any color — always resolve from the provided tokens.
    - typography: { heading, subheading, bodyText, claimText, scientificClaim, footnoteText, disclaimerText, referenceText, adverseEventText, legalText, footerText, ctaButtonText, approvalCode }
      Each typography entry has: { fontFamily, fontSize, fontWeight, lineHeight, letterSpacing, textTransform }
 
@@ -52,8 +52,8 @@ For EACH module in the module data array, place content in this order:
    - The FIRST claim of each module: style using componentTokens.claimBlocks[moduleIndex % claimBlocks.length].
      * If the selected claimBlock has a non-null backgroundColor, render the cell with that background color and use the claimBlock's color for text (this creates an inverse/callout style).
      * If the selected claimBlock has backgroundColor: null, render on white background and use the claimBlock's color for text. Use the claimBlock's textAlign, fontFamily, fontSize, fontWeight, lineHeight.
-   - All OTHER claims (not first, not last): style using the claimBlock with type "general" from componentTokens.claimBlocks. This is typically the smaller, lighter weight style (e.g. 12px/400). Do NOT use semanticTokens.typography.claimText for these — use the "general" claimBlock.
-   - The LAST claim of each module: wrap in a bordered container using the "teal-claim-border" from primitiveTokens.borders (border: {width} {style} {color}; border-radius: {radius}). Use the "general" claimBlock typography inside the border.
+   - All OTHER claims (not first, not last): style using the claimBlock with type "general" from componentTokens.claimBlocks. Use its exact fontFamily, fontSize, fontWeight, lineHeight, color, and textAlign values. Do NOT use semanticTokens.typography.claimText for these — use the "general" claimBlock.
+   - The LAST claim of each module: wrap in a bordered container using semanticTokens.colors.brandAccent as the border color (border: 3px solid {brandAccent}; border-radius: 10px). If a matching border token exists in primitiveTokens.borders, use its values instead. Use the "general" claimBlock typography inside the border.
    - If a module has only ONE claim, apply the first-claim styling AND the callout border wrapping.
    - For each claim, build superscript citations:
      * If claim has footnotes: add superscript "*"
@@ -66,8 +66,9 @@ For EACH module in the module data array, place content in this order:
 3. **Reusable Texts** (reusableTexts[]): style using semanticTokens.typography.bodyText.
 
 4. **Components** (components[]):
-   - If classification is "Data Infographic" or "Data Chart" or subType is "Data Graphic": **full-width layout** — image at 100% width, then related claims below.
-   - Otherwise: **two-column layout** — 80% width for related claims text (left), 20% width for image (right). Use MSO conditional comments for Outlook compatibility: <!--[if mso | IE]> with fixed-width table cells, and use CSS classes (.mj-column-per-80, .mj-column-per-20) with inline-block divs for other clients.
+   - **Deduplication rule**: Before rendering a component's relatedClaims[], check whether each relatedClaim was already rendered in the module's claims[] section (match by claimName or matchText). Skip any that were already rendered — do NOT render the same claim text twice. If a component has relatedClaims: [] (empty array), do NOT hallucinate or invent any claim text for it — render no claims for that component.
+   - If classification is "Data Infographic" or "Data Chart" or subType is "Data Graphic": **full-width layout** — image at 100% width, then any non-duplicate related claims below (only those not already rendered in the module claims section).
+   - Otherwise: **two-column layout** — 80% width left column, 20% width for image (right). Use MSO conditional comments for Outlook compatibility: <!--[if mso | IE]> with fixed-width table cells, and use CSS classes (.mj-column-per-80, .mj-column-per-20) with inline-block divs for other clients. Left column content: if the component has relatedClaims that were NOT already rendered in the module claims section, show those claims. If all relatedClaims were already rendered (or relatedClaims is empty), show the componentName as text in the left column instead (styled with semanticTokens.typography.bodyText and semanticTokens.colors.textPrimary).
    - After each component, render its relatedReusableTexts using bodyText typography.
 
 After ALL modules, place the following global sections:
@@ -81,18 +82,18 @@ After ALL modules, place the following global sections:
 8. **Footer Section**: Background from componentTokens.footer.backgroundColor or semanticTokens.colors.backgroundFooterPrimary.
    - Approval code (from first module's approvalCode or metadata.approvalCode) styled with footer.approvalCodeFontSize and footer.approvalCodeColor.
    - Footnotes: each footnote prefixed with superscript "*", styled with semanticTokens.typography.footnoteText.
-   - Red Bottom Rule: At the very end of the footer, add a 10px solid red divider using the "divider-top-red" border from primitiveTokens.borders (border-top: {width} solid {color}). This is the brand signature divider and must use the RED color from that border token, NOT the teal brandAccent.
+   - Brand Bottom Rule: At the very end of the footer, add a 10px solid brand divider (border-top: 10px solid {brandPrimary}). Use semanticTokens.colors.brandPrimary for the color. If a divider border token exists in primitiveTokens.borders, use its color instead.
 
 ## Inline Keyword Highlighting
-This is a CRITICAL styling feature for pharma emails. Within claim text, you must highlight key medical terms, brand names, and important statistical figures by wrapping them in <span> tags with the claimHighlight color from semanticTokens.colors (typically the brand red color).
+This is a CRITICAL styling feature for pharma emails. Within claim text, you must highlight key medical terms, brand names, and important statistical figures by wrapping them in <span> tags with the claimHighlight color from semanticTokens.colors.
 
 Rules for what to highlight:
-- Brand names (e.g. "Biktarvy", "BIKTARVY") — wrap in <span style="color:{claimHighlight}">
+- Brand names and product names — wrap in <span style="color:{claimHighlight}">
 - Key medical terms and conditions relevant to the claim's topic
 - Important statistical figures and percentages (e.g. "60%", "OR: 2,24")
 - Action words that emphasize the claim's message (e.g. "supresión virológica", "adherencia subóptima")
 - Use <b> tags for bold emphasis on specific data points where appropriate
-- Add ® symbol after brand names where appropriate (e.g. Biktarvy<sup>®</sup>)
+- Add ® symbol after brand names where appropriate (e.g. BrandName<sup>®</sup>)
 - Do NOT highlight the entire text — only specific key phrases and terms
 - Analyze the context of each claim to determine which words are medically significant and deserve highlighting
 
@@ -138,9 +139,9 @@ Each content section should follow this MJML-derived table nesting pattern for e
 </div>
 \`\`\`
 
-For the callout-border claim (last claim), the inner td gets the border style:
+For the callout-border claim (last claim), the inner td gets the border style (use the actual brandAccent color from semanticTokens.colors):
 \`\`\`
-<td style="border:3px solid #6ECBB8;border-radius:10px;vertical-align:top;border-collapse:separate;padding-top:0px;padding-right:10px;padding-bottom:0px;padding-left:10px;">
+<td style="border:3px solid {brandAccent};border-radius:10px;vertical-align:top;border-collapse:separate;padding-top:0px;padding-right:10px;padding-bottom:0px;padding-left:10px;">
 \`\`\`
 
 ## Output Format

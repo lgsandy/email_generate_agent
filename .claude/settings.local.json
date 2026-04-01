@@ -11,7 +11,9 @@
       "Bash(bun check:*)",
       "Bash(bun build:*)",
       "Bash(node --check llm-email-generator.js)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(sed 's/\"\"\"\".*//g')",
+      "Bash(find 'D:\\\\Bun App\\\\email_create' -name *.log -o -name *test* -o -name *result*)"
     ]
   }
 }
