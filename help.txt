@@ -34,3 +34,7 @@ claude --resume "pharma-email-token-extractor"
   bun run index.js "./ModCon TRO Emailer.html"
 
   It will output output/design-tokens.json (3-tier token hierarchy) and output/validation-report.json (ground-truth cross-validation).
+
+
+
+  claude --resume "multi-version-pharma-email-generator" 
