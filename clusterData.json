@@ -1,0 +1,948 @@
+[
+    {
+        "asset_id": "32396a05-5e29-46d8-82a1-6aa00761f1ba",
+        "category": "Long-term Efficacy",
+        "claims": "BIKTARVY®: robust and durable efficacy through 5 years in treatment-naïve people with HIV*1\n* At Week 48 in pooled data from treatment-naïve participants: efficacy was 91% for BIKTARVY® (pooled [n=634]) vs 93% (ABC/3TC/DTG [n=315]) in Study 1489 (95% CI: -2.1 [-5.9 to 1.6]) and 93% (FTC/TAF + DTG [n=325]) in Study 1490 (95% CI: -1.9 [-5.6 to 1.8]).2\nPrimary endpoint: at Week 48, pooled data from treatment-naïve participants, efficacy was 91% for BIKTARVY® (pooled n=634)*+2\n99% pooled efficacy (M=E) through Week 240 (n=426/432)+1\n67% pooled efficacy (M=F) through Week 240 (n=426/634)+1",
+        "components": [
+            {
+                "bbox": [
+                    0.05652187764644623,
+                    0.9236459732055664,
+                    0.20711536705493927,
+                    0.9907007217407227
+                ],
+                "component_index": 4,
+                "component_type": "logo",
+                "content": "BIKTARVY® bictegravir 50mg/emtricitabine 200mg/tenofovir alafenamide 25mg tablets",
+                "id": "1b50eb1c-ccb1-4dd9-995f-a0a6d7331fd2",
+                "image_url": "https://icb-asset-store-s3.s3.amazonaws.com/ncci-semanticmesh-elements/component_images/347a3f08-85db-4c25-b82e-c70c6148aa66_page_13_comp4.png?AWSAccessKeyId=AKIAW3MEFFJK4ERS4VEG&Signature=N0qIVNZ0u3SZ5YtJd9NLBxA7jFA%3D&Expires=1776081828",
+                "name": "BIKTARVY® bictegravir 50mg/emtricitabine 200mg/tenofovir alafenamide 25mg tablets",
+                "type": "Component"
+            },
+            {
+                "bbox": [
+                    0.47779229283332825,
+                    0.9316906929016113,
+                    0.5218633413314819,
+                    0.9600614309310913
+                ],
+                "component_index": 5,
+                "component_type": "logo",
+                "content": "Efficacy (HIV <50 copies/mL), all participants on BIKTARVY®, pooled Studies 1489 and 1490+1",
+                "id": "f2754ad9-ffe6-4f32-bbd8-da7197f49bc6",
+                "image_url": "https://icb-asset-store-s3.s3.amazonaws.com/ncci-semanticmesh-elements/component_images/2c2ea257-ccf2-4ebb-8106-02c4305498f9_page_13_comp5.png?AWSAccessKeyId=AKIAW3MEFFJK4ERS4VEG&Signature=z1j0mRIZb5n3NgWS03Dg1pbOuOM%3D&Expires=1776081828",
+                "name": "Efficacy (HIV <50 copies/mL), all participants on BIKTARVY®, pooled Studies 1489 and 1490+1",
+                "type": "Component"
+            },
+            {
+                "bbox": [
+                    0.6434054374694824,
+                    0.025466421619057655,
+                    0.6876035928726196,
+                    0.07738208770751953
+                ],
+                "component_index": 2,
+                "component_type": "logo",
+                "content": "Unidentifiable Brand A red line drawing depicts a stylized sun or a burger bun with wavy lines below it, possibly representing water or a grill.",
+                "id": "cefb393e-8e4c-46f4-814a-d8a8be1db200",
+                "image_url": "https://icb-asset-store-s3.s3.amazonaws.com/ncci-semanticmesh-elements/component_images/77305110-f50a-4267-9d26-375f32b18a3e_page_13_comp2.png?AWSAccessKeyId=AKIAW3MEFFJK4ERS4VEG&Signature=CxUlRMG3KRYWI6FmoXL6%2FFeC4Jk%3D&Expires=1776081828",
+                "name": "Unidentifiable Brand A red line drawing depicts a stylized sun or a burger bun with wavy lines below",
+                "type": "Component"
+            },
+            {
+                "bbox": [
+                    0.06682005524635315,
+                    0.014591950923204422,
+                    0.632749080657959,
+                    0.08452792465686798
+                ],
+                "component_index": 1,
+                "component_type": "figure",
+                "content": "An infographic showing a red continuous line that starts as a horizontal baseline, then curves upwards to encompass a series of icons and text labels. From left to right: - A red outline icon of a house. - A red outline icon of two hands shaking. - A red outline icon of a person's head and shoulders. - A red outline icon of two people, one with an arm around the other's shoulder. - The bold red text \"Efficacy\". - The bold black text \"Forgiveness\". - The bold black text \"Tolerability profile & ease\".",
+                "id": "3c12ebff-6d23-4dd5-9484-645dd6dabb2f",
+                "image_url": "https://icb-asset-store-s3.s3.amazonaws.com/ncci-semanticmesh-elements/component_images/21559cd3-65d9-4143-a6df-ec743c54be77_page_13_comp1.png?AWSAccessKeyId=AKIAW3MEFFJK4ERS4VEG&Signature=a1ERR%2Bwa%2Fcku3TkFEC0J9y0Bi6o%3D&Expires=1776081828",
+                "name": "An infographic showing a red continuous line that starts as a horizontal baseline, then curves upwar",
+                "type": "Component"
+            }
+        ],
+        "content": "BIKTARVY® shows sustained efficacy of 91% over five years in treatment-naïve HIV patients.",
+        "footnotes": [
+            {
+                "content": "+ Participants with nonmissing HIV-1 RNA value.1",
+                "id": "0f4c666f-ea7e-4ab1-a9e5-42ed72589d8e",
+                "source": "KeyClaim",
+                "source_id": "3d5d505d-99a2-4fff-9ecb-bb9bf3340efc",
+                "type": "Footnote"
+            },
+            {
+                "content": "+ Efficacy defined as HIV-1 RNA <50 copies/mL.1",
+                "id": "bd2a7bc9-4f14-4a2f-a9c5-e8ab268b1255",
+                "source": "KeyClaim",
+                "source_id": "3d5d505d-99a2-4fff-9ecb-bb9bf3340efc",
+                "type": "Footnote"
+            }
+        ],
+        "glossaries": [
+            {
+                "content": "RPV, rilpivirine",
+                "id": "6607f0fe-ba59-4fc6-bd88-0c5a85488377",
+                "source": "KeyClaim",
+                "source_id": "3d5d505d-99a2-4fff-9ecb-bb9bf3340efc",
+                "type": "Glossary"
+            },
+            {
+                "content": "RNA, ribonucleic acid",
+                "id": "663de69d-d8ce-495d-8608-3f556408970b",
+                "source": "KeyClaim",
+                "source_id": "3d5d505d-99a2-4fff-9ecb-bb9bf3340efc",
+                "type": "Glossary"
+            },
+            {
+                "content": "M=F, missing=failure",
+                "id": "6869d8d8-0de9-4d46-9b50-1c6c2759fba1",
+                "source": "KeyClaim",
+                "source_id": "3d5d505d-99a2-4fff-9ecb-bb9bf3340efc",
+                "type": "Glossary"
+            },
+            {
+                "content": "M=E, missing=excluded",
+                "id": "05a2f778-b0c0-47d5-a457-5ce3564d4dd3",
+                "source": "KeyClaim",
+                "source_id": "3d5d505d-99a2-4fff-9ecb-bb9bf3340efc",
+                "type": "Glossary"
+            },
+            {
+                "content": "CI, confidence interval",
+                "id": "527763c8-2954-4985-abf9-d085806f5d7d",
+                "source": "KeyClaim",
+                "source_id": "3d5d505d-99a2-4fff-9ecb-bb9bf3340efc",
+                "type": "Glossary"
+            },
+            {
+                "content": "CAB, cabotegravir",
+                "id": "27491430-32a2-40f9-b97c-0ed565fdf8a5",
+                "source": "KeyClaim",
+                "source_id": "3d5d505d-99a2-4fff-9ecb-bb9bf3340efc",
+                "type": "Glossary"
+            }
+        ],
+        "glossary": "3TC, lamivudine | ABC, abacavir | BIC, bictegravir | CAB, cabotegravir | CI, confidence interval | DTG, dolutegravir | FTC, emtricitabine | M=E, missing=excluded | M=F, missing=failure | RNA, ribonucleic acid | RPV, rilpivirine | TAF, tenofovir alafenamide fumarate",
+        "id": "summary:90b61378ce3193e36677c98235aa7483fd03063c",
+        "key_claims": [
+            {
+                "content": "Primary endpoint: at Week 48, pooled data from treatment-naïve participants, efficacy was 91% for BIKTARVY® (pooled n=634)*+2",
+                "id": "9bf9f531-a1fd-40ec-ab66-45dfe25fae6a",
+                "name": "Primary endpoint: at Week 48, pooled data from treatment-naïve participants, efficacy was 91% for BI",
+                "type": "KeyClaim"
+            },
+            {
+                "content": "* At Week 48 in pooled data from treatment-naïve participants: efficacy was 91% for BIKTARVY® (pooled [n=634]) vs 93% (ABC/3TC/DTG [n=315]) in Study 1489 (95% CI: -2.1 [-5.9 to 1.6]) and 93% (FTC/TAF + DTG [n=325]) in Study 1490 (95% CI: -1.9 [-5.6 to 1.8]).2",
+                "id": "3d5d505d-99a2-4fff-9ecb-bb9bf3340efc",
+                "name": "* At Week 48 in pooled data from treatment-naïve participants: efficacy was 91% for BIKTARVY® (poole",
+                "type": "KeyClaim"
+            },
+            {
+                "content": "BIKTARVY®: robust and durable efficacy through 5 years in treatment-naïve people with HIV*1",
+                "id": "b024ed00-877b-4fee-b109-80483823a275",
+                "name": "BIKTARVY®: robust and durable efficacy through 5 years in treatment-naïve people with HIV*1",
+                "type": "KeyClaim"
+            }
+        ],
+        "page_number": 13,
+        "reference": "Adapted from Sax PE, et al. eClinicalMedicine. 2023.¹\n1. Sax PE, et al. eClinicalMedicine. 2023; 59: 101991. | 2. BIKTARVY® (BIC/FTC/TAF) Summary of Product Characteristics.\n2. BIKTARVY® (BIC/FTC/TAF) Summary of Product Characteristics.\n1. Sax PE, et al. eClinicalMedicine. 2023; 59: 101991.",
+        "references": [
+            {
+                "content": "1. Sax PE, et al. eClinicalMedicine. 2023; 59: 101991.",
+                "id": "6238739e-2cf1-46c5-a1c0-ed239099b125",
+                "source": "KeyClaim",
+                "source_id": "3d5d505d-99a2-4fff-9ecb-bb9bf3340efc",
+                "type": "Reference"
+            },
+            {
+                "content": "Adapted from Sax PE, et al. eClinicalMedicine. 2023.¹",
+                "id": "62390461-d2bf-430e-9cc5-efa0c3706c1e",
+                "source": "KeyClaim",
+                "source_id": "b024ed00-877b-4fee-b109-80483823a275",
+                "type": "Reference"
+            },
+            {
+                "content": "1. Sax PE, et al. eClinicalMedicine. 2023; 59: 101991.",
+                "id": "6238739e-2cf1-46c5-a1c0-ed239099b125",
+                "source": "SupportingClaim",
+                "source_id": "a9a45c54-5004-4c5a-a7b0-0268c66875bb",
+                "type": "Reference"
+            },
+            {
+                "content": "1. Sax PE, et al. eClinicalMedicine. 2023; 59: 101991.",
+                "id": "6238739e-2cf1-46c5-a1c0-ed239099b125",
+                "source": "SupportingClaim",
+                "source_id": "d4fa6aa0-dc34-4ca9-9831-83d8a314a608",
+                "type": "Reference"
+            }
+        ],
+        "reusable_text": "",
+        "reusable_texts": [],
+        "similarity": 0.7119311195097408,
+        "supporting_claims": [
+            {
+                "content": "pooled efficacy (M=F) through Week 240 (n=426/634)+1",
+                "id": "a9a45c54-5004-4c5a-a7b0-0268c66875bb",
+                "key_claim_id": "9bf9f531-a1fd-40ec-ab66-45dfe25fae6a",
+                "name": "pooled efficacy (M=F) through Week 240 (n=426/634)+1",
+                "type": "SupportingClaim"
+            },
+            {
+                "content": "pooled efficacy (M=E) through Week 240 (n=426/432)+1",
+                "id": "d4fa6aa0-dc34-4ca9-9831-83d8a314a608",
+                "key_claim_id": "9bf9f531-a1fd-40ec-ab66-45dfe25fae6a",
+                "name": "pooled efficacy (M=E) through Week 240 (n=426/432)+1",
+                "type": "SupportingClaim"
+            },
+            {
+                "content": "67% pooled efficacy (M=F) through Week 240 (n=426/634)+1",
+                "id": "edead5e0-9582-4fe7-9790-d328ee10a393",
+                "key_claim_id": "b024ed00-877b-4fee-b109-80483823a275",
+                "name": "67% pooled efficacy (M=F) through Week 240 (n=426/634)+1",
+                "type": "SupportingClaim"
+            },
+            {
+                "content": "99% pooled efficacy (M=E) through Week 240 (n=426/432)+1",
+                "id": "e854266a-9618-4504-ad0d-1c72e139a803",
+                "key_claim_id": "b024ed00-877b-4fee-b109-80483823a275",
+                "name": "99% pooled efficacy (M=E) through Week 240 (n=426/432)+1",
+                "type": "SupportingClaim"
+            },
+            {
+                "content": "Primary endpoint: at Week 48, pooled data from treatment-naïve participants, efficacy was 91% for BIKTARVY® (pooled n=634)*+2",
+                "id": "5d446533-c9af-4b61-ad03-a0c224efff20",
+                "key_claim_id": "b024ed00-877b-4fee-b109-80483823a275",
+                "name": "Primary endpoint: at Week 48, pooled data from treatment-naïve participants, efficacy was 91% for BI",
+                "type": "SupportingClaim"
+            }
+        ],
+        "type": "Summary"
+    },
+    {
+        "asset_id": "32396a05-5e29-46d8-82a1-6aa00761f1ba",
+        "category": "Clinical Efficacy",
+        "claims": "BIKTARVY®: forgiveness* demonstrated in Phase 3 clinical trials†1\nBIKTARVY® maintained higher virologic suppression through 144 weeks in treatment-naïve participants with <85% adherence vs DTG + 2 NRTI regimens‡ (p=0.03)+1",
+        "components": [
+            {
+                "bbox": [
+                    0.052963197231292725,
+                    0.3500874638557434,
+                    0.6517202854156494,
+                    0.7541797757148743
+                ],
+                "component_index": 3,
+                "component_type": "figure",
+                "content": "BIKTARVY bictegravir 50mg/emtricitabine 200mg/ tenofovir alafenamide 25mg tablets Three inverted pyramid shapes are stacked on top of each other, with the largest red, the middle teal, and the smallest dark blue, forming a stylized upward-pointing arrow or growth symbol",
+                "id": "52b3322b-6dd7-42b1-af8a-4753a6b9e09e",
+                "image_url": "https://icb-asset-store-s3.s3.amazonaws.com/ncci-semanticmesh-elements/component_images/0d113eb0-10c9-4843-b482-7ceedde4438a_page_31_comp3.png?AWSAccessKeyId=AKIAW3MEFFJK4ERS4VEG&Signature=cSswsDr97kR%2F4mcanWtWEditb4M%3D&Expires=1776081828",
+                "name": "BIKTARVY bictegravir 50mg/emtricitabine 200mg/ tenofovir alafenamide 25mg tablets Three inverted pyr",
+                "type": "Component"
+            },
+            {
+                "bbox": [
+                    0.6434313654899597,
+                    0.023506836965680122,
+                    0.6881935000419617,
+                    0.07846634089946747
+                ],
+                "component_index": 2,
+                "component_type": "logo",
+                "content": "Bar chart: Efficacy (HIV <50 copies/mL) of BIKTARVY® vs DTG + 2 NRTI regimens stratified by adherence level in a pooled, retrospective analysis of 1489 and 1490+ Y-axis: Participants (%) X-axis: Adherence category and treatment regimen Data Series: BIKTARVY® (n=623) - Red bars - High (adherence ≥95%, n=436): 99% - Intermediate (adherence ≥85-<95%, n=149): 99% - Low (adherence <85%, n=38): 97% DTG + 2 NRTIs‡ (n=637) - Dark gray bars (Week 144) - High (adherence ≥95%, n=436): 98% - Intermediate (adherence ≥85-<95%, n=149): 96% - Low (adherence <85%, n=38): 82% P-values: - Between BIKTARVY® High and Intermediate adherence: p=0.45 - Between BIKTARVY® Intermediate and Low adherence: p=0.50 - Between DTG + 2 NRTIs High and Intermediate adherence: p<0.0001 - Between DTG + 2 NRTIs Intermediate and Low adherence: p=0.005",
+                "id": "25c5ce19-9191-469d-8adf-22d2ebbf0b4e",
+                "image_url": "https://icb-asset-store-s3.s3.amazonaws.com/ncci-semanticmesh-elements/component_images/85a36fb9-4938-401b-b18c-91ee0d26fbd2_page_31_comp2.png?AWSAccessKeyId=AKIAW3MEFFJK4ERS4VEG&Signature=5prJcAtndSgqh8C9NpOQojJ32AA%3D&Expires=1776081828",
+                "name": "Bar chart: Efficacy (HIV <50 copies/mL) of BIKTARVY® vs DTG + 2 NRTI regimens stratified by adherenc",
+                "type": "Component"
+            }
+        ],
+        "content": "BIKTARVY® shows superior virologic suppression in treatment-naïve patients with low adherence over 144 weeks.",
+        "footnotes": [
+            {
+                "content": "Forgiveness is defined as the ability of a given regimen to achieve and maintain virological suppression despite imperfect adherence.",
+                "id": "2ea574b9-5471-4fdd-ab0f-bf41fa2a131f",
+                "source": "SupportingClaim",
+                "source_id": "3cd727ee-2335-4850-ae78-85d3743aeb79",
+                "type": "Footnote"
+            },
+            {
+                "content": "‡ DTG + 2 NRTI regimens included: Study 1489, ABC/3TC/DTG (n=314) and Study 1490, DTG + FTC/TAF (n=323).",
+                "id": "f8f3f824-7628-4ec8-8ae8-473805726380",
+                "source": "SupportingClaim",
+                "source_id": "3cd727ee-2335-4850-ae78-85d3743aeb79",
+                "type": "Footnote"
+            },
+            {
+                "content": "† A retrospective analysis evaluated treatment adherence and its effect on virologic outcomes in double-blind, placebo-controlled clinical studies in treatment-naïve (1489, 1490, 4458) or virologically suppressed (1844 and 4030) participants.¹ Participants with ≥1 returned pill bottle and ≥1 on-treatment HIV-1 RNA measurement were included in the analysis.¹ Adherence was measured by the number of pills taken divided by the number of pills prescribed. Assessment was limited to returned pill bottles.¹",
+                "id": "4d43e396-5514-4b13-b643-37f1fb3315eb",
+                "source": "SupportingClaim",
+                "source_id": "3cd727ee-2335-4850-ae78-85d3743aeb79",
+                "type": "Footnote"
+            }
+        ],
+        "glossaries": [],
+        "glossary": "3TC, lamivudine | ABC, abacavir | DTG, dolutegravir | NRTI, nucleoside reverse transcriptase inhibitor\nBIC, bictegravir | FTC, emtricitabine | TAF, tenofovir alafenamide fumarate",
+        "id": "summary:066400580ba30f5951c192fbb7b552a585b08174",
+        "key_claims": [
+            {
+                "content": "BIKTARVY®: forgiveness* demonstrated in Phase 3 clinical trials†1",
+                "id": "9492fa2a-73a3-42b4-8b4f-12eff16e1c77",
+                "name": "BIKTARVY®: forgiveness* demonstrated in Phase 3 clinical trials†1",
+                "type": "KeyClaim"
+            }
+        ],
+        "page_number": 31,
+        "reference": "1. Andreatta K, et al. Infectious Diseases (ID) Week 2023; 11-15 October; Boston, MA.\n1. Andreatta K, et al. Infectious Diseases (ID) Week 2023; 11-15 October; Boston, MA. | 2. BIKTARVY® (BIC/FTC/TAF) Summary of Product Characteristics.",
+        "references": [
+            {
+                "content": "1. Andreatta K, et al. Infectious Diseases (ID) Week 2023; 11-15 October; Boston, MA.",
+                "id": "201e0200-953e-40ef-8819-1fb82b51f871",
+                "source": "SupportingClaim",
+                "source_id": "3cd727ee-2335-4850-ae78-85d3743aeb79",
+                "type": "Reference"
+            },
+            {
+                "content": "1. Andreatta K, et al. Infectious Diseases (ID) Week 2023; 11-15 October; Boston, MA.",
+                "id": "201e0200-953e-40ef-8819-1fb82b51f871",
+                "source": "ReusableText",
+                "source_id": "57ea3590-85f5-4993-b794-c6acaa80b364",
+                "type": "Reference"
+            }
+        ],
+        "reusable_text": "O treatment-emergent resistance with BIKTARVY® (n=1306) Across double-blind, placebo-controlled clinical studies in treatment-naïve (1489, 1490, 4458) or virologically suppressed (1844 and 4030) participants†‡§1\nBIKTARVY® is one tablet to be taken once daily.¹²",
+        "reusable_texts": [
+            {
+                "content": "Efficacy (HIV <50 copies/mL) of BIKTARVY® vs DTG + 2 NRTI regimens stratified by adherence level in a pooled, retrospective analysis of 1489 and 1490",
+                "id": "57ea3590-85f5-4993-b794-c6acaa80b364",
+                "name": "Efficacy (HIV <50 copies/mL) of BIKTARVY",
+                "type": "ReusableText"
+            }
+        ],
+        "similarity": 0.6997984739165892,
+        "supporting_claims": [
+            {
+                "content": "O treatment-emergent resistance with BIKTARVY® (n=1306) Across double-blind, placebo-controlled clinical studies in treatment-naïve (1489, 1490, 4458) or virologically suppressed (1844 and 4030) participants†‡§1",
+                "id": "3cd727ee-2335-4850-ae78-85d3743aeb79",
+                "key_claim_id": "9492fa2a-73a3-42b4-8b4f-12eff16e1c77",
+                "name": "O treatment-emergent resistance with BIKTARVY® (n=1306) Across double-blind, placebo-controlled clin",
+                "type": "SupportingClaim"
+            },
+            {
+                "content": "BIKTARVY® maintained higher virologic suppression through 144 weeks in treatment-naïve participants with <85% adherence vs DTG + 2 NRTI regimens‡ (p=0.03)+1",
+                "id": "978a1d6c-9b3e-46c3-a600-1b14ecf8d7ab",
+                "key_claim_id": "9492fa2a-73a3-42b4-8b4f-12eff16e1c77",
+                "name": "BIKTARVY® maintained higher virologic suppression through 144 weeks in treatment-naïve participants ",
+                "type": "SupportingClaim"
+            }
+        ],
+        "type": "Summary"
+    },
+    {
+        "asset_id": "32396a05-5e29-46d8-82a1-6aa00761f1ba",
+        "category": "Long-term Efficacy",
+        "claims": "BIKTARVY®: sustained efficacy through 3 years in virologically suppressed people with HIV*1,2\nThrough Week 48, in Studies 1844 (n=282) and 1878 (n=290), efficacy was 92-94% with BIKTARVY®*3\n≥96% efficacy (M=E) maintained through the open-label extensions of both studies‡1,2\n* At Week 48, efficacy was 94% for BIKTARVY® (n=282) vs 95% for ABC/3TC/DTG (n=281) in Study 1844 (95% CI: -1.4 [-5.5 to 2.6]) and 92% for BIKTARVY® (n=290) vs 89% for ABC/3TC or FTC/TDF plus boosted ATV or DRV (n=287) in Study 1878 (95% CI: 3.2 [-1.6 to 8.2]).3",
+        "components": [],
+        "content": "BIKTARVY® shows sustained efficacy of 92-94% over three years in HIV patients.",
+        "footnotes": [
+            {
+                "content": "At Week 48, efficacy was 94% for BIKTARVY® (n=282) vs 95% for ABC/3TC/DTG (n=281) in Study 1844 (95% CI: -1.4 [-5.5 to 2.6]) and 92% for BIKTARVY® (n=290) vs 89% for ABC/3TC or FTC/TDF plus boosted ATV or DRV (n=287) in Study 1878 (95% CI: 3.2 [-1.6 to 8.2]). ",
+                "id": "616afa08-2d24-4407-9a8f-03e078b5caec",
+                "source": "KeyClaim",
+                "source_id": "a5d4674a-3c94-4057-81ff-8a01feea0379",
+                "type": "Footnote"
+            },
+            {
+                "content": "+ Includes all participants treated with BIKTARVY® (Study 1844: n=547; Study 1878: n=534) in either the randomisation phases or the open-label extension phases of Studies 1844 and 1878.1.2",
+                "id": "4fcd3bb7-5910-4ca6-8dda-eedd2dac3430",
+                "source": "SupportingClaim",
+                "source_id": "61a15938-759d-4813-b167-2a5d703f55b1",
+                "type": "Footnote"
+            }
+        ],
+        "glossaries": [],
+        "glossary": "",
+        "id": "summary:03bfeeb6ac4cbc37001b078bd23bae70db4fbba5",
+        "key_claims": [
+            {
+                "content": "BIKTARVY®: sustained efficacy through 3 years in virologically suppressed people with HIV*1,2",
+                "id": "a5d4674a-3c94-4057-81ff-8a01feea0379",
+                "name": "BIKTARVY®: sustained efficacy through 3 years in virologically suppressed people with HIV*1,2",
+                "type": "KeyClaim"
+            }
+        ],
+        "page_number": 15,
+        "reference": "1. Brar I, et al. Infectious Disease (ID) Week 2020, 21-25 October; Virtual. Poster 1028. | 2. Andreatta K, et al. 18th European AIDS Conference (EACS) 2021, 27-30 October; London, UK. Poster PE1/19.\n3. BIKTARVY® (BIC/FTC/TAF) Summary of Product Characteristics.\n3. BIKTARVY® (BIC/FTC/TAF) Summary of Product Characteristics. | 1. Brar I, et al. Infectious Disease (ID) Week 2020, 21-25 October; Virtual. Poster 1028. | 2. Andreatta K, et al. 18th European AIDS Conference (EACS) 2021, 27-30 October; London, UK. Poster PE1/19.",
+        "references": [
+            {
+                "content": "2. Andreatta K, et al. 18th European AIDS Conference (EACS) 2021, 27-30 October; London, UK. Poster PE1/19.",
+                "id": "dd1ba509-00ea-40aa-b8f7-0c59ed423a30",
+                "source": "KeyClaim",
+                "source_id": "a5d4674a-3c94-4057-81ff-8a01feea0379",
+                "type": "Reference"
+            },
+            {
+                "content": "1. Brar I, et al. Infectious Disease (ID) Week 2020, 21-25 October; Virtual. Poster 1028.",
+                "id": "bd0d67ce-8326-4716-9bd1-a9dc87edeb98",
+                "source": "KeyClaim",
+                "source_id": "a5d4674a-3c94-4057-81ff-8a01feea0379",
+                "type": "Reference"
+            },
+            {
+                "content": "2. Andreatta K, et al. 18th European AIDS Conference (EACS) 2021, 27-30 October; London, UK. Poster PE1/19.",
+                "id": "dd1ba509-00ea-40aa-b8f7-0c59ed423a30",
+                "source": "SupportingClaim",
+                "source_id": "61a15938-759d-4813-b167-2a5d703f55b1",
+                "type": "Reference"
+            },
+            {
+                "content": "1. Brar I, et al. Infectious Disease (ID) Week 2020, 21-25 October; Virtual. Poster 1028.",
+                "id": "bd0d67ce-8326-4716-9bd1-a9dc87edeb98",
+                "source": "SupportingClaim",
+                "source_id": "61a15938-759d-4813-b167-2a5d703f55b1",
+                "type": "Reference"
+            }
+        ],
+        "reusable_text": "option Pivotal trials: [x] option Real world: [ ] option Diverse populations: [ ] option Rapid start: [ ] option Guidelines: [ ]",
+        "reusable_texts": [],
+        "similarity": 0.6615871023019385,
+        "supporting_claims": [
+            {
+                "content": "≥96% efficacy (M=E) maintained through the open-label extensions of both studies‡1,2",
+                "id": "61a15938-759d-4813-b167-2a5d703f55b1",
+                "key_claim_id": "a5d4674a-3c94-4057-81ff-8a01feea0379",
+                "name": "≥96% efficacy (M=E) maintained through the open-label extensions of both studies‡1,2",
+                "type": "SupportingClaim"
+            },
+            {
+                "content": "Through Week 48, in Studies 1844 (n=282) and 1878 (n=290), efficacy was 92-94% with BIKTARVY®*3",
+                "id": "5d29aee3-c100-4689-8257-29609ec1862e",
+                "key_claim_id": "a5d4674a-3c94-4057-81ff-8a01feea0379",
+                "name": "Through Week 48, in Studies 1844 (n=282) and 1878 (n=290), efficacy was 92-94% with BIKTARVY®*3",
+                "type": "SupportingClaim"
+            }
+        ],
+        "type": "Summary"
+    },
+    {
+        "asset_id": "32396a05-5e29-46d8-82a1-6aa00761f1ba",
+        "category": "Efficacy and Resistance",
+        "claims": "BIKTARVY®: robust and durable efficacy through 5 years with 0 treatment- emergent resistance*1,2\nGuideline-recommended for rapid start, with robust efficacy from Day 1¹²⁻¹⁸\nA guideline-recommended regimen to start and stay for the majority of your patients¹⁶⁻¹⁸\ntreatment-emergent resistance demonstrated in:Pivotal Phase 3 trials²⁻⁴ >Real-world BICSTaR study⁵ >Diverse populations⁶⁻¹¹ >",
+        "components": [
+            {
+                "bbox": [
+                    0.05685488134622574,
+                    0.9239372611045837,
+                    0.20706117153167725,
+                    0.9908590912818909
+                ],
+                "component_index": 6,
+                "component_type": "logo",
+                "content": "Logo: Red line icons representing a house, a handshake, a person, two people, and a sun, with text labels in red and black",
+                "id": "61fff891-76f0-4b6f-aa51-ab70ca1bfa76",
+                "image_url": "https://icb-asset-store-s3.s3.amazonaws.com/ncci-semanticmesh-elements/component_images/4b23798b-5a23-4c58-986f-8641708f7716_page_11_comp6.png?AWSAccessKeyId=AKIAW3MEFFJK4ERS4VEG&Signature=I4AbKEIZNzgNbISb7Vx9Fczzhgs%3D&Expires=1776081828",
+                "name": "Logo: Red line icons representing a house, a handshake, a person, two people, and a sun, with text l",
+                "type": "Component"
+            },
+            {
+                "bbox": [
+                    0.6495632529258728,
+                    0.35934752225875854,
+                    0.941672146320343,
+                    0.763754665851593
+                ],
+                "component_index": 5,
+                "component_type": "figure",
+                "content": "Efficacy Forgiveness Tolerability profile & ease",
+                "id": "38ecd98b-ae38-4149-84a3-a0a09d148664",
+                "image_url": "https://icb-asset-store-s3.s3.amazonaws.com/ncci-semanticmesh-elements/component_images/4f121e72-0b8a-463c-8aa4-72bf72f30ac0_page_11_comp5.png?AWSAccessKeyId=AKIAW3MEFFJK4ERS4VEG&Signature=BOn6zZ%2FZMnVo4ApwheUClikH%2Bf0%3D&Expires=1776081828",
+                "name": "Efficacy Forgiveness Tolerability profile & ease",
+                "type": "Component"
+            },
+            {
+                "bbox": [
+                    0.06848996877670288,
+                    0.014541156589984894,
+                    0.6336514949798584,
+                    0.08620838820934296
+                ],
+                "component_index": 1,
+                "component_type": "logo",
+                "content": "Efficacy Forgiveness Tolerability profile & ease Red line icons of a house, handshake, person, and two people embracing, followed by text in a red and black color scheme within a red outlined box.",
+                "id": "fc05207f-4a8b-448c-8ebf-f5fd74190913",
+                "image_url": "https://icb-asset-store-s3.s3.amazonaws.com/ncci-semanticmesh-elements/component_images/ee001725-cdc9-45db-9eb0-54e727228639_page_11_comp1.png?AWSAccessKeyId=AKIAW3MEFFJK4ERS4VEG&Signature=ExOF5Fu96S9ghyS%2B9l7W5HXg%2Fdg%3D&Expires=1776081828",
+                "name": "Efficacy Forgiveness Tolerability profile & ease Red line icons of a house, handshake, person, and t",
+                "type": "Component"
+            }
+        ],
+        "content": "BIKTARVY® shows sustained efficacy and no treatment-emergent resistance over five years.",
+        "footnotes": [
+            {
+                "content": "* At Week 48 (primary endpoint) in pooled data from treatment-naïve participants: efficacy was 91% for BIKTARVY® (n=634) vs 93% (ABC/3TC/DTG [n=315]) in Study 1489 (95% CI: -2.1 [-5.9 to 1.6]) and 93% (FTC/TAF + DTG [n=325]) in Study 1490 (95% CI: -1.9 [-5.6 to 1.8]).¹ Efficacy defined as viral load <50 copies/mL. In a pooled analysis of both studies in participants initially randomised to BIKTARVY® (n=634), efficacy was 98.6% (M=E) at Week 240 with 0 treatment-emergent resistance in the final resistance analysis population.²",
+                "id": "47ed54ed-ae0b-4c02-a14f-abdd9f407900",
+                "source": "KeyClaim",
+                "source_id": "cb623a22-e20b-491f-af29-e051202c0605",
+                "type": "Footnote"
+            }
+        ],
+        "glossaries": [],
+        "glossary": "",
+        "id": "summary:1af3d55c7215a5d7a026fcc1d50599504b8f5456",
+        "key_claims": [
+            {
+                "content": "A guideline-recommended regimen to start and stay for the majority of your patients¹⁶⁻¹⁸",
+                "id": "7c083b42-8196-4626-975a-038d9c6ea097",
+                "name": "A guideline-recommended regimen to start and stay for the majority of your patients¹⁶⁻¹⁸",
+                "type": "KeyClaim"
+            },
+            {
+                "content": "Guideline-recommended for rapid start, with robust efficacy from Day 1¹²⁻¹⁸",
+                "id": "cdaead18-18e4-4dd9-9b39-afdfdc3fec7c",
+                "name": "Guideline-recommended for rapid start, with robust efficacy from Day 1¹²⁻¹⁸",
+                "type": "KeyClaim"
+            },
+            {
+                "content": "BIKTARVY®: robust and durable efficacy through 5 years with 0 treatment- emergent resistance*1,2",
+                "id": "cb623a22-e20b-491f-af29-e051202c0605",
+                "name": "BIKTARVY®: robust and durable efficacy through 5 years with 0 treatment- emergent resistance*1,2",
+                "type": "KeyClaim"
+            }
+        ],
+        "page_number": 11,
+        "reference": "¹ Efficacy defined as viral load <50 copies/mL. | ² At Week 240, M=F efficacy was 67.2%.\n¹² Hidalgo-Tenorio C, et al. European AIDS Conference (EACS) 2023, 18-21 October; Warsaw, Poland. Poster eP.A.098. | ¹³ Dai L, et al. HIV Glasgow 2022, 23-26 October; Glasgow, UK. Oral presentation. | ¹⁴ Bachelard A, et al. J Antimicrob Chemother. 2023; 78: 769-778. | ¹⁵ Camici M, et al. Int J Antimicrob Agents. 2024; 63: 107049. | ¹⁶ European AIDS Clinical Society (EACS). Guidelines. Version 12.0 October 2023. Available from: https://www.eacsociety.org/media/guidelines-12.0.pdf/. Accessed April 2024. | ¹⁷ US Department of Health and Human Services (DHHS). Guidelines for the use of antiretroviral agents in adults and adolescents with HIV. February 2024. Available from: https://clinicalinfo.hiv.gov/sites/default/files/guidelines/documents/adult-adolescent-arv/guidelines-adult-adolescent-arv.pdf. Accessed April 2024. | ¹⁸ Gandhi RT, et al. JAMA. 2023; 329: 63-84.\n¹⁶ European AIDS Clinical Society (EACS). Guidelines. Version 12.0 October 2023. Available from: https://www.eacsociety.org/media/guidelines-12.0.pdf/. Accessed April 2024. | ¹⁷ US Department of Health and Human Services (DHHS). Guidelines for the use of antiretroviral agents in adults and adolescents with HIV. February 2024. Available from: https://clinicalinfo.hiv.gov/sites/default/files/guidelines/documents/adult-adolescent-arv/guidelines-adult-adolescent-arv.pdf. Accessed April 2024. | ¹⁸ Gandhi RT, et al. JAMA. 2023; 329: 63-84.\n² Sax PE, et al. eClinicalMedicine. 2023; 59: 10199. | ³ Brar I, et al. Infectious Disease (ID) Week 2020, 21-25 October; Virtual. Poster 1028. | ⁴ Andreatta K, et al. 18th European AIDS Conference (EACS) 2021, 27-30 October; London, UK. Poster PE1/19. | ⁵ Sabranski M, et al. 19th European AIDS Conference (EACS) 2023, 18-21 October; Warsaw, Poland. Poster eP.A.081. | ⁶ Kityo C, et al. International AIDS Society (IAS) 2019, 21-24 July; Mexico City, Mexico. Presentation MOAB0106. | ⁷ Natukunda E, et al. International Workshop on HIV Pediatrics 2021, 16-17 July; Virtual. Oral 2. | ⁸ Rodriguez C, et al. International Workshop on HIV Pediatrics 2022, 27-28 July; Montréal, Canada. Oral 2. | ⁹ Hagins D, et al. J Acquir Immune Defic Syndr. 2021; 88: 86-95. | ¹⁰ Maggiolo F, et al. HIV Med. 2023; 24: 27-36. | ¹¹ Avihingsanon A, et al. Lancet HIV. 2023; 10: e640-e652.",
+        "references": [
+            {
+                "content": "¹⁸ Gandhi RT, et al. JAMA. 2023; 329: 63-84.",
+                "id": "80f21a19-97c2-43dc-9772-211981a156ba",
+                "source": "KeyClaim",
+                "source_id": "7c083b42-8196-4626-975a-038d9c6ea097",
+                "type": "Reference"
+            },
+            {
+                "content": "¹⁷ US Department of Health and Human Services (DHHS). Guidelines for the use of antiretroviral agents in adults and adolescents with HIV. February 2024. Available from: https://clinicalinfo.hiv.gov/sites/default/files/guidelines/documents/adult-adolescent-arv/guidelines-adult-adolescent-arv.pdf. Accessed April 2024.",
+                "id": "f53db2f7-6856-46bf-9dc7-dc1457aeb3ce",
+                "source": "KeyClaim",
+                "source_id": "7c083b42-8196-4626-975a-038d9c6ea097",
+                "type": "Reference"
+            },
+            {
+                "content": "¹⁶ European AIDS Clinical Society (EACS). Guidelines. Version 12.0 October 2023. Available from: https://www.eacsociety.org/media/guidelines-12.0.pdf/. Accessed April 2024.",
+                "id": "23946eff-ffa4-4218-8407-ab1271d411aa",
+                "source": "KeyClaim",
+                "source_id": "7c083b42-8196-4626-975a-038d9c6ea097",
+                "type": "Reference"
+            },
+            {
+                "content": "¹⁸ Gandhi RT, et al. JAMA. 2023; 329: 63-84.",
+                "id": "80f21a19-97c2-43dc-9772-211981a156ba",
+                "source": "KeyClaim",
+                "source_id": "cdaead18-18e4-4dd9-9b39-afdfdc3fec7c",
+                "type": "Reference"
+            },
+            {
+                "content": "¹⁷ US Department of Health and Human Services (DHHS). Guidelines for the use of antiretroviral agents in adults and adolescents with HIV. February 2024. Available from: https://clinicalinfo.hiv.gov/sites/default/files/guidelines/documents/adult-adolescent-arv/guidelines-adult-adolescent-arv.pdf. Accessed April 2024.",
+                "id": "f53db2f7-6856-46bf-9dc7-dc1457aeb3ce",
+                "source": "KeyClaim",
+                "source_id": "cdaead18-18e4-4dd9-9b39-afdfdc3fec7c",
+                "type": "Reference"
+            },
+            {
+                "content": "¹⁶ European AIDS Clinical Society (EACS). Guidelines. Version 12.0 October 2023. Available from: https://www.eacsociety.org/media/guidelines-12.0.pdf/. Accessed April 2024.",
+                "id": "23946eff-ffa4-4218-8407-ab1271d411aa",
+                "source": "KeyClaim",
+                "source_id": "cdaead18-18e4-4dd9-9b39-afdfdc3fec7c",
+                "type": "Reference"
+            },
+            {
+                "content": "¹⁵ Camici M, et al. Int J Antimicrob Agents. 2024; 63: 107049.",
+                "id": "7e26f044-7959-4e01-a54b-f8a5b802de90",
+                "source": "KeyClaim",
+                "source_id": "cdaead18-18e4-4dd9-9b39-afdfdc3fec7c",
+                "type": "Reference"
+            },
+            {
+                "content": "¹⁴ Bachelard A, et al. J Antimicrob Chemother. 2023; 78: 769-778.",
+                "id": "62dbd15a-f17b-4acf-8e59-0fc1e2e452a1",
+                "source": "KeyClaim",
+                "source_id": "cdaead18-18e4-4dd9-9b39-afdfdc3fec7c",
+                "type": "Reference"
+            },
+            {
+                "content": "¹³ Dai L, et al. HIV Glasgow 2022, 23-26 October; Glasgow, UK. Oral presentation.",
+                "id": "70cb4368-9b83-4b48-bc59-1ef5505fdb7f",
+                "source": "KeyClaim",
+                "source_id": "cdaead18-18e4-4dd9-9b39-afdfdc3fec7c",
+                "type": "Reference"
+            },
+            {
+                "content": "¹² Hidalgo-Tenorio C, et al. European AIDS Conference (EACS) 2023, 18-21 October; Warsaw, Poland. Poster eP.A.098.",
+                "id": "b01c94b8-12f9-4d66-9a3c-9f1003b9063d",
+                "source": "KeyClaim",
+                "source_id": "cdaead18-18e4-4dd9-9b39-afdfdc3fec7c",
+                "type": "Reference"
+            },
+            {
+                "content": "² At Week 240, M=F efficacy was 67.2%.",
+                "id": "befb5cd0-811f-4cdd-b950-ac749b1e7b2f",
+                "source": "KeyClaim",
+                "source_id": "cb623a22-e20b-491f-af29-e051202c0605",
+                "type": "Reference"
+            },
+            {
+                "content": "¹ Efficacy defined as viral load <50 copies/mL.",
+                "id": "e5962489-8d8a-4c08-bb01-406bed51ae8d",
+                "source": "KeyClaim",
+                "source_id": "cb623a22-e20b-491f-af29-e051202c0605",
+                "type": "Reference"
+            },
+            {
+                "content": "¹¹ Avihingsanon A, et al. Lancet HIV. 2023; 10: e640-e652.",
+                "id": "aad467b9-c0e8-4c36-b4bc-a2e33efab5fd",
+                "source": "SupportingClaim",
+                "source_id": "49a57d33-da32-42fa-bedc-f91d955d1230",
+                "type": "Reference"
+            },
+            {
+                "content": "¹⁰ Maggiolo F, et al. HIV Med. 2023; 24: 27-36.",
+                "id": "f66fc203-8f22-4b8d-9ae2-f309fe360a23",
+                "source": "SupportingClaim",
+                "source_id": "49a57d33-da32-42fa-bedc-f91d955d1230",
+                "type": "Reference"
+            },
+            {
+                "content": "⁹ Hagins D, et al. J Acquir Immune Defic Syndr. 2021; 88: 86-95.",
+                "id": "a10d548e-c0ff-4042-9a8a-9587e578e8d0",
+                "source": "SupportingClaim",
+                "source_id": "49a57d33-da32-42fa-bedc-f91d955d1230",
+                "type": "Reference"
+            },
+            {
+                "content": "⁸ Rodriguez C, et al. International Workshop on HIV Pediatrics 2022, 27-28 July; Montréal, Canada. Oral 2.",
+                "id": "8a35784a-1532-453b-9c8f-e1c1e43447d8",
+                "source": "SupportingClaim",
+                "source_id": "49a57d33-da32-42fa-bedc-f91d955d1230",
+                "type": "Reference"
+            },
+            {
+                "content": "⁷ Natukunda E, et al. International Workshop on HIV Pediatrics 2021, 16-17 July; Virtual. Oral 2.",
+                "id": "3e418894-6638-4960-b306-5672644adf4d",
+                "source": "SupportingClaim",
+                "source_id": "49a57d33-da32-42fa-bedc-f91d955d1230",
+                "type": "Reference"
+            },
+            {
+                "content": "⁶ Kityo C, et al. International AIDS Society (IAS) 2019, 21-24 July; Mexico City, Mexico. Presentation MOAB0106.",
+                "id": "8d1135da-cfec-42ef-80fb-5c06fe9132ee",
+                "source": "SupportingClaim",
+                "source_id": "49a57d33-da32-42fa-bedc-f91d955d1230",
+                "type": "Reference"
+            },
+            {
+                "content": "⁵ Sabranski M, et al. 19th European AIDS Conference (EACS) 2023, 18-21 October; Warsaw, Poland. Poster eP.A.081.",
+                "id": "3f20e011-356f-4211-91a3-535d52d065e7",
+                "source": "SupportingClaim",
+                "source_id": "49a57d33-da32-42fa-bedc-f91d955d1230",
+                "type": "Reference"
+            },
+            {
+                "content": "⁴ Andreatta K, et al. 18th European AIDS Conference (EACS) 2021, 27-30 October; London, UK. Poster PE1/19.",
+                "id": "01d3d487-1ad9-440d-8501-ab81bb8eacda",
+                "source": "SupportingClaim",
+                "source_id": "49a57d33-da32-42fa-bedc-f91d955d1230",
+                "type": "Reference"
+            },
+            {
+                "content": "³ Brar I, et al. Infectious Disease (ID) Week 2020, 21-25 October; Virtual. Poster 1028.",
+                "id": "41c479d8-8f55-4694-8f0d-4c6ed3690a5b",
+                "source": "SupportingClaim",
+                "source_id": "49a57d33-da32-42fa-bedc-f91d955d1230",
+                "type": "Reference"
+            },
+            {
+                "content": "² Sax PE, et al. eClinicalMedicine. 2023; 59: 10199.",
+                "id": "1c0b3917-0baa-4b71-8c90-d9b590c3389c",
+                "source": "SupportingClaim",
+                "source_id": "49a57d33-da32-42fa-bedc-f91d955d1230",
+                "type": "Reference"
+            }
+        ],
+        "reusable_text": "Tolerability profile & ease",
+        "reusable_texts": [
+            {
+                "content": "Tolerability profile & ease",
+                "id": "3604c3b0-41fe-408b-b013-664382888ec7",
+                "name": "Tolerability profile & ease",
+                "type": "ReusableText"
+            }
+        ],
+        "similarity": 0.6534087635972401,
+        "supporting_claims": [
+            {
+                "content": "treatment-emergent resistance demonstrated in:Pivotal Phase 3 trials²⁻⁴ >Real-world BICSTaR study⁵ >Diverse populations⁶⁻¹¹ >",
+                "id": "49a57d33-da32-42fa-bedc-f91d955d1230",
+                "key_claim_id": "cb623a22-e20b-491f-af29-e051202c0605",
+                "name": "treatment-emergent resistance demonstrated in:Pivotal Phase 3 trials²⁻⁴ >Real-world BICSTaR study⁵ >",
+                "type": "SupportingClaim"
+            }
+        ],
+        "type": "Summary"
+    },
+    {
+        "asset_id": "32396a05-5e29-46d8-82a1-6aa00761f1ba",
+        "category": "Clinical Trials",
+        "claims": "Treatment-naïve adults: Studies 1489 and 1490¹⁻⁵\nStudies 1489 and 1490 were Phase 3, randomised, double- blind, multicentre clinical trials⁵\nPrimary endpoint:\u0012,\u0013 - HIV-1 RNA <50 copies/mL at Week 48*\nSecondary endpoints:²,´ - HIV-1 RNA <50 copies/mL at Weeks 96, 144, 192 and 240\nOLE objectives:¹ - To evaluate efficacy and safety after additional exposure to BIKTARVY®\nRandomised double-blind Study 1490: ART-r - Chronic HBV or infection allowed - eGFRCG ≥30 mL/ - No known resist - FTC, TAF, ABC, - HIV-1 RNA ≥500",
+        "components": [
+            {
+                "bbox": [
+                    0.07503688335418701,
+                    0.21832093596458435,
+                    0.7126924991607666,
+                    0.4279535114765167
+                ],
+                "component_index": 2,
+                "component_type": "figure",
+                "content": "Study Design: 1. **Randomization (1:1)**: * **Arm 1 (n=320)**: BIKTARVY® QD * **Arm 2 (n=325)**: FTC/TAF + DTG QD 2. **Timeline**: * **Blinded treatment (Week 0-144)**: * Week 0 * Week 48: Primary endpoint * Week 96: Secondary endpoint * Week 144: Secondary endpoint * **Open-label extension (Week 144-240)**: * From Week 144, Arm 2 switches to BIKTARVY® QD. * Week 192: Secondary endpoint * Week 240: Secondary endpoint",
+                "id": "9feb4136-896b-44d7-9346-15ecef40ddcc",
+                "image_url": "https://icb-asset-store-s3.s3.amazonaws.com/ncci-semanticmesh-elements/component_images/17a5c19c-b6a2-430f-9c19-53c9d02eaada_page_67_comp2.png?AWSAccessKeyId=AKIAW3MEFFJK4ERS4VEG&Signature=Dn5J6vjcDIsc%2FokJfsmAgkVTy%2BA%3D&Expires=1776081828",
+                "name": "Study Design: 1. **Randomization (1:1)**: * **Arm 1 (n=320)**: BIKTARVY® QD * **Arm 2 (n=325)**: FTC",
+                "type": "Component"
+            },
+            {
+                "bbox": [
+                    0.9024657011032104,
+                    0.10264943540096283,
+                    0.9351797103881836,
+                    0.14457426965236664
+                ],
+                "component_index": 1,
+                "component_type": "logo",
+                "content": "This flowchart outlines the design of Study 1489 for ART-naïve adults, which is a randomised double-blind study. The initial population is defined by the following criteria: - HLA B*5701 negative - Negative for chronic HBV - eGFRCG ≥50 mL/min - No known resistance to FTC, TAF, ABC, or 3TC - HIV-1 RNA ≥500 copies/mL This population is randomised 1:1 into two main groups: - Group 1 (n=314) receives BIKTARVY® QD. - Group 2 (n=315) is further divided or compared, with one arm receiving ABC/3TC/DTG QD (indicated by a gray box) and another arm receiving BIKTARVY® QD (indicated by a red box).",
+                "id": "7455b1ba-66c6-4460-92e3-9822c06db39e",
+                "image_url": "https://icb-asset-store-s3.s3.amazonaws.com/ncci-semanticmesh-elements/component_images/51719dc8-15bf-4578-8132-79699598d790_page_67_comp1.png?AWSAccessKeyId=AKIAW3MEFFJK4ERS4VEG&Signature=gsYZbvjqBLF9kuNkcgInc9ZzTsQ%3D&Expires=1776081828",
+                "name": "This flowchart outlines the design of Study 1489 for ART-naïve adults, which is a randomised double-",
+                "type": "Component"
+            }
+        ],
+        "content": "Phase 3 trials evaluated BIKTARVY® efficacy and safety in treatment-naïve adults over 240 weeks.",
+        "footnotes": [
+            {
+                "content": "* Based on US FDA snapshot algorithm, non-inferiority margin of -12%.2,3",
+                "id": "04c06f1a-3414-44e2-b71f-b8aefc2dc3e4",
+                "source": "SupportingClaim",
+                "source_id": "7228f795-f75d-4cb1-8df9-0f4330fb5e0b",
+                "type": "Footnote"
+            }
+        ],
+        "glossaries": [
+            {
+                "content": "RNA, ribonucleic acid",
+                "id": "663de69d-d8ce-495d-8608-3f556408970b",
+                "source": "SupportingClaim",
+                "source_id": "62e5d8a1-15ba-4490-90af-e4de8eb088ef",
+                "type": "Glossary"
+            },
+            {
+                "content": "eGFRCG, estimated glomerular filtration rate by Cockcroft-Gault",
+                "id": "299993a7-0dce-4983-9586-75a71040a3e4",
+                "source": "SupportingClaim",
+                "source_id": "62e5d8a1-15ba-4490-90af-e4de8eb088ef",
+                "type": "Glossary"
+            },
+            {
+                "content": "HBV, hepatitis B virus",
+                "id": "734208f5-8d87-4ff3-b181-4d401267eb33",
+                "source": "SupportingClaim",
+                "source_id": "62e5d8a1-15ba-4490-90af-e4de8eb088ef",
+                "type": "Glossary"
+            },
+            {
+                "content": "ART, antiretroviral therapy",
+                "id": "4c984232-dbea-437d-b629-d3070ba588ec",
+                "source": "SupportingClaim",
+                "source_id": "62e5d8a1-15ba-4490-90af-e4de8eb088ef",
+                "type": "Glossary"
+            },
+            {
+                "content": "OLE, open-label extension",
+                "id": "ccb8802a-e366-4765-952a-6cc127956cbd",
+                "source": "SupportingClaim",
+                "source_id": "559b5a53-e632-4564-bf9a-bfd0dc099d3f",
+                "type": "Glossary"
+            },
+            {
+                "content": "RNA, ribonucleic acid",
+                "id": "663de69d-d8ce-495d-8608-3f556408970b",
+                "source": "SupportingClaim",
+                "source_id": "495ce444-785f-48c0-990a-6947ab42c19c",
+                "type": "Glossary"
+            },
+            {
+                "content": "RNA, ribonucleic acid",
+                "id": "663de69d-d8ce-495d-8608-3f556408970b",
+                "source": "SupportingClaim",
+                "source_id": "7228f795-f75d-4cb1-8df9-0f4330fb5e0b",
+                "type": "Glossary"
+            }
+        ],
+        "glossary": "RNA, ribonucleic acid\nOLE, open-label extension\nART, antiretroviral therapy | HBV, hepatitis B virus | eGFRCG, estimated glomerular filtration rate by Cockcroft-Gault | FTC, emtricitabine | TAF, tenofovir alafenamide fumarate | ABC, abacavir | RNA, ribonucleic acid\nART, antiretroviral therapy | HLA, human leukocyte antigen | HBV, hepatitis B virus | eGFRCG, estimated glomerular filtration rate by Cockcroft-Gault | FTC, emtricitabine | TAF, tenofovir alafenamide fumarate | ABC, abacavir | 3TC, lamivudine | RNA, ribonucleic acid | QD, once daily | DTG, dolutegravir\nQD, once daily | FTC, emtricitabine | TAF, tenofovir alafenamide fumarate | DTG, dolutegravir\nUS, United States | FDA, Food and Drug Administration",
+        "id": "summary:bd2fe509b824102e54b0812e88613c92fbdd0450",
+        "key_claims": [
+            {
+                "content": "Treatment-naïve adults: Studies 1489 and 1490¹⁻⁵",
+                "id": "86db748d-1793-4ca3-a945-ac6eb2cbd404",
+                "name": "Treatment-naïve adults: Studies 1489 and 1490¹⁻⁵",
+                "type": "KeyClaim"
+            }
+        ],
+        "page_number": 67,
+        "reference": "1. Sax PE, et al. eClinicalMedicine. 2023; 59: 101991. | 2. Wohl DA, et al. Virtual Conference on Retroviruses and Opportunistic Infections (CROI) 2022, 12-16 February. Poster 494. | 3. Gallant J, et al. Lancet. 2017; 390: 2063-2072. | 4. Orkin C, et al. Lancet. 2020; 7: e389-e400. | 5. BIKTARVY® (BIC/FTC/TAF) Summary of Product Characteristics.\n5. BIKTARVY® (BIC/FTC/TAF) Summary of Product Characteristics.\n2. Wohl DA, et al. Virtual Conference on Retroviruses and Opportunistic Infections (CROI) 2022, 12-16 February. Poster 494. | 3. Gallant J, et al. Lancet. 2017; 390: 2063-2072.\n2. Wohl DA, et al. Virtual Conference on Retroviruses and Opportunistic Infections (CROI) 2022, 12-16 February. Poster 494. | 4. Orkin C, et al. Lancet. 2020; 7: e389-e400.\n1. Sax PE, et al. eClinicalMedicine. 2023; 59: 101991.",
+        "references": [
+            {
+                "content": "5. BIKTARVY® (BIC/FTC/TAF) Summary of Product Characteristics.",
+                "id": "c0b28f7b-cc68-4390-9100-8e6befb61275",
+                "source": "KeyClaim",
+                "source_id": "86db748d-1793-4ca3-a945-ac6eb2cbd404",
+                "type": "Reference"
+            },
+            {
+                "content": "4. Orkin C, et al. Lancet. 2020; 7: e389-e400.",
+                "id": "6f4a2707-a2ad-4206-b12a-d856a9120f3a",
+                "source": "KeyClaim",
+                "source_id": "86db748d-1793-4ca3-a945-ac6eb2cbd404",
+                "type": "Reference"
+            },
+            {
+                "content": "3. Gallant J, et al. Lancet. 2017; 390: 2063-2072.",
+                "id": "332d0d1d-e728-445b-9771-7840269fd307",
+                "source": "KeyClaim",
+                "source_id": "86db748d-1793-4ca3-a945-ac6eb2cbd404",
+                "type": "Reference"
+            },
+            {
+                "content": "2. Wohl DA, et al. Virtual Conference on Retroviruses and Opportunistic Infections (CROI) 2022, 12-16 February. Poster 494.",
+                "id": "33312d32-3a14-487a-9d51-3515c0835c2e",
+                "source": "KeyClaim",
+                "source_id": "86db748d-1793-4ca3-a945-ac6eb2cbd404",
+                "type": "Reference"
+            },
+            {
+                "content": "1. Sax PE, et al. eClinicalMedicine. 2023; 59: 101991.",
+                "id": "6238739e-2cf1-46c5-a1c0-ed239099b125",
+                "source": "KeyClaim",
+                "source_id": "86db748d-1793-4ca3-a945-ac6eb2cbd404",
+                "type": "Reference"
+            },
+            {
+                "content": "1. Sax PE, et al. eClinicalMedicine. 2023; 59: 101991.",
+                "id": "6238739e-2cf1-46c5-a1c0-ed239099b125",
+                "source": "SupportingClaim",
+                "source_id": "559b5a53-e632-4564-bf9a-bfd0dc099d3f",
+                "type": "Reference"
+            },
+            {
+                "content": "4. Orkin C, et al. Lancet. 2020; 7: e389-e400.",
+                "id": "6f4a2707-a2ad-4206-b12a-d856a9120f3a",
+                "source": "SupportingClaim",
+                "source_id": "495ce444-785f-48c0-990a-6947ab42c19c",
+                "type": "Reference"
+            },
+            {
+                "content": "2. Wohl DA, et al. Virtual Conference on Retroviruses and Opportunistic Infections (CROI) 2022, 12-16 February. Poster 494.",
+                "id": "33312d32-3a14-487a-9d51-3515c0835c2e",
+                "source": "SupportingClaim",
+                "source_id": "495ce444-785f-48c0-990a-6947ab42c19c",
+                "type": "Reference"
+            },
+            {
+                "content": "3. Gallant J, et al. Lancet. 2017; 390: 2063-2072.",
+                "id": "332d0d1d-e728-445b-9771-7840269fd307",
+                "source": "SupportingClaim",
+                "source_id": "7228f795-f75d-4cb1-8df9-0f4330fb5e0b",
+                "type": "Reference"
+            },
+            {
+                "content": "2. Wohl DA, et al. Virtual Conference on Retroviruses and Opportunistic Infections (CROI) 2022, 12-16 February. Poster 494.",
+                "id": "33312d32-3a14-487a-9d51-3515c0835c2e",
+                "source": "SupportingClaim",
+                "source_id": "7228f795-f75d-4cb1-8df9-0f4330fb5e0b",
+                "type": "Reference"
+            },
+            {
+                "content": "5. BIKTARVY® (BIC/FTC/TAF) Summary of Product Characteristics.",
+                "id": "c0b28f7b-cc68-4390-9100-8e6befb61275",
+                "source": "SupportingClaim",
+                "source_id": "0e43d909-e63d-4676-858f-cb18c30ac9c0",
+                "type": "Reference"
+            },
+            {
+                "content": "1. Sax PE, et al. eClinicalMedicine. 2023; 59: 101991.",
+                "id": "6238739e-2cf1-46c5-a1c0-ed239099b125",
+                "source": "ReusableText",
+                "source_id": "c588d16d-88be-4f5e-beb3-f966fc05dec4",
+                "type": "Reference"
+            },
+            {
+                "content": "1. Sax PE, et al. eClinicalMedicine. 2023; 59: 101991.",
+                "id": "6238739e-2cf1-46c5-a1c0-ed239099b125",
+                "source": "ReusableText",
+                "source_id": "962f95f4-342d-421a-b1a3-34688d1b33e0",
+                "type": "Reference"
+            }
+        ],
+        "reusable_text": "ClinicalMedicine.¹\nAdapted from Sax PE, et al. eClinicalMedicine.¹",
+        "reusable_texts": [
+            {
+                "content": "Adapted from Sax PE, et al. eClinicalMedicine.¹",
+                "id": "c588d16d-88be-4f5e-beb3-f966fc05dec4",
+                "name": "Adapted from Sax PE, et al. eClinicalMedicine.¹",
+                "type": "ReusableText"
+            },
+            {
+                "content": "ClinicalMedicine.¹",
+                "id": "962f95f4-342d-421a-b1a3-34688d1b33e0",
+                "name": "ClinicalMedicine.¹",
+                "type": "ReusableText"
+            }
+        ],
+        "similarity": 0.6449320220727524,
+        "supporting_claims": [
+            {
+                "content": "Randomised double-blind Study 1490: ART-r - Chronic HBV or infection allowed - eGFRCG ≥30 mL/ - No known resist - FTC, TAF, ABC, - HIV-1 RNA ≥500",
+                "id": "62e5d8a1-15ba-4490-90af-e4de8eb088ef",
+                "key_claim_id": "86db748d-1793-4ca3-a945-ac6eb2cbd404",
+                "name": "Randomised double-blind Study 1490: ART-r - Chronic HBV or infection allowed - eGFRCG ≥30 mL/ - No k",
+                "type": "SupportingClaim"
+            },
+            {
+                "content": "OLE objectives:¹ - To evaluate efficacy and safety after additional exposure to BIKTARVY®",
+                "id": "559b5a53-e632-4564-bf9a-bfd0dc099d3f",
+                "key_claim_id": "86db748d-1793-4ca3-a945-ac6eb2cbd404",
+                "name": "OLE objectives:¹ - To evaluate efficacy and safety after additional exposure to BIKTARVY®",
+                "type": "SupportingClaim"
+            },
+            {
+                "content": "Secondary endpoints:²,´ - HIV-1 RNA <50 copies/mL at Weeks 96, 144, 192 and 240",
+                "id": "495ce444-785f-48c0-990a-6947ab42c19c",
+                "key_claim_id": "86db748d-1793-4ca3-a945-ac6eb2cbd404",
+                "name": "Secondary endpoints:²,´ - HIV-1 RNA <50 copies/mL at Weeks 96, 144, 192 and 240",
+                "type": "SupportingClaim"
+            },
+            {
+                "content": "Primary endpoint:\u0012,\u0013 - HIV-1 RNA <50 copies/mL at Week 48*",
+                "id": "7228f795-f75d-4cb1-8df9-0f4330fb5e0b",
+                "key_claim_id": "86db748d-1793-4ca3-a945-ac6eb2cbd404",
+                "name": "Primary endpoint:\u0012,\u0013 - HIV-1 RNA <50 copies/mL at Week 48*",
+                "type": "SupportingClaim"
+            },
+            {
+                "content": "Studies 1489 and 1490 were Phase 3, randomised, double- blind, multicentre clinical trials⁵",
+                "id": "0e43d909-e63d-4676-858f-cb18c30ac9c0",
+                "key_claim_id": "86db748d-1793-4ca3-a945-ac6eb2cbd404",
+                "name": "Studies 1489 and 1490 were Phase 3, randomised, double- blind, multicentre clinical trials⁵",
+                "type": "SupportingClaim"
+            }
+        ],
+        "type": "Summary"
+    }
+]

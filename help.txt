@@ -38,3 +38,5 @@ claude --resume "pharma-email-token-extractor"
 
 
   claude --resume "multi-version-pharma-email-generator" 
+
+claude --resume "cluster-email-generator"

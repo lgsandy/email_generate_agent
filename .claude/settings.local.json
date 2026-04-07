@@ -14,7 +14,9 @@
       "Bash(ls:*)",
       "Bash(sed 's/\"\"\"\".*//g')",
       "Bash(find 'D:\\\\Bun App\\\\email_create' -name *.log -o -name *test* -o -name *result*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(node -e \"const d = require\\('./clusterData.json'\\); console.log\\('Total clusters:', d.length\\); console.log\\('Fields per cluster:', Object.keys\\(d[0]\\)\\); d.forEach\\(\\(c,i\\) => console.log\\('Cluster', i, ':', c.category, '| keys:', c.key_claims.length, '| supporting:', c.supporting_claims.length, '| reusable:', c.reusable_texts.length, '| comps:', c.components.length, '| refs:', c.references.length, '| footnotes:', c.footnotes.length\\)\\);\")",
+      "Bash(node -e \"const d = require\\('./clusterData.json'\\); d.forEach\\(\\(c,i\\) => { if\\(c.reusable_texts.length > 0\\) { console.log\\('Cluster', i, 'reusable_texts:'\\); c.reusable_texts.forEach\\(r => console.log\\(JSON.stringify\\(r, null, 2\\)\\)\\); }}\\)\")"
     ]
   }
 }

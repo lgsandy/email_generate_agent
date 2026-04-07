@@ -5,7 +5,7 @@
  */
 
 // Shared Biktarvy brand palette (from design-tokens.json)
-const BRAND_PALETTE = {
+export const BRAND_PALETTE = {
   primary: '#cf0a2c',
   secondary: '#c00000',
   accent: '#6ecbb8',
